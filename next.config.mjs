@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: "export",
-    basePath: "/portfolio",
-    assetPrefix: "https://muscaa.github.io/portfolio/",
+    basePath: process.env.NODE_ENV === "production" ? "/portfolio" : "",
+    assetPrefix: process.env.NODE_ENV === "production" ? "https://muscaa.github.io/portfolio/" : "",
 };
 
 export default nextConfig;
