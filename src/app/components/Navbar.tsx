@@ -29,6 +29,11 @@ export default function Navbar() {
             <p className="hover:underline">Contact</p>
           </Link>
         </li>
+        <li className="mx-2">
+          <Link href="/contests">
+            <p className="hover:underline">Contests</p>
+          </Link>
+        </li>
       </ul>
     </nav>
   );
