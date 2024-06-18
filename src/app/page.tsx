@@ -1,7 +1,19 @@
-import Image from "next/image";
+import Home from "./components/content/Home";
+import Navbar from "./components/Navbar";
+import About from "./components/content/About";
+import Projects from "./components/content/Projects";
+import Resume from "./components/content/Resume";
+import Contact from "./components/content/Contact";
 
-export default function Home() {
+export default function Main() {
     return (
-        <div className="mt-16">Home Page Content</div>
+        <>
+            <Home />
+            <Navbar />
+            <About />
+            <Projects />
+            <Resume />
+            <Contact />
+        </>
     );
 }

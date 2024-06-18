@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-import Navbar from "./components/Navbar";
+import { Montserrat } from "next/font/google";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Montserrat({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
 export const metadata: Metadata = {
     title: "Musca's Portfolio",
@@ -19,9 +17,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>
-                <Navbar />
-                <main className="flex min-h-screen flex-col items-center justify-between p-24">
+            <body className={font.className}>
+                <main className="flex flex-col">
                     {children}
                 </main>
             </body>
