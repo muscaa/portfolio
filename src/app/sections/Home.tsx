@@ -5,7 +5,7 @@ import ButtonArrow from "../components/ButtonArrow";
 export default function Home() {
     return (
         <section id="home" className="flex flex-col space-y-2 justify-center items-center text-center min-h-screen md:text-6xl text-3xl font-light">
-            <p>Hello, I'm <span className="text-primary font-medium">Mihail</span>.</p>
+            <p>Hello, Im <span className="text-primary font-medium">Mihail</span>.</p>
             <ReactTyped
                 strings={[
                     "Java Developer",
