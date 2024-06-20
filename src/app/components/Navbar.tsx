@@ -12,7 +12,7 @@ function NavButton({ href, text } : { href: string, text: string }) {
 
 export default function Navbar() {
     return (
-        <nav className="bg-background-2 sticky top-0 px-20 z-50">
+        <nav className="bg-background-2 shadow-md sticky top-0 px-20 z-50">
             <ul className="inline-flex w-full md:justify-end justify-center">
                 <NavButton href="#home" text="Home" />
                 <NavButton href="#about" text="About" />

@@ -4,6 +4,8 @@
 
 :root {
     --foreground-rgb: 0, 0, 0;
+
+    scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,8 +39,4 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
-}
-
-.blur-1 {
-    filter: blur(1px);
 }

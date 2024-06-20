@@ -29,11 +29,11 @@ export default function ParticlesBackground({ className } : { className?: string
             smooth: true,
             particles: {
                 color: {
-                    value: "#ffffff",
+                    value: "#49FED0",
                 },
                 links: {
                     enable: true,
-                    color: "#ffffff",
+                    color: "#49FED0",
                     distance: 100,
                     opacity: 0.1,
                     width: 0.5,
