@@ -1,19 +1,23 @@
-import Home from "./components/content/Home";
+"use client";
+
+import Home from "./sections/Home";
 import Navbar from "./components/Navbar";
-import About from "./components/content/About";
-import Projects from "./components/content/Projects";
-import Resume from "./components/content/Resume";
-import Contact from "./components/content/Contact";
+import About from "./sections/About";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 export default function Main() {
     return (
-        <>
-            <Home />
-            <Navbar />
-            <About />
-            <Projects />
-            <Resume />
-            <Contact />
-        </>
+        <div>
+            <ParticlesBackground />
+            <main className="flex flex-col md:text-base text-xs">
+                <Home />
+                <Navbar />
+                <About />
+                <Projects />
+                <Contact />
+            </main>
+        </div>
     );
 }

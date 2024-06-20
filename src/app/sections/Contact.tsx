@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Contact() {
     return (
-        <div id="contact" className="min-h-screen">
+        <section id="contact" className="backdrop-blur-sm min-h-screen">
             Contact Page Content
-        </div>
+        </section>
     );
 }

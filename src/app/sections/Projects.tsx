@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Projects() {
     return (
-        <div id="projects" className="min-h-screen">
+        <section id="projects" className="backdrop-blur-sm min-h-screen">
             Projects Page Content
-        </div>
+        </section>
     );
 }
