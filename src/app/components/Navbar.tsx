@@ -46,7 +46,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className="bg-background-2 bg-opacity-75 backdrop-blur-lg shadow-md shadow-background-1 sticky top-0 px-20 z-50">
+        <nav className="bg-background-2 bg-opacity-50 backdrop-blur-lg shadow-bottom shadow-background-1 sticky top-0 px-20 z-50">
             <ul className="inline-flex w-full md:justify-end justify-center">
                 <NavButton href="#home" text="Home" IconComponent={Home} active={activeSection == "home"} />
                 <NavButton href="#about" text="About" IconComponent={UserMale} active={activeSection == "about"} />
