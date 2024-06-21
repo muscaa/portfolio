@@ -1,27 +1,46 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function getRotationClass(direction: string) {
+function getRotation(direction: string) {
     switch (direction) {
         case "up":
-            return "-rotate-90";
+            return {
+                class: "-rotate-90",
+                x: [0, 0, 0, 0, 0],
+                y: [0, -10, 0, -6, 0],
+            }
         case "down":
-            return "rotate-90";
+            return {
+                class: "rotate-90",
+                x: [0, 0, 0, 0, 0],
+                y: [0, 10, 0, 6, 0],
+            }
         case "left":
-            return "rotate-180";
+            return {
+                class: "rotate-180",
+                x: [0, -10, 0, -6, 0],
+                y: [0, 0, 0, 0, 0],
+            }
         case "right":
         default:
-            return "";
+            return {
+                class: "",
+                x: [0, 10, 0, 6, 0],
+                y: [0, 0, 0, 0, 0],
+            }
     }
 }
 
 export default function ButtonArrow({ direction = "right", href } : { direction: "up" | "down" | "left" | "right", href: string }) {
+    const rotation = getRotation(direction);
+
     return (
         <motion.a
             href={href}
             className="inline-block"
             animate={{
-                y: [0, -10, 0, -6, 0],
+                x: rotation.x,
+                y: rotation.y,
                 transition: {
                     duration: 0.5,
                     ease: "easeInOut",
@@ -30,7 +49,7 @@ export default function ButtonArrow({ direction = "right", href } : { direction:
                 },
             }}
         >
-            <button className={`p-3 bg-primary rounded-full transform transition-transform hover:scale-110 ${getRotationClass(direction)}`}>
+            <button className={`p-3 bg-primary rounded-full transform transition-transform hover:scale-110 ${rotation.class}`}>
                 <svg
                     className="w-8 h-8"
                     fill="none"
