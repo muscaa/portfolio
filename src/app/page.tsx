@@ -9,15 +9,17 @@ import ParticlesBackground from "./components/ParticlesBackground";
 
 export default function Main() {
     return (
-        <div>
+        <>
             <ParticlesBackground />
             <main className="flex flex-col md:text-base text-xs">
                 <Home />
                 <Navbar />
-                <About />
-                <Projects />
-                <Contact />
+                <div className="backdrop-blur-sm">
+                    <About />
+                    <Projects />
+                    <Contact />
+                </div>
             </main>
-        </div>
+        </>
     );
 }

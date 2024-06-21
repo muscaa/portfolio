@@ -17,10 +17,20 @@ function getRotationClass(direction: string) {
 
 export default function ButtonArrow({ direction = "right", href } : { direction: "up" | "down" | "left" | "right", href: string }) {
     return (
-        <a href={href} className="inline-block">
-            <motion.button
-                className={`p-3 bg-primary rounded-full transform transition-transform hover:scale-110 ${getRotationClass(direction)}`}
-            >
+        <motion.a
+            href={href}
+            className="inline-block"
+            animate={{
+                y: [0, -10, 0, -6, 0],
+                transition: {
+                    duration: 0.5,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                    repeatDelay: 2,
+                },
+            }}
+        >
+            <button className={`p-3 bg-primary rounded-full transform transition-transform hover:scale-110 ${getRotationClass(direction)}`}>
                 <svg
                     className="w-8 h-8"
                     fill="none"
@@ -34,7 +44,7 @@ export default function ButtonArrow({ direction = "right", href } : { direction:
                         d="M13 5l7 7-7 7M5 5l7 7-7 7"
                     ></path>
                 </svg>
-            </motion.button>
-        </a>
+            </button>
+        </motion.a>
     );
 }

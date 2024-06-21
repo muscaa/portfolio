@@ -9,7 +9,6 @@ import { loadFull } from "tsparticles";
 
 export default function ParticlesBackground({ className } : { className?: string }) {
     const [init, setInit] = useState(false);
-    
     useEffect(() => {
         initParticlesEngine(async (engine) => {
             await loadFull(engine);
@@ -17,6 +16,31 @@ export default function ParticlesBackground({ className } : { className?: string
             setInit(true);
         });
     }, []);
+
+    const [screenSize, setScreenSize] = useState({
+        width: 0,
+        height: 0,
+    });
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        };
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    const calculateParticles = () => {
+        const area = screenSize.width * screenSize.height;
+        return Math.floor(area / 6000);
+    };
 
     const options: ISourceOptions = useMemo(
         () => ({
@@ -29,30 +53,30 @@ export default function ParticlesBackground({ className } : { className?: string
             smooth: true,
             particles: {
                 color: {
-                    value: "#49FED0",
+                    value: "#49FED0", // same as secondary
                 },
                 links: {
                     enable: true,
-                    color: "#49FED0",
+                    color: "#49FED0", // same as secondary
                     distance: 100,
                     opacity: 0.1,
                     width: 0.5,
                 },
                 move: {
                     enable: true,
-                    speed: 0.1,
+                    speed: 0.05,
                     direction: MoveDirection.none,
                     outModes: {
                         default: OutMode.bounce,
                     },
                 },
                 number: {
-                    value: 200,
+                    value: calculateParticles(),
                 },
                 opacity: {
                     value: {
                         min: 0.1,
-                        max: 0.5,
+                        max: 0.6,
                     },
                 },
                 shape: {
@@ -61,40 +85,22 @@ export default function ParticlesBackground({ className } : { className?: string
                 size: {
                     value: {
                         min: 1,
-                        max: 2,
+                        max: 2.5,
                     },
                 },
+                collisions: {
+                    enable: true,
+                    mode: "bounce",
+                }
             },
-            responsive: [
-                {
-                    maxWidth: 768,
-                    options: {
-                        particles: {
-                            number: {
-                                value: 100,
-                            },
-                        },
-                    },
-                },
-                {
-                    maxWidth: 425,
-                    options: {
-                        particles: {
-                            number: {
-                                value: 50,
-                            },
-                        },
-                    },
-                },
-            ],
         }),
-        [],
+        [screenSize],
     );
-    
+
     if (init) {
         return (
             <Particles
-                id="bgparticles1"
+                id="bg-particles"
                 options={options}
                 className={className}
             />

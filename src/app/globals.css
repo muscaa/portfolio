@@ -34,9 +34,9 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    @apply bg-background-2;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    @apply bg-background-3;
 }
