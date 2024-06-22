@@ -3,20 +3,12 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-
     scroll-behavior: smooth;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-    }
 }
 
 body {
     @apply bg-background-1;
-    color: rgb(var(--foreground-rgb));
+    @apply text-text;
 }
 
 @layer utilities {

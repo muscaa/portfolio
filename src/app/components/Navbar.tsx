@@ -9,9 +9,15 @@ import Contacts from "../svg/Contacts";
 function NavButton({ href, text, IconComponent, active } : { href: string, text: string, IconComponent: ComponentType<{ className?: string }>, active: boolean}) {
     return (
         <li className="md:py-4 py-2 px-4">
-            <Link className={`flex items-center md:text-xl text-sm text-center font-medium hover:underline ${active ? "text-secondary" : ""}`} href={href}>
-                <IconComponent className="w-6 h-6 mr-2" />
-                {text}
+            <Link className={`flex items-center md:text-xl text-sm text-center font-medium ${active ? "text-secondary" : ""}`} href={href}>
+                <div className="absolute flex blur-md opacity-0 hover:opacity-100 transition-opacity duration-200">
+                    <IconComponent className="w-6 h-6 mr-2" />
+                    <span>{text}</span>
+                </div>
+                <div className="flex">
+                    <IconComponent className="w-6 h-6 mr-2" />
+                    <span>{text}</span>
+                </div>
             </Link>
         </li>
     );

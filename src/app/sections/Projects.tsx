@@ -1,9 +1,10 @@
 import React from "react";
+import Title from "../components/Title";
 
 export default function Projects() {
     return (
         <section id="projects" className="min-h-screen">
-            Projects Page Content
+            <Title text="Projects" />
         </section>
     );
 }

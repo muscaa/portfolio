@@ -1,9 +1,10 @@
 import React from "react";
+import Title from "../components/Title";
 
 export default function Contact() {
     return (
         <section id="contact" className="min-h-screen">
-            Contact Page Content
+            <Title text="Contact" />
         </section>
     );
 }
