@@ -6,7 +6,6 @@ import {
     OutMode,
 } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
-import WindowSize from "../states/WindowSize";
 
 export default function ParticlesBackground({ className } : { className?: string }) {
     const [init, setInit] = useState(false);
