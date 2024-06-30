@@ -34,7 +34,10 @@ const config: Config = {
                 "224": "56rem",
                 "240": "60rem",
                 "256": "64rem",
-              },
+            },
+            gridTemplateColumns: {
+                "fill": "repeat(auto-fill, minmax(20rem, 1fr))",
+            },
         },
     },
     plugins: [],

@@ -6,6 +6,7 @@ import {
     OutMode,
 } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
+import WindowSize from "../states/WindowSize";
 
 export default function ParticlesBackground({ className } : { className?: string }) {
     const [init, setInit] = useState(false);
@@ -17,13 +18,13 @@ export default function ParticlesBackground({ className } : { className?: string
         });
     }, []);
 
-    const [screenSize, setScreenSize] = useState({
+    const [windowSize, setWindowSize] = useState({
         width: 0,
         height: 0,
     });
     useEffect(() => {
         const handleResize = () => {
-            setScreenSize({
+            setWindowSize({
                 width: window.innerWidth,
                 height: window.innerHeight,
             });
@@ -38,7 +39,7 @@ export default function ParticlesBackground({ className } : { className?: string
     }, []);
 
     const calculateParticles = () => {
-        const area = screenSize.width * screenSize.height;
+        const area = windowSize.width * windowSize.height;
         return Math.floor(area / 6000);
     };
 
@@ -94,7 +95,7 @@ export default function ParticlesBackground({ className } : { className?: string
                 }
             },
         }),
-        [screenSize],
+        [windowSize],
     );
 
     if (init) {
