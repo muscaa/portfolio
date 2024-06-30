@@ -8,7 +8,7 @@ export default function Projects() {
         projects.push({
             name: `Project ${i}`,
             description: `This is a description of Project ${i}.`,
-            imageSrc: "/project.png"
+            imageSrc: "project.png"
         });
     }
 
