@@ -11,14 +11,16 @@ import Footer from "./components/Footer";
 export default function Main() {
     return (
         <>
-            <ParticlesBackground />
+            <ParticlesBackground className="fixed inset-0 -z-50" />
             <main className="flex flex-col md:text-base text-xs">
                 <Home />
                 <Navbar />
-                <div className="backdrop-blur-sm">
+                <div className="relative">
                     <About />
                     <Projects />
                     <Contact />
+
+                    <div className="absolute inset-0 -z-50 backdrop-blur-sm"></div>
                 </div>
                 <Footer />
             </main>

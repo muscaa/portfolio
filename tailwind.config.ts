@@ -38,6 +38,9 @@ const config: Config = {
             gridTemplateColumns: {
                 "fill": "repeat(auto-fill, minmax(20rem, 1fr))",
             },
+            backdropBlur: {
+                "msm": "8px",
+            },
         },
     },
     plugins: [],

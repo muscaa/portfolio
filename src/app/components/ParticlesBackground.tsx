@@ -39,14 +39,13 @@ export default function ParticlesBackground({ className } : { className?: string
 
     const calculateParticles = () => {
         const area = windowSize.width * windowSize.height;
-        return Math.floor(area / 6000);
+        return Math.floor(area / 5000);
     };
 
     const options: ISourceOptions = useMemo(
         () => ({
             fullScreen: {
-                enable: true,
-                zIndex: -60,
+                enable: false,
             },
             fpsLimit: 120,
             detectRetina: true,
