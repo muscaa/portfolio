@@ -20,6 +20,7 @@ const config: Config = {
                 "background-3": "rgb(62, 65, 68)",
                 "background-4": "rgb(82, 85, 88)",
                 "text": "rgb(250, 249, 246)",
+                "text-2": "rgb(173, 172, 171)",
                 "primary": "rgb(118, 73, 254)",
                 "secondary": "rgb(73, 254, 208)",
                 "shadow": "rgb(17, 20, 23)",

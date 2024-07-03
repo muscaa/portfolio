@@ -39,7 +39,7 @@ export default function ParticlesBackground({ className }: { className?: string 
 
     const calculateParticles = () => {
         const area = windowSize.width * windowSize.height;
-        return Math.floor(area / 5000);
+        return Math.floor(area / 6000);
     };
 
     const options: ISourceOptions = useMemo(
