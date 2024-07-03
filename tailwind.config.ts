@@ -22,6 +22,7 @@ const config: Config = {
                 "text": "rgb(250, 249, 246)",
                 "primary": "rgb(118, 73, 254)",
                 "secondary": "rgb(73, 254, 208)",
+                "shadow": "rgb(17, 20, 23)",
             },
             width: {
                 "112": "28rem",
@@ -34,9 +35,6 @@ const config: Config = {
                 "224": "56rem",
                 "240": "60rem",
                 "256": "64rem",
-            },
-            gridTemplateColumns: {
-                "fill": "repeat(auto-fill, minmax(20rem, 1fr))",
             },
             backdropBlur: {
                 "msm": "8px",

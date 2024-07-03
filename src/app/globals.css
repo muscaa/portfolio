@@ -15,6 +15,10 @@ body {
     .text-balance {
         text-wrap: balance;
     }
+
+    .shadow-glow {
+        box-shadow: 0 0 100px -50px var(--tw-shadow-color);
+    }
 }
 
 ::-webkit-scrollbar {
@@ -31,12 +35,4 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     @apply bg-background-3;
-}
-
-.shadow-top {
-    @apply shadow-[var(--tw-shadow-color)_0px_-5px_8px_0px];
-}
-
-.shadow-bottom {
-    @apply shadow-[var(--tw-shadow-color)_0px_5px_8px_0px];
 }

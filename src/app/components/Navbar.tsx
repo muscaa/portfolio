@@ -90,7 +90,7 @@ export default function Navbar() {
     const isMobile = windowSize.width < 768;
 
     return (
-        <nav className="bg-background-2 bg-opacity-25 backdrop-blur-lg shadow-bottom shadow-background-1 sticky top-0 z-50 flex">
+        <nav className="bg-background-2 bg-opacity-25 backdrop-blur-lg shadow-md shadow-shadow sticky top-0 z-50 flex">
             <ul className="inline-flex w-full justify-start">
                 <NavButton href="https://github.com/muscaa/portfolio/" text="muscaa" IconComponent={Maxi} />
             </ul>
