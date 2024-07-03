@@ -31,7 +31,7 @@ function getRotation(direction: string) {
     }
 }
 
-export default function ButtonArrow({ direction = "right", href, className } : { direction: "up" | "down" | "left" | "right", href: string, className?: string}) {
+export default function ButtonArrow({ direction = "right", href, className }: { direction: "up" | "down" | "left" | "right", href: string, className?: string }) {
     const rotation = getRotation(direction);
 
     return (

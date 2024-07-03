@@ -9,7 +9,7 @@ import Menu from "../svg/Menu";
 import Close from "../svg/Close";
 import Maxi from "./Maxi";
 
-function NavButton({ href, text, IconComponent, active } : { href: string, text: string, IconComponent: ComponentType<{ className?: string }>, active?: boolean}) {
+function NavButton({ href, text, IconComponent, active }: { href: string, text: string, IconComponent: ComponentType<{ className?: string }>, active?: boolean }) {
     return (
         <li className="md:py-4 py-2 px-4">
             <Link className={`flex items-center md:text-xl text-sm text-center font-medium ${active ? "text-primary" : ""}`} href={href}>
@@ -22,7 +22,7 @@ function NavButton({ href, text, IconComponent, active } : { href: string, text:
     );
 }
 
-function Small({ activeSection } : { activeSection: string }) {
+function Small({ activeSection }: { activeSection: string }) {
     return (
         <div className="flex items-center">
             <Menu className="w-6 h-6 mr-2" />
@@ -30,7 +30,7 @@ function Small({ activeSection } : { activeSection: string }) {
     );
 }
 
-function Big({ activeSection } : { activeSection: string }) {
+function Big({ activeSection }: { activeSection: string }) {
     return (
         <ul className="inline-flex w-full justify-end">
             <NavButton href="#home" text="Home" IconComponent={Home} active={activeSection == "home"} />

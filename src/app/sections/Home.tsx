@@ -32,7 +32,7 @@ export default function Home() {
                 />
             </div>
             <div className="flex-grow"></div>
-            <ButtonArrow direction="down" href="#about"/>
+            <ButtonArrow direction="down" href="#about" />
             <div className="flex-grow"></div>
         </section>
     );

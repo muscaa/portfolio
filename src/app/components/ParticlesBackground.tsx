@@ -7,7 +7,7 @@ import {
 } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
 
-export default function ParticlesBackground({ className } : { className?: string }) {
+export default function ParticlesBackground({ className }: { className?: string }) {
     const [init, setInit] = useState(false);
     useEffect(() => {
         initParticlesEngine(async (engine) => {
