@@ -7,6 +7,7 @@ import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
+import PopupMenu from "./components/PopupMenu";
 
 export default function Main() {
     return (
@@ -24,6 +25,7 @@ export default function Main() {
                 </main>
                 <Footer />
             </div>
+            <PopupMenu />
         </>
     );
 }
