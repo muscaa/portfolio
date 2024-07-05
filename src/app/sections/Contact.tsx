@@ -8,6 +8,7 @@ import {
     GoogleReCaptchaProvider,
     useGoogleReCaptcha
 } from "react-google-recaptcha-v3";
+import Shield from "../svg/Shield";
 
 function ContactForm() {
     const { executeRecaptcha } = useGoogleReCaptcha();
@@ -52,20 +53,23 @@ function ContactForm() {
                 field="message"
                 errors={state.errors}
             />
-            <div className="flex flex-col items-end my-2">
+            <div className="grid grid-cols-2 sm:grid-cols-[60%_40%] items-end my-2">
+                <div className="flex justify-center items-center h-full">
+                    <Shield className="w-6 h-6 mr-2" />
+                    <p>Protected by reCAPTCHA</p>
+                </div>
                 {
                     !state.succeeded && (
                         <Button
                             type="submit"
                             disabled={state.submitting}
                             text="Send"
-                            className="w-32"
                         />
                     )
                 }
                 {
                     state.succeeded && (
-                        <div className="flex justify-center items-center w-32 p-3">
+                        <div className="flex justify-center items-center p-3">
                             <p>Sent!</p>
                         </div>
                     )
