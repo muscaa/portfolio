@@ -4,9 +4,17 @@ import { useForm, ValidationError } from "@formspree/react";
 import Input from "../components/Input"
 import InputArea from "../components/InputArea"
 import Button from "../components/Button"
+import {
+    GoogleReCaptchaProvider,
+    useGoogleReCaptcha
+} from "react-google-recaptcha-v3";
 
 function ContactForm() {
-    const [state, handleSubmit] = useForm("xrbzglbe");
+    const { executeRecaptcha } = useGoogleReCaptcha();
+    const [state, handleSubmit] = useForm("xrbzglbe", {
+        data: { "g-recaptcha-response": executeRecaptcha }
+    });
+
     return (
         <form onSubmit={handleSubmit} autoComplete="off" className="flex flex-col gap-2">
             <Input
@@ -82,7 +90,9 @@ export default function Contact() {
                         Have a question or want to work together?
                         Leave your details and I'll get back to you as soon as possible.
                     </p>
-                    <ContactForm />
+                    <GoogleReCaptchaProvider reCaptchaKey="6LdLCQkqAAAAAJqQeo3ss5PdqytaM9QWrol9x5vY">
+                        <ContactForm />
+                    </GoogleReCaptchaProvider>
                 </div>
             </div>
         </section>
