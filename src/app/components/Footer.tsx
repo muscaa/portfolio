@@ -6,7 +6,7 @@ import Linkedin from "../svg/Linkedin";
 
 export default function Footer() {
     return (
-        <div className="bg-background-2 bg-opacity-25 backdrop-blur-lg flex flex-col justify-center items-center text-center py-8 space-y-4">
+        <footer className="bg-background-2 bg-opacity-25 backdrop-blur-lg flex flex-col justify-center items-center text-center py-8 space-y-4">
             <ButtonArrow direction="up" href="#home" className="absolute -top-8" />
             <div className="flex space-x-2">
                 <Link href="https://github.com/muscaa/" className="transform transition-transform hover:scale-110">
@@ -20,6 +20,6 @@ export default function Footer() {
                 </Link>
             </div>
             <p className="text-xs font-light">Mihail Musca ©2024</p>
-        </div>
+        </footer>
     );
 }

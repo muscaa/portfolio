@@ -53,27 +53,16 @@ function ContactForm() {
                 field="message"
                 errors={state.errors}
             />
-            <div className="grid grid-cols-2 sm:grid-cols-[60%_40%] items-end my-2">
+            <div className="grid grid-cols-2 sm:grid-cols-[60%_40%] my-2">
                 <div className="flex justify-center items-center h-full">
-                    <Shield className="w-6 h-6 mr-2" />
+                    <Shield className="w-6 h-6 mr-2 sm:ml-0 ml-2 flex-shrink-0" />
                     <p>Protected by reCAPTCHA</p>
                 </div>
-                {
-                    !state.succeeded && (
-                        <Button
-                            type="submit"
-                            disabled={state.submitting}
-                            text="Send"
-                        />
-                    )
-                }
-                {
-                    state.succeeded && (
-                        <div className="flex justify-center items-center p-3">
-                            <p>Sent!</p>
-                        </div>
-                    )
-                }
+                <Button
+                    type="submit"
+                    disabled={state.submitting || state.succeeded}
+                    text={state.succeeded ? "Sent!" : "Send"}
+                />
             </div>
         </form>
     );
@@ -86,10 +75,11 @@ export default function Contact() {
             <div className="flex flex-col justify-center items-center">
                 <div className="
                 w-64 sm:w-96 md:w-128
-                mb-16 sm:mb-24 md:mb-32
+                mb-24 md:mb-32
                 ">
                     <p className="
-                    mb-4 sm:mb-8 md:mb-12
+                    mb-8 md:mb-12
+                    text-center sm:text-start
                     ">
                         Have a question or want to work together?
                         Leave your details and I'll get back to you as soon as possible.
