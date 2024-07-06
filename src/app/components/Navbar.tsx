@@ -15,7 +15,7 @@ import { openPopupMenu } from "./PopupMenu";
 export function Tab({ href, text, IconComponent, active }: { href: string, text: string, IconComponent: ComponentType<{ className?: string }>, active?: boolean }) {
     return (
         <li className="md:py-4 py-2 px-4">
-            <Link className={`flex items-center md:text-xl text-sm text-center font-medium transition-colors duration-200 ease-in-out hover:text-primary ${active ? "text-primary" : ""}`} href={href}>
+            <Link className={`flex items-center md:text-xl text-sm text-center font-medium transition-all duration-200 ease-in-out hover:scale-110 hover:text-primary ${active ? "text-primary" : ""}`} href={href}>
                 <div className="relative flex items-center">
                     <IconComponent className="w-6 h-6 mr-2" />
                     <p>{text}</p>
