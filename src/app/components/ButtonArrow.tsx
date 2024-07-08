@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function getRotation(direction: string) {
+function getRotation(direction: "up" | "down" | "left" | "right") {
     switch (direction) {
         case "up":
             return {
@@ -22,7 +22,6 @@ function getRotation(direction: string) {
                 y: [0, 0, 0, 0, 0],
             }
         case "right":
-        default:
             return {
                 class: "",
                 x: [0, 10, 0, 6, 0],

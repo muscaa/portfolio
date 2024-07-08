@@ -11,17 +11,22 @@ import {
     useActiveSection
 } from "../States";
 import { openPopupMenu } from "./PopupMenu";
+import Reveal from "./Reveal";
 
-export function Tab({ href, text, IconComponent, active }: { href: string, text: string, IconComponent: ComponentType<{ className?: string }>, active?: boolean }) {
+export function Tab({ href, text, IconComponent, active, target }:
+    { href: string, text: string, IconComponent: ComponentType<{ className?: string }>, active?: boolean, target?: string }) {
     return (
-        <li className="md:py-4 py-2 px-4">
-            <Link className={`flex items-center md:text-xl text-sm text-center font-medium transition-all duration-200 ease-in-out hover:scale-110 hover:text-primary ${active ? "text-primary" : ""}`} href={href}>
-                <div className="relative flex items-center">
-                    <IconComponent className="w-6 h-6 mr-2" />
-                    <p>{text}</p>
-                </div>
-            </Link>
-        </li>
+        <Reveal>
+            <li className="md:py-4 py-2 px-4">
+                <Link href={href} target={target} className={`flex items-center md:text-xl text-sm text-center font-medium
+                transition-all duration-200 ease-in-out hover:scale-110 hover:text-primary ${active ? "text-primary" : ""}`}>
+                    <div className="relative flex items-center">
+                        <IconComponent className="w-6 h-6 mr-2" />
+                        <p>{text}</p>
+                    </div>
+                </Link>
+            </li>
+        </Reveal>
     );
 }
 
@@ -54,7 +59,7 @@ export default function Navbar() {
     return (
         <nav className="bg-background-2 bg-opacity-25 backdrop-blur-lg shadow-md shadow-shadow sticky top-0 z-50 flex">
             <ul className="inline-flex w-full justify-start">
-                <Tab href="https://github.com/muscaa/portfolio/" text="muscaa" IconComponent={Maxi} />
+                <Tab href="https://github.com/muscaa/portfolio/" target="_blank" text="muscaa" IconComponent={Maxi} />
             </ul>
 
             {isMobile ? (

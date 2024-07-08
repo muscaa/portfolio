@@ -9,13 +9,13 @@ export default function Footer() {
         <footer className="bg-background-2 bg-opacity-25 backdrop-blur-lg flex flex-col justify-center items-center text-center py-8 space-y-4">
             <ButtonArrow direction="up" href="#home" className="absolute -top-8" />
             <div className="flex space-x-2">
-                <Link href="https://github.com/muscaa/" className="transform transition-transform hover:scale-110">
+                <Link href="https://github.com/muscaa/" target="_blank" className="transform transition-transform hover:scale-110">
                     <Github className="w-10 h-10" />
                 </Link>
-                <Link href="https://www.instagram.com/musca.mihail/" className="transform transition-transform hover:scale-110">
+                <Link href="https://www.instagram.com/musca.mihail/" target="_blank" className="transform transition-transform hover:scale-110">
                     <Instagram className="w-10 h-10" />
                 </Link>
-                <Link href="https://www.linkedin.com/in/muscaa/" className="transform transition-transform hover:scale-110">
+                <Link href="https://www.linkedin.com/in/muscaa/" target="_blank" className="transform transition-transform hover:scale-110">
                     <Linkedin className="w-10 h-10" />
                 </Link>
             </div>

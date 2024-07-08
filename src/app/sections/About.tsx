@@ -7,7 +7,7 @@ export default function About() {
             <Title text="About" />
             <div className="flex flex-col lg:flex-row justify-center items-center gap-x-32">
                 <div className="flex-grow"></div>
-                <div className="max-w-lg">
+                <div className="max-w-xs sm:max-w-md lg:max-w-lg">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id ante auctor, 
                         interdum neque eu, porta ligula. Vivamus commodo imperdiet nulla, eu eleifend massa 
@@ -18,7 +18,7 @@ export default function About() {
                     </p>
                 </div>
 
-                <div className="max-w-lg">
+                <div className="max-w-xs sm:max-w-md lg:max-w-lg">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id ante auctor, 
                         interdum neque eu, porta ligula. Vivamus commodo imperdiet nulla, eu eleifend massa 
