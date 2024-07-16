@@ -1,6 +1,9 @@
 import React from "react";
 import Title from "../components/Title";
-import { useForm, ValidationError } from "@formspree/react";
+import {
+    useForm,
+    ValidationError
+} from "@formspree/react";
 import Input from "../components/Input"
 import InputArea from "../components/InputArea"
 import Button from "../components/Button"
@@ -9,21 +12,29 @@ import {
     useGoogleReCaptcha
 } from "react-google-recaptcha-v3";
 import Shield from "../svg/Shield";
+import {
+    useState,
+    useEffect
+} from "react";
 
 function ContactForm() {
     const { executeRecaptcha } = useGoogleReCaptcha();
     const [state, handleSubmit] = useForm("xrbzglbe", {
         data: { "g-recaptcha-response": executeRecaptcha }
     });
+    const [nameEmpty, setNameEmpty] = useState(true);
+    const [emailEmpty, setEmailEmpty] = useState(true);
+    const [messageEmpty, setMessageEmpty] = useState(true);
 
     return (
-        <form onSubmit={handleSubmit} autoComplete="off" className="flex flex-col gap-2">
+        <form onSubmit={handleSubmit} autoComplete="on" className="flex flex-col gap-2">
             <Input
                 id="name"
                 type="text"
                 name="name"
                 placeholder="Name"
                 className="min-w-max"
+                onChange={e => setNameEmpty(e.target.value.trim().length === 0)}
             />
             <ValidationError
                 prefix="Name"
@@ -36,6 +47,7 @@ function ContactForm() {
                 name="email"
                 placeholder="Email"
                 className="min-w-max"
+                onChange={e => setEmailEmpty(e.target.value.trim().length === 0)}
             />
             <ValidationError
                 prefix="Email"
@@ -47,6 +59,7 @@ function ContactForm() {
                 name="message"
                 placeholder="Message"
                 className="min-w-max"
+                onChange={e => setMessageEmpty(e.target.value.trim().length === 0)}
             />
             <ValidationError
                 prefix="Message"
@@ -60,7 +73,7 @@ function ContactForm() {
                 </div>
                 <Button
                     type="submit"
-                    disabled={state.submitting || state.succeeded}
+                    disabled={nameEmpty || emailEmpty || messageEmpty || state.submitting || state.succeeded}
                     text={state.succeeded ? "Sent!" : "Send"}
                 />
             </div>
@@ -70,7 +83,7 @@ function ContactForm() {
 
 export default function Contact() {
     return (
-        <section id="contact" className="">
+        <section id="contact">
             <Title text="Contact" />
             <div className="flex flex-col justify-center items-center">
                 <div className="

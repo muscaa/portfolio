@@ -40,7 +40,7 @@ export default function Reveal({ children, direction = "up", delay = 0 }: { chil
     }, [inView]);
 
     return (
-        <div className="relative overflow-hidden" ref={ref}>
+        <div className="relative" ref={ref}>
             <motion.div
                 variants={{
                     hidden: {

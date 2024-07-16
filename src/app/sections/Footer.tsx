@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ButtonArrow from "./ButtonArrow";
+import ButtonArrow from "../components/ButtonArrow";
 import Github from "../svg/Github";
 import Instagram from "../svg/Instagram";
 import Linkedin from "../svg/Linkedin";
@@ -19,7 +19,7 @@ export default function Footer() {
                     <Linkedin className="w-10 h-10" />
                 </Link>
             </div>
-            <p className="text-xs font-light">Mihail Musca ©2024</p>
+            <p className="text-xs font-light">© 2024 Musca Mihail</p>
         </footer>
     );
 }

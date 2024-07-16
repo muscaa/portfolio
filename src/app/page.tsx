@@ -5,8 +5,9 @@ import Home from "./sections/Home";
 import Navbar from "./components/Navbar";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
+import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
-import Footer from "./components/Footer";
+import Footer from "./sections/Footer";
 import PopupMenu from "./components/PopupMenu";
 
 export default function Main() {
@@ -17,9 +18,14 @@ export default function Main() {
                 <Home />
                 <Navbar />
                 <main className="relative">
-                    <About />
-                    <Projects />
-                    <Contact />
+                    <div className="flex justify-center items-center">
+                        <div className="flex flex-col w-full max-w-6xl">
+                            <About />
+                            <Projects />
+                            <Experience />
+                            <Contact />
+                        </div>
+                    </div>
 
                     <div className="absolute inset-0 -z-50 backdrop-blur-sm"></div>
                 </main>

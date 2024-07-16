@@ -23,7 +23,7 @@ export default function ParticlesBackground({ className }: { className?: string 
     const windowSize = useWindowSize();
     const calculateParticles = () => {
         const area = windowSize.width * windowSize.height;
-        return Math.floor(area / 6000);
+        return Math.floor(area / 8000);
     };
 
     const options: ISourceOptions = useMemo(
@@ -31,7 +31,7 @@ export default function ParticlesBackground({ className }: { className?: string 
             fullScreen: {
                 enable: false,
             },
-            fpsLimit: 120,
+            fpsLimit: 30,
             detectRetina: true,
             smooth: true,
             particles: {
@@ -47,7 +47,7 @@ export default function ParticlesBackground({ className }: { className?: string 
                 },
                 move: {
                     enable: true,
-                    speed: 0.05,
+                    speed: 0.02,
                     direction: MoveDirection.none,
                     outModes: {
                         default: OutMode.bounce,
