@@ -54,6 +54,6 @@ export function useActiveSection() {
     return activeSection;
 }
 
-export function isMobile() {
+export function useIsMobile() {
     return useWindowSize().width < 1024;
 }

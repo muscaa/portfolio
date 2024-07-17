@@ -8,7 +8,7 @@ import Contacts from "../svg/Contacts";
 import Menu from "../svg/Menu";
 import Maxi from "./Maxi";
 import {
-    isMobile,
+    useIsMobile,
     useActiveSection
 } from "../States";
 import { openPopupMenu } from "./PopupMenu";
@@ -60,7 +60,7 @@ export default function Navbar() {
                     <Tab href="#home" text="muscaa" IconComponent={Maxi} />
                 </ul>
                 
-                {isMobile() ? (
+                {useIsMobile() ? (
                     <Hamburger activeSection={activeSection} />
                 ) : (
                     <Tabs activeSection={activeSection} />

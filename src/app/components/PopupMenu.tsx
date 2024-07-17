@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    isMobile,
+    useIsMobile,
     useActiveSection
 } from "../States";
 import Close from "../svg/Close";
@@ -40,7 +40,7 @@ function Tabs({ activeSection }: { activeSection: string }) {
 export default function PopupMenu() {
     const activeSection = useActiveSection();
 
-    if (!isMobile()) return null;
+    if (!useIsMobile()) return null;
     return (
         <div id="popupMenu" className="fixed right-0 top-0 w-0 transition-all duration-200 ease-in-out h-full bg-background-1 bg-opacity-25 backdrop-blur-3xl z-50">
             <div className="absolute inset-0 w-screen flex flex-col">
