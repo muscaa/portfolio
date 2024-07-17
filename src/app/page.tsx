@@ -4,6 +4,7 @@ import ParticlesBackground from "./components/ParticlesBackground";
 import Home from "./sections/Home";
 import Navbar from "./components/Navbar";
 import About from "./sections/About";
+import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
@@ -21,6 +22,7 @@ export default function Main() {
                     <div className="flex justify-center items-center">
                         <div className="flex flex-col w-full max-w-6xl">
                             <About />
+                            <Skills />
                             <Projects />
                             <Experience />
                             <Contact />

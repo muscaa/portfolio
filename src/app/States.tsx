@@ -53,3 +53,7 @@ export function useActiveSection() {
 
     return activeSection;
 }
+
+export function isMobile() {
+    return useWindowSize().width < 1024;
+}
