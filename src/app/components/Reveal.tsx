@@ -57,6 +57,7 @@ export default function Reveal({ children, direction = "up", delay = 0 }: { chil
                 initial="hidden"
                 animate={controls}
                 transition={{
+                    easings: "easeInOut",
                     duration: 0.4,
                     delay: delay,
                 }}
