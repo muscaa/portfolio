@@ -20,6 +20,7 @@ const config: Config = {
                 "background-3": "rgb(62, 65, 68)",
                 "background-4": "rgb(82, 85, 88)",
                 "text": "rgb(250, 249, 246)",
+                "text-1": "rgb(220, 219, 216)",
                 "text-2": "rgb(173, 172, 171)",
                 "text-3": "rgb(113, 112, 111)",
                 "primary": "rgb(118, 73, 254)",
@@ -54,6 +55,9 @@ const config: Config = {
                 "msm": "8px",
             },
         },
+    },
+    variants: {
+        hyphens: ['responsive'],
     },
     plugins: [],
 };

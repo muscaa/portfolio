@@ -13,9 +13,9 @@ import {
 } from "react-google-recaptcha-v3";
 import Shield from "../svg/Shield";
 import {
-    useState,
-    useEffect
+    useState
 } from "react";
+import { hyphenateSync } from "hyphen/en";
 
 function ContactForm() {
     const { executeRecaptcha } = useGoogleReCaptcha();
@@ -92,10 +92,9 @@ export default function Contact() {
                 ">
                     <p className="
                     mb-8 md:mb-12
-                    text-center sm:text-start
                     ">
-                        Have a question or want to work together?
-                        Leave your details and I'll get back to you as soon as possible.
+                        {hyphenateSync(`Have a question or want to work together? 
+                            Leave your details and I'll get back to you as soon as possible.`)}
                     </p>
                     <GoogleReCaptchaProvider reCaptchaKey="6LdLCQkqAAAAAJqQeo3ss5PdqytaM9QWrol9x5vY">
                         <ContactForm />
