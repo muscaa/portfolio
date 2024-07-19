@@ -4,7 +4,6 @@ import ButtonArrow from "../components/ButtonArrow";
 import Github from "../svg/Github";
 import Instagram from "../svg/Instagram";
 import Linkedin from "../svg/Linkedin";
-import Mail from "../svg/Mail";
 
 function IconLink({ href, IconComponent }: { href: string, IconComponent: ComponentType<{ className?: string }> }) {
     return (
@@ -22,7 +21,6 @@ export default function Footer() {
                 <IconLink href="https://github.com/muscaa/" IconComponent={Github} />
                 <IconLink href="https://www.instagram.com/musca.mihail/" IconComponent={Instagram} />
                 <IconLink href="https://www.linkedin.com/in/muscaa/" IconComponent={Linkedin} />
-                <IconLink href="mailto:muscamihailp@gmail.com" IconComponent={Mail} />
             </div>
             <p className="text-xs font-light">© 2024 Musca Mihail</p>
         </footer>
