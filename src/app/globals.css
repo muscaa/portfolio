@@ -42,11 +42,6 @@ body {
             transform: translateX(-100%);
         }
     }
-
-    .mask-gradient {
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0) 100%);
-        pointer-events: none;
-    }
 }
 
 ::-webkit-scrollbar {

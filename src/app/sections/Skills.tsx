@@ -90,11 +90,11 @@ export default function Skills() {
             <Title text="Skills" />
             <div className="flex flex-col justify-center items-center gap-12">
                 <div className="flex max-w-4xl overflow-hidden" style={{
-                    maskImage: "linear-gradient(to right, transparent, black, black, black, black, black, black, black, black, transparent)"
-                }}>
+                        maskImage: "linear-gradient(to right, transparent, black, black, black, black, black, black, black, black, transparent)"
+                    }}>
                     <div className="flex group" style={{
-                    maskImage: "linear-gradient(to right, transparent, black, black, black, black, black, black, black, black, transparent)"
-                }}>
+                        maskImage: "linear-gradient(to right, transparent, black, black, black, black, black, black, black, black, transparent)"
+                    }}>
                         <SkillSet />
                         <SkillSet />
                     </div>
