@@ -25,6 +25,28 @@ body {
     .shadow-glow-lg {
         box-shadow: 0 0 100px -50px var(--tw-shadow-color);
     }
+
+    .animation-slide {
+        animation: slide 30s infinite linear;
+    }
+
+    .animation-pause {
+        animation-play-state: paused;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .mask-gradient {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0) 100%);
+        pointer-events: none;
+    }
 }
 
 ::-webkit-scrollbar {

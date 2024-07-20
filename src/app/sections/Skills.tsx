@@ -39,13 +39,47 @@ import Bash from "../svg/tools/Bash";
 import Docker from "../svg/tools/Docker";
 import Insomnia from "../svg/tools/Insomnia";
 
-function SkillSet({ title, children }: { title: string, children: ReactNode }) {
+/*function SkillSet({ title, children }: { title: string, children: ReactNode }) {
     return (
         <div className="flex flex-col justify-center items-center">
             <h2 className="text-2xl font-semibold mb-8">{title}</h2>
             <div className="flex flex-wrap max-w-2xl justify-center items-center gap-4">
                 {children}
             </div>
+        </div>
+    );
+}*/
+
+function SkillSet() {
+    return (
+        <div className="flex animation-slide group-hover:animation-pause">
+            <Skill name="Java" IconComponent={Java} />
+            <Skill name="C++" IconComponent={Cpp} />
+            <Skill name="C" IconComponent={C} />
+            <Skill name="C#" IconComponent={CSharp} />
+            <Skill name="Dart" IconComponent={Dart} />
+            <Skill name="HTML5" IconComponent={Html5} />
+            <Skill name="CSS3" IconComponent={Css3} />
+            <Skill name="JavaScript" IconComponent={JavaScript} />
+            <Skill name="TypeScript" IconComponent={TypeScript} />
+            <Skill name="Flutter" IconComponent={Flutter} />
+            <Skill name="Spring" IconComponent={Spring} />
+            <Skill name="React" IconComponent={ReactJs} />
+            <Skill name="Next" IconComponent={NextJs} />
+            <Skill name="Arduino" IconComponent={Arduino} />
+            <Skill name=".NET" IconComponent={DotNet} />
+            <Skill name="Electron" IconComponent={ElectronJs} />
+            <Skill name="MySQL" IconComponent={MySql} />
+            <Skill name="SQLite" IconComponent={SqLite} />
+            <Skill name="Supabase" IconComponent={Supabase} />
+            <Skill name="Eclipse" IconComponent={Eclipse} />
+            <Skill name="IntelliJ" IconComponent={IntelliJ} />
+            <Skill name="VS Code" IconComponent={VSCode} />
+            <Skill name="VS" IconComponent={VisualStudio} />
+            <Skill name="Git" IconComponent={Git} />
+            <Skill name="Bash" IconComponent={Bash} />
+            <Skill name="Docker" IconComponent={Docker} />
+            <Skill name="Insomnia" IconComponent={Insomnia} />
         </div>
     );
 }
@@ -55,47 +89,16 @@ export default function Skills() {
         <section id="skills">
             <Title text="Skills" />
             <div className="flex flex-col justify-center items-center gap-12">
-                <SkillSet title="Languages">
-                    <Skill name="Java" IconComponent={Java} />
-                    <Skill name="C++" IconComponent={Cpp} />
-                    <Skill name="C" IconComponent={C} />
-                    <Skill name="C#" IconComponent={CSharp} />
-                    <Skill name="Dart" IconComponent={Dart} />
-                    <Skill name="HTML5" IconComponent={Html5} />
-                    <Skill name="CSS3" IconComponent={Css3} />
-                    <Skill name="JavaScript" IconComponent={JavaScript} />
-                    <Skill name="TypeScript" IconComponent={TypeScript} />
-                </SkillSet>
-
-                <SkillSet title="Frameworks">
-                    <Skill name="Flutter" IconComponent={Flutter} />
-                    <Skill name="Spring" IconComponent={Spring} />
-                    <Skill name="React" IconComponent={ReactJs} />
-                    <Skill name="Next" IconComponent={NextJs} />
-                    <Skill name="Arduino" IconComponent={Arduino} />
-                    <Skill name=".NET" IconComponent={DotNet} />
-                    <Skill name="Electron" IconComponent={ElectronJs} />
-                </SkillSet>
-
-                <SkillSet title="Databases">
-                    <Skill name="MySQL" IconComponent={MySql} />
-                    <Skill name="SQLite" IconComponent={SqLite} />
-                    <Skill name="Supabase" IconComponent={Supabase} />
-                </SkillSet>
-
-                <SkillSet title="IDEs">
-                    <Skill name="Eclipse" IconComponent={Eclipse} />
-                    <Skill name="IntelliJ" IconComponent={IntelliJ} />
-                    <Skill name="VS Code" IconComponent={VSCode} />
-                    <Skill name="VS" IconComponent={VisualStudio} />
-                </SkillSet>
-
-                <SkillSet title="Tools">
-                    <Skill name="Git" IconComponent={Git} />
-                    <Skill name="Bash" IconComponent={Bash} />
-                    <Skill name="Docker" IconComponent={Docker} />
-                    <Skill name="Insomnia" IconComponent={Insomnia} />
-                </SkillSet>
+                <div className="flex max-w-4xl overflow-hidden" style={{
+                    maskImage: "linear-gradient(to right, transparent, black, black, black, black, black, black, black, black, transparent)"
+                }}>
+                    <div className="flex group" style={{
+                    maskImage: "linear-gradient(to right, transparent, black, black, black, black, black, black, black, black, transparent)"
+                }}>
+                        <SkillSet />
+                        <SkillSet />
+                    </div>
+                </div>
             </div>
         </section>
     );
