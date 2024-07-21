@@ -42,7 +42,6 @@ function Tabs({ activeSection }: { activeSection: string }) {
     return (
         <ul className="inline-flex w-full justify-end">
             <Tab href="#about" text="About" IconComponent={UserMale} active={activeSection == "about"} />
-            <Tab href="#skills" text="Skills" IconComponent={Star} active={activeSection == "skills"} />
             <Tab href="#projects" text="Projects" IconComponent={CheckAll} active={activeSection == "projects"} />
             <Tab href="#experience" text="Experience" IconComponent={Briefcase} active={activeSection == "experience"} />
             <Tab href="#contact" text="Contact" IconComponent={Contacts} active={activeSection == "contact"} />
