@@ -42,7 +42,7 @@ import Insomnia from "../svg/tools/Insomnia";
 
 function SkillSet() {
     return (
-        <div className="flex animation-slide group-hover:animation-pause">
+        <div className="flex">
             <Skill name="Java" IconComponent={Java} />
             <Skill name="Spring" IconComponent={Spring} />
 
@@ -114,13 +114,9 @@ export default function About() {
                 </div>
                 <div className="flex-grow"></div>
             </div>
-            <div className="flex flex-col justify-center items-center gap-12">
-                <div className="flex w-full overflow-hidden" style={{
-                        maskImage: "linear-gradient(to right, transparent, black, black, black, black, black, black, black, black, transparent)"
-                    }}>
-                    <div className="flex group" style={{
-                        maskImage: "linear-gradient(to right, transparent, black, black, black, black, black, black, black, black, transparent)"
-                    }}>
+            <div className="flex flex-col justify-center items-center mask-smooth">
+                <div className="flex w-full overflow-hidden masked">
+                    <div className="flex animation-slide hover:animation-pause">
                         <SkillSet />
                         <SkillSet />
                     </div>
