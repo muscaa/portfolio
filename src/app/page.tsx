@@ -26,8 +26,6 @@ export default function Main() {
                             <Contact />
                         </div>
                     </div>
-
-                    <div className="absolute inset-0 -z-50 backdrop-blur-sm"></div>
                 </main>
                 <Footer />
             </div>

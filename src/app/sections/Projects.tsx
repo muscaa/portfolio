@@ -8,6 +8,7 @@ export default function Projects() {
         projects.push({
             name: `Project ${i}`,
             description: `This is a description of Project ${i}.`,
+            skills: [ "React", "TypeScript", "Tailwind CSS" ],
             imageSrc: "project.png"
         });
     }
@@ -21,6 +22,7 @@ export default function Projects() {
                         key={index}
                         name={project.name}
                         description={project.description}
+                        skills={project.skills}
                         imageSrc={project.imageSrc}
                     />
                 ))}
