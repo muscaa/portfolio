@@ -8,7 +8,7 @@ export default function InputArea({ id, type, name, placeholder, className, onCh
             name={name}
             placeholder={placeholder}
             className={`resize-none min-h-32 appearance-none placeholder-text-2 outline-none p-3
-                bg-background-4 bg-opacity-25 backdrop-blur-msm rounded-md ${className}`}
+                bg-background-4 bg-opacity-25 backdrop-blur-sm rounded-md ${className}`}
             onChange={onChange}
         />
     );

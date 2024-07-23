@@ -9,7 +9,7 @@ export default function Input({ id, type, name, placeholder, className, onChange
             name={name}
             placeholder={placeholder}
             className={`appearance-none placeholder-text-2 outline-none p-3
-                bg-background-4 bg-opacity-25 backdrop-blur-msm rounded-md ${className}`}
+                bg-background-4 bg-opacity-25 backdrop-blur-sm rounded-md ${className}`}
             onChange={onChange}
         />
     );

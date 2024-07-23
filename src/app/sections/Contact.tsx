@@ -16,7 +16,16 @@ import {
     useState
 } from "react";
 import { hyphenateSync } from "hyphen/en";
+import IconLink from "../components/IconLink";
 import Link from "next/link";
+import { ComponentType } from "react";
+
+// Icons
+import Github from "../svg/Github";
+import Instagram from "../svg/Instagram";
+import Linkedin from "../svg/Linkedin";
+import Mail from "../svg/Mail";
+import Phone from "../svg/Phone";
 
 function ContactForm() {
     const { executeRecaptcha } = useGoogleReCaptcha();
@@ -70,7 +79,9 @@ function ContactForm() {
             <div className="grid grid-cols-2 sm:grid-cols-[60%_40%] my-2">
                 <div className="flex justify-center items-center h-full">
                     <Shield className="w-6 h-6 mr-2 sm:ml-0 ml-2 flex-shrink-0" />
-                    <p className="text-text-1">Protected by reCAPTCHA</p>
+                    <div className="flex max-w-20 sm:max-w-full text-text-2">
+                        <p>Protected by reCAPTCHA</p>
+                    </div>
                 </div>
                 <Button
                     type="submit"
@@ -82,28 +93,59 @@ function ContactForm() {
     );
 }
 
+function Info({ name, value, href, IconComponent }:
+    { name: string, value: string, href: string, IconComponent: ComponentType<{ className?: string }> }) {
+    return (
+        <Link href={href} target="_blank" className="flex items-center gap-4 p-3
+        bg-primary bg-opacity-25 backdrop-blur-sm rounded-md
+        transform transition-transform duration-200 ease-in-out hover:scale-105
+        ">
+            <IconComponent className="w-8 h-8 text-text" />
+            <div className="flex flex-col">
+                <p className="font-bold text-text-1">{name}</p>
+                <p className="font-light text-text-2">{value}</p>
+            </div>
+        </Link>
+    );
+}
+
 export default function Contact() {
     return (
         <section id="contact">
             <Title text="Contact" />
-            <div className="flex flex-col justify-center items-center">
-                <div className="
-                w-64 sm:w-96 md:w-128
+            <div className="
+                flex flex-col justify-center items-center
                 mb-24 md:mb-32
+                px-8 md:px-16
+            ">
+                <p className="
+                mb-8 md:mb-12
+                max-w-xl text-center
                 ">
-                    <p className="
-                    mb-8 md:mb-12
-                    ">
-                        {hyphenateSync(`Have a question or want to work together? 
-                            Leave your details and I'll get back to you as soon as possible.`)}
-                    </p>
-                    <GoogleReCaptchaProvider reCaptchaKey="6LdLCQkqAAAAAJqQeo3ss5PdqytaM9QWrol9x5vY">
-                        <ContactForm />
-                    </GoogleReCaptchaProvider>
-                    <p className="text-center text-text-3">or</p>
-                    <p className="text-center text-primary my-2">
-                        <Link href="mailto:muscamihailp@gmail.com" target="_blank">Email Me</Link>
-                    </p>
+                    {hyphenateSync(`Have a question or want to work together? 
+                        Leave your details and I'll get back to you as soon as possible.`)}
+                </p>
+                <div className="flex flex-col lg:flex-row justify-center items-center w-full">
+                    <div className="w-full max-w-md">
+                        <GoogleReCaptchaProvider reCaptchaKey="6LdLCQkqAAAAAJqQeo3ss5PdqytaM9QWrol9x5vY">
+                            <ContactForm />
+                        </GoogleReCaptchaProvider>
+                    </div>
+                    <div className="flex justify-center items-center p-4 text-text-2">
+                        <p>OR</p>
+                    </div>
+                    <div className="w-full max-w-md">
+                        <div className="flex flex-col gap-2">
+                            <Info name="Phone" value="(+)40 738 479 198" href="tel:+40738479198" IconComponent={Phone} />
+                            <Info name="E-mail" value="muscamihailp@gmail.com" href="mailto:muscamihailp@gmail.com" IconComponent={Mail} />
+                        </div>
+                        <div className="h-px my-4 md:my-8 bg-text-2"></div>
+                        <div className="flex gap-2 justify-center items-center">
+                            <IconLink href="https://github.com/muscaa/" IconComponent={Github} />
+                            <IconLink href="https://www.instagram.com/musca.mihail/" IconComponent={Instagram} />
+                            <IconLink href="https://www.linkedin.com/in/muscaa/" IconComponent={Linkedin} />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
