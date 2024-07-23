@@ -17,8 +17,7 @@ import {
 } from "react";
 import { hyphenateSync } from "hyphen/en";
 import IconLink from "../components/IconLink";
-import Link from "next/link";
-import { ComponentType } from "react";
+import Info from "../components/Info";
 
 // Icons
 import Github from "../svg/Github";
@@ -76,12 +75,10 @@ function ContactForm() {
                 field="message"
                 errors={state.errors}
             />
-            <div className="grid grid-cols-2 sm:grid-cols-[60%_40%] my-2">
-                <div className="flex justify-center items-center h-full">
+            <div className="grid grid-cols-2 my-2">
+                <div className="flex justify-center items-center h-full text-text-2">
                     <Shield className="w-6 h-6 mr-2 sm:ml-0 ml-2 flex-shrink-0" />
-                    <div className="flex max-w-20 sm:max-w-full text-text-2">
-                        <p>Protected by reCAPTCHA</p>
-                    </div>
+                    <p className="max-w-20 md:max-w-32">Protected by reCAPTCHA</p>
                 </div>
                 <Button
                     type="submit"
@@ -90,22 +87,6 @@ function ContactForm() {
                 />
             </div>
         </form>
-    );
-}
-
-function Info({ name, value, href, IconComponent }:
-    { name: string, value: string, href: string, IconComponent: ComponentType<{ className?: string }> }) {
-    return (
-        <Link href={href} target="_blank" className="flex items-center gap-4 p-3
-        bg-primary bg-opacity-25 backdrop-blur-sm rounded-md
-        transform transition-transform duration-200 ease-in-out hover:scale-105
-        ">
-            <IconComponent className="w-8 h-8 text-text" />
-            <div className="flex flex-col">
-                <p className="font-bold text-text-1">{name}</p>
-                <p className="font-light text-text-2">{value}</p>
-            </div>
-        </Link>
     );
 }
 
