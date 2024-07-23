@@ -15,7 +15,7 @@ export default function Project({ name, description, skills, imageSrc }:
                         <div className="w-full h-px bg-text-3 mb-2"></div>
                         <div className="flex flex-wrap gap-1 mb-2">
                             {skills.map((skill, index) => (
-                                <span key={index} className="text-sm text-text bg-primary bg-opacity-25 px-2 rounded-lg">{skill}</span>
+                                <span key={index} className="text-sm text-secondary bg-background-4 bg-opacity-25 px-2 rounded-lg">{skill}</span>
                             ))}
                         </div>
                         <p className="text-text-1">{description}</p>

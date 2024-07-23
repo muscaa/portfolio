@@ -114,7 +114,7 @@ export default function About() {
                 </div>
                 <div className="flex-grow"></div>
             </div>
-            <div className="flex flex-col justify-center items-center mask-smooth">
+            <div className="flex flex-col justify-center items-center mask-smooth-sm">
                 <div className="flex w-full overflow-hidden masked">
                     <div className="flex animation-slide hover:animation-pause">
                         <SkillSet />

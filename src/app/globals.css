@@ -47,8 +47,16 @@ body {
         mask-image: linear-gradient(black, black);
     }
 
-    .mask-smooth {
+    .mask-smooth-sm {
         mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+
+    .mask-smooth-md {
+        mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    }
+
+    .mask-smooth-lg {
+        mask-image: linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%);
     }
 }
 

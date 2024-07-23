@@ -82,11 +82,13 @@ export default function ParticlesBackground({ className }: { className?: string 
 
     if (init) {
         return (
-            <Particles
-                id="bg-particles"
-                options={options}
-                className={className}
-            />
+            <div className={`mask-smooth-lg ${className}`}>
+                <Particles
+                    id="bg-particles"
+                    options={options}
+                    className="absolute inset-0 masked"
+                />
+            </div>
         );
     }
 

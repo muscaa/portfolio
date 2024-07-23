@@ -16,6 +16,7 @@ import {
     useState
 } from "react";
 import { hyphenateSync } from "hyphen/en";
+import Link from "next/link";
 
 function ContactForm() {
     const { executeRecaptcha } = useGoogleReCaptcha();
@@ -69,7 +70,7 @@ function ContactForm() {
             <div className="grid grid-cols-2 sm:grid-cols-[60%_40%] my-2">
                 <div className="flex justify-center items-center h-full">
                     <Shield className="w-6 h-6 mr-2 sm:ml-0 ml-2 flex-shrink-0" />
-                    <p>Protected by reCAPTCHA</p>
+                    <p className="text-text-1">Protected by reCAPTCHA</p>
                 </div>
                 <Button
                     type="submit"
@@ -99,6 +100,10 @@ export default function Contact() {
                     <GoogleReCaptchaProvider reCaptchaKey="6LdLCQkqAAAAAJqQeo3ss5PdqytaM9QWrol9x5vY">
                         <ContactForm />
                     </GoogleReCaptchaProvider>
+                    <p className="text-center text-text-3">or</p>
+                    <p className="text-center text-primary my-2">
+                        <Link href="mailto:muscamihailp@gmail.com" target="_blank">Email Me</Link>
+                    </p>
                 </div>
             </div>
         </section>
