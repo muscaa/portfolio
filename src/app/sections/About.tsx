@@ -3,8 +3,9 @@ import Title from "../components/Title";
 import { hyphenateSync } from "hyphen/en";
 import Skill from "../components/Skill";
 import Button from "../components/Button";
-import Divider from "../components/Divider";
 import Image from "next/image";
+import { ReactTyped } from "react-typed";
+import Divider from "../components/Divider";
 
 // Languages
 import Java from "../svg/languages/Java";
@@ -89,16 +90,38 @@ export default function About() {
         <section id="about">
             <Title text="About" />
             <div className="flex justify-center px-8
-            flex-col sm:flex-row
+            flex-col sm:flex-row-reverse
             gap-8 lg:gap-16
             ">
                 <div className="flex flex-col justify-center items-center min-w-64 min-h-64 md:min-w-80 md:min-h-80 lg:min-w-96 lg:min-h-96">
-                    <Image className="rounded-full border-2 border-primary w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96" src="me.png" width={384} height={384} alt="Me" />
+                    <Image className="rounded-full border-2 border-text-2 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96" src="me.png" width={384} height={384} alt="Me" />
                 </div>
 
                 <div className="flex flex-col flex-grow">
                     <div className="flex flex-col gap-2">
-                        <h2 className="font-bold text-center lg:text-end">Musca Mihail</h2>
+                        <h2 className="font-bold text-center">Musca Mihail</h2>
+                        <Divider />
+                        <div className="h3 font-bold">
+                            <span>I am a </span>
+                            <ReactTyped
+                                strings={[
+                                    "computer science student",
+                                    "java fanatic",
+                                    "full-stack developer",
+                                    "linux &amp; windows user",
+                                    "photography &amp; music lover",
+                                    "bird lover",
+                                    // "Open Source Contributor", // not yet
+                                    // "Software Engineer", // not yet
+                                ]}
+                                typeSpeed={50}
+                                backSpeed={30}
+                                backDelay={2500}
+                                startDelay={500}
+                                loop
+                                className="text-text-3"
+                            />
+                        </div>
                         <p className="text-justify text-text-1">
                             {hyphenateSync(`
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id ante auctor,
