@@ -19,7 +19,6 @@ import { hyphenateSync } from "hyphen/en";
 import IconLink from "../components/IconLink";
 import Info from "../components/Info";
 import Divider from "../components/Divider";
-import { P } from "../components/Text";
 
 // Icons
 import Github from "../svg/Github";
@@ -82,8 +81,8 @@ function ContactForm() {
                 <div className="flex justify-center items-center h-full text-text-2">
                     <Shield className="w-6 h-6 md:w-8 md:h-8 mr-2 sm:ml-0 ml-2 flex-shrink-0" />
                     <div className="flex flex-col">
-                        <P>Protected by</P>
-                        <P>reCAPTCHA</P>
+                        <h5>Protected by</h5>
+                        <h5>reCAPTCHA</h5>
                     </div>
                 </div>
                 <Button
@@ -105,13 +104,13 @@ export default function Contact() {
                 mb-24 md:mb-32
                 px-8 md:px-16
             ">
-                <P className="
+                <p className="
                 mb-8 md:mb-12
                 max-w-xl text-center
                 ">
                     {hyphenateSync(`Have a question or want to work together? 
                         Leave your details and I'll get back to you as soon as possible.`)}
-                </P>
+                </p>
                 <div className="flex flex-col lg:flex-row justify-center items-center w-full">
                     <div className="w-full max-w-md">
                         <GoogleReCaptchaProvider reCaptchaKey="6LdLCQkqAAAAAJqQeo3ss5PdqytaM9QWrol9x5vY">
@@ -119,7 +118,7 @@ export default function Contact() {
                         </GoogleReCaptchaProvider>
                     </div>
                     <div className="flex justify-center items-center p-4 text-text-2">
-                        <P>OR</P>
+                        <p>OR</p>
                     </div>
                     <div className="w-full max-w-md">
                         <div className="flex flex-col gap-2">

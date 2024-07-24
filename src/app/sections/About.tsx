@@ -4,7 +4,6 @@ import { hyphenateSync } from "hyphen/en";
 import Skill from "../components/Skill";
 import Button from "../components/Button";
 import Divider from "../components/Divider";
-import { P, H3 } from "../components/Text";
 import Image from "next/image";
 
 // Languages
@@ -89,7 +88,7 @@ export default function About() {
     return (
         <section id="about">
             <Title text="About" />
-            <div className="flex justify-center items-center px-8
+            <div className="flex justify-center px-8
             flex-col sm:flex-row
             gap-8 lg:gap-16
             ">
@@ -97,20 +96,24 @@ export default function About() {
                     <Image className="rounded-full border-2 border-primary w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96" src="me.png" width={384} height={384} alt="Me" />
                 </div>
 
-                <div className="flex flex-col flex-grow gap-2">
-                    <H3 className="text-3xl font-bold text-center">Musca Mihail</H3>
-                    <Divider />
-                    <P className="text-justify text-text-1">
-                        {hyphenateSync(`
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id ante auctor,
-                            interdum neque eu, porta ligula. Vivamus commodo imperdiet nulla, eu eleifend massa
-                            rhoncus a. Morbi eget tristique enim. Cras dapibus tortor vitae urna commodo, semper
-                            rutrum metus efficitur. Etiam nibh magna, pellentesque at risus id, venenatis rhoncus
-                            nisi. Donec ut efficitur arcu. Aenean convallis elit lacus, sit amet varius velit
-                            luctus in. Nunc suscipit congue auctor.
-                            `)}
-                    </P>
-                    <Button text="View Resume" />
+                <div className="flex flex-col flex-grow">
+                    <div className="flex flex-col gap-2">
+                        <h2 className="text-3xl font-bold text-center">Musca Mihail</h2>
+                        <Divider />
+                        <p className="text-justify text-text-1">
+                            {hyphenateSync(`
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id ante auctor,
+                                interdum neque eu, porta ligula. Vivamus commodo imperdiet nulla, eu eleifend massa
+                                rhoncus a. Morbi eget tristique enim. Cras dapibus tortor vitae urna commodo, semper
+                                rutrum metus efficitur. Etiam nibh magna, pellentesque at risus id, venenatis rhoncus
+                                nisi. Donec ut efficitur arcu. Aenean convallis elit lacus, sit amet varius velit
+                                luctus in. Nunc suscipit congue auctor.
+                                `)}
+                        </p>
+                    </div>
+                    <div className="flex flex-col h-full justify-end">
+                        <Button text="View Resume" />
+                    </div>
                 </div>
             </div>
             <div className="flex mask-smooth-sm mt-16">

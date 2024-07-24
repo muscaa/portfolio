@@ -54,6 +54,9 @@ const config: Config = {
             backdropBlur: {
                 "msm": "8px",
             },
+            fontSize: {
+                "xxs": [ "0.625rem", "0.75rem" ],
+            },
         },
     },
     variants: {

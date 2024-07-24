@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ComponentType } from "react";
-import { P } from "./Text";
 
 export default function Info({ name, value, href, IconComponent }:
     { name: string, value: string, href: string, IconComponent: ComponentType<{ className?: string }> }) {
@@ -11,8 +10,8 @@ export default function Info({ name, value, href, IconComponent }:
         ">
             <IconComponent className="w-8 h-8 text-primary" />
             <div className="flex flex-col">
-                <P className="font-bold text-primary">{name}</P>
-                <P className="font-light text-text-2">{value}</P>
+                <p className="font-bold text-primary">{name}</p>
+                <p className="font-light text-text-2">{value}</p>
             </div>
         </Link>
     );
