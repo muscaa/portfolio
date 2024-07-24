@@ -16,8 +16,8 @@ export default function Project({ name, description, skills, imageSrc }:
                         <H2>{name}</H2>
                         <div className="w-full h-px bg-text-3 mb-2"></div>
                         <div className="flex flex-wrap gap-1 mb-2">
-                            {skills.map((skill) => (
-                                <Span className={`text-secondary bg-background-4 bg-opacity-25 px-2 rounded-lg ${StyleH6}`}>{skill}</Span>
+                            {skills.map((skill, index) => (
+                                <Span key={index} className={`text-secondary bg-background-4 bg-opacity-25 px-2 rounded-lg ${StyleH6}`}>{skill}</Span>
                             ))}
                         </div>
                         <P className="text-text-1">{description}</P>
