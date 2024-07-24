@@ -5,6 +5,7 @@ import Skill from "../components/Skill";
 import Button from "../components/Button";
 import Divider from "../components/Divider";
 import { P, H3 } from "../components/Text";
+import Image from "next/image";
 
 // Languages
 import Java from "../svg/languages/Java";
@@ -93,7 +94,7 @@ export default function About() {
             gap-8 lg:gap-16
             ">
                 <div className="flex flex-col justify-center items-center min-w-64 min-h-64 md:min-w-80 md:min-h-80 lg:min-w-96 lg:min-h-96">
-                    <img src="me.png" alt="Me" className="rounded-full border-2 border-primary w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96" />
+                    <Image className="rounded-full border-2 border-primary w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96" src="me.png" width={384} height={384} alt="Me" />
                 </div>
 
                 <div className="flex flex-col flex-grow gap-2">

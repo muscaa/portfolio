@@ -2,6 +2,7 @@ import React from "react";
 import Reveal from "./Reveal";
 import { hyphenateSync } from "hyphen/en";
 import { P, H4, H6 } from "./Text";
+import Image from "next/image";
 
 export default function Job({ name, company, date, description, icon }: { name: string, company: string, date: string, description: string, icon: string }) {
     return (
@@ -10,7 +11,7 @@ export default function Job({ name, company, date, description, icon }: { name: 
             rounded-lg overflow-hidden flex flex-col transform transition-all duration-200 ease-in-out hover:scale-105">
                 <div className="p-4 flex flex-col">
                     <div className="flex mb-4 items-center">
-                        <img className="w-16 h-16 rounded-xl mr-4" src={icon} alt="" />
+                        <Image className="w-16 h-16 rounded-xl mr-4" src={icon} width={64} height={64} alt="" />
                         <div className="flex flex-col">
                             <H4>{name}</H4>
                             <H6 className="text-text-3">{company}</H6>

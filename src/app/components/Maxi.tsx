@@ -1,7 +1,8 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Maxi({ className }: { className?: string }) {
     return (
-        <img src="maxi_32x32.png" alt="Maxi" className={className} />
+        <Image src="maxi_32x32.png" width={32} height={32} alt="Maxi" className={className} />
     );
 }

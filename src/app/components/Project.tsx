@@ -2,6 +2,7 @@ import React from "react";
 import Reveal from "./Reveal";
 import Button from "./Button";
 import { P, Span, H2, StyleH6 } from "./Text";
+import Image from "next/image";
 
 export default function Project({ name, description, skills, imageSrc }:
     { name: string, description: string, skills: string[], imageSrc: string }) {
@@ -9,7 +10,7 @@ export default function Project({ name, description, skills, imageSrc }:
         <Reveal>
             <div className="w-80 h-96 bg-background-3 bg-opacity-25 backdrop-blur-msm shadow-md shadow-background-1 hover:shadow-glow-lg hover:shadow-secondary
             rounded-lg overflow-hidden flex flex-col items-center transform transition-all duration-200 ease-in-out hover:scale-105">
-                <img className="w-full h-40 object-cover" src={imageSrc} alt={`${name} screenshot`} />
+                <Image className="w-full h-40 object-cover" src={imageSrc} width={320} height={180} alt={`${name} screenshot`} />
                 <div className="p-4 flex flex-col h-full justify-between">
                     <div className="flex flex-col">
                         <H2>{name}</H2>

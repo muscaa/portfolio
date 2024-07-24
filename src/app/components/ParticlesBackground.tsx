@@ -10,6 +10,11 @@ import {
     useWindowSize
 } from "../States";
 
+function calculateParticles(windowSize: { width: number, height: number }) {
+    const area = windowSize.width * windowSize.height;
+    return Math.floor(area / 8000);
+};
+
 export default function ParticlesBackground({ className }: { className?: string }) {
     const [init, setInit] = useState(false);
     useEffect(() => {
@@ -21,10 +26,6 @@ export default function ParticlesBackground({ className }: { className?: string 
     }, []);
 
     const windowSize = useWindowSize();
-    const calculateParticles = () => {
-        const area = windowSize.width * windowSize.height;
-        return Math.floor(area / 8000);
-    };
 
     const options: ISourceOptions = useMemo(
         () => ({
@@ -54,7 +55,7 @@ export default function ParticlesBackground({ className }: { className?: string 
                     },
                 },
                 number: {
-                    value: calculateParticles(),
+                    value: calculateParticles(windowSize),
                 },
                 opacity: {
                     value: {
