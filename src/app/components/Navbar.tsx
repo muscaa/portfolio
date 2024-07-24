@@ -12,6 +12,7 @@ import {
     useActiveSection
 } from "../States";
 import { openPopupMenu } from "./PopupMenu";
+import { P } from "./Text";
 
 export function Tab({ href, text, IconComponent, active, target }:
     { href: string, text: string, IconComponent: ComponentType<{ className?: string }>, active?: boolean, target?: string }) {
@@ -21,7 +22,7 @@ export function Tab({ href, text, IconComponent, active, target }:
             transition-colors duration-200 ease-in-out hover:text-primary ${active ? "text-primary" : ""}`}>
                 <div className="relative flex items-center">
                     <IconComponent className="w-6 h-6 mr-1" />
-                    <p>{text}</p>
+                    <P>{text}</P>
                 </div>
             </Link>
         </li>

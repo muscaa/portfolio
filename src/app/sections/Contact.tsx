@@ -18,6 +18,8 @@ import {
 import { hyphenateSync } from "hyphen/en";
 import IconLink from "../components/IconLink";
 import Info from "../components/Info";
+import Divider from "../components/Divider";
+import { P } from "../components/Text";
 
 // Icons
 import Github from "../svg/Github";
@@ -25,6 +27,7 @@ import Instagram from "../svg/Instagram";
 import Linkedin from "../svg/Linkedin";
 import Mail from "../svg/Mail";
 import Phone from "../svg/Phone";
+import Location from "../svg/Location";
 
 function ContactForm() {
     const { executeRecaptcha } = useGoogleReCaptcha();
@@ -77,8 +80,11 @@ function ContactForm() {
             />
             <div className="grid grid-cols-2 my-2">
                 <div className="flex justify-center items-center h-full text-text-2">
-                    <Shield className="w-6 h-6 mr-2 sm:ml-0 ml-2 flex-shrink-0" />
-                    <p className="max-w-20 md:max-w-32">Protected by reCAPTCHA</p>
+                    <Shield className="w-6 h-6 md:w-8 md:h-8 mr-2 sm:ml-0 ml-2 flex-shrink-0" />
+                    <div className="flex flex-col">
+                        <P>Protected by</P>
+                        <P>reCAPTCHA</P>
+                    </div>
                 </div>
                 <Button
                     type="submit"
@@ -99,13 +105,13 @@ export default function Contact() {
                 mb-24 md:mb-32
                 px-8 md:px-16
             ">
-                <p className="
+                <P className="
                 mb-8 md:mb-12
                 max-w-xl text-center
                 ">
                     {hyphenateSync(`Have a question or want to work together? 
                         Leave your details and I'll get back to you as soon as possible.`)}
-                </p>
+                </P>
                 <div className="flex flex-col lg:flex-row justify-center items-center w-full">
                     <div className="w-full max-w-md">
                         <GoogleReCaptchaProvider reCaptchaKey="6LdLCQkqAAAAAJqQeo3ss5PdqytaM9QWrol9x5vY">
@@ -113,14 +119,15 @@ export default function Contact() {
                         </GoogleReCaptchaProvider>
                     </div>
                     <div className="flex justify-center items-center p-4 text-text-2">
-                        <p>OR</p>
+                        <P>OR</P>
                     </div>
                     <div className="w-full max-w-md">
                         <div className="flex flex-col gap-2">
-                            <Info name="Phone" value="(+)40 738 479 198" href="tel:+40738479198" IconComponent={Phone} />
+                            <Info name="Location" value="Timisoara, Romania" href="https://www.google.com/maps/place/Timișoara/" IconComponent={Location} />
+                            <Info name="Phone" value="+40 738 479 198" href="tel:+40738479198" IconComponent={Phone} />
                             <Info name="E-mail" value="muscamihailp@gmail.com" href="mailto:muscamihailp@gmail.com" IconComponent={Mail} />
                         </div>
-                        <div className="h-px my-4 md:my-8 bg-text-2"></div>
+                        <Divider className="my-4" />
                         <div className="flex gap-2 justify-center items-center">
                             <IconLink href="https://github.com/muscaa/" IconComponent={Github} />
                             <IconLink href="https://www.instagram.com/musca.mihail/" IconComponent={Instagram} />

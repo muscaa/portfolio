@@ -2,14 +2,15 @@ import React from "react";
 import { ReactTyped } from "react-typed";
 import ButtonArrow from "../components/ButtonArrow";
 import Reveal from "../components/Reveal";
+import { H1, StyleH2 } from "../components/Text";
 
 export default function Home() {
     return (
-        <section id="home" className="flex flex-col justify-center items-center text-center min-h-screen md:text-6xl text-3xl font-light">
+        <section id="home" className="flex flex-col justify-center items-center text-center min-h-screen">
             <div className="flex-grow"></div>
             <div className="flex flex-col items-center space-y-2 mx-8">
                 <Reveal direction="up">
-                    <p>Hello, I'm <span className="text-primary font-medium">Mihail</span>.</p>
+                    <H1>Hello, I'm Mihail.</H1>
                 </Reveal>
                 <hr className="md:w-144 w-72 border-t-2 my-4" />
                 <Reveal direction="down">
@@ -32,7 +33,7 @@ export default function Home() {
                         backDelay={2000}
                         startDelay={500}
                         loop
-                        className="md:text-4xl text-2xl"
+                        className={StyleH2}
                     />
                 </Reveal>
             </div>

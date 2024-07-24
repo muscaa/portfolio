@@ -1,6 +1,7 @@
 import React from "react";
 import Reveal from "./Reveal";
 import { hyphenateSync } from "hyphen/en";
+import { P, H4, H6 } from "./Text";
 
 export default function Job({ name, company, date, description, icon }: { name: string, company: string, date: string, description: string, icon: string }) {
     return (
@@ -11,13 +12,13 @@ export default function Job({ name, company, date, description, icon }: { name: 
                     <div className="flex mb-4 items-center">
                         <img className="w-16 h-16 rounded-xl mr-4" src={icon} alt="" />
                         <div className="flex flex-col">
-                            <h2 className="text-xl font-bold">{name}</h2>
-                            <h3 className="text-base font-bold text-text-3">{company}</h3>
-                            <h3 className="text-sm font-normal text-text-3">{date}</h3>
+                            <H4>{name}</H4>
+                            <H6 className="text-text-3">{company}</H6>
+                            <H6 className="font-normal text-text-3">{date}</H6>
                         </div>
                     </div>
 
-                    <p lang="en" className="text-justify hyphens-auto text-text-1">{hyphenateSync(description)}</p>
+                    <P className="text-justify text-text-1">{hyphenateSync(description)}</P>
                 </div>
             </div>
         </Reveal>

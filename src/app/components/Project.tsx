@@ -1,6 +1,7 @@
 import React from "react";
 import Reveal from "./Reveal";
 import Button from "./Button";
+import { P, Span, H2, StyleH6 } from "./Text";
 
 export default function Project({ name, description, skills, imageSrc }:
     { name: string, description: string, skills: string[], imageSrc: string }) {
@@ -11,14 +12,14 @@ export default function Project({ name, description, skills, imageSrc }:
                 <img className="w-full h-40 object-cover" src={imageSrc} alt={`${name} screenshot`} />
                 <div className="p-4 flex flex-col h-full justify-between">
                     <div className="flex flex-col">
-                        <h2 className="text-xl font-bold">{name}</h2>
+                        <H2>{name}</H2>
                         <div className="w-full h-px bg-text-3 mb-2"></div>
                         <div className="flex flex-wrap gap-1 mb-2">
-                            {skills.map((skill, index) => (
-                                <span key={index} className="text-sm text-secondary bg-background-4 bg-opacity-25 px-2 rounded-lg">{skill}</span>
+                            {skills.map((skill) => (
+                                <Span className={`text-secondary bg-background-4 bg-opacity-25 px-2 rounded-lg ${StyleH6}`}>{skill}</Span>
                             ))}
                         </div>
-                        <p className="text-text-1">{description}</p>
+                        <P className="text-text-1">{description}</P>
                     </div>
                     <div className="flex justify-end gap-2">
                         <Button text="View" />

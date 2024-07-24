@@ -2,8 +2,9 @@ import React from "react";
 import Title from "../components/Title";
 import { hyphenateSync } from "hyphen/en";
 import Skill from "../components/Skill";
-import Info from "../components/Info";
 import Button from "../components/Button";
+import Divider from "../components/Divider";
+import { P, H3 } from "../components/Text";
 
 // Languages
 import Java from "../svg/languages/Java";
@@ -41,9 +42,6 @@ import Git from "../svg/tools/Git";
 import Bash from "../svg/tools/Bash";
 import Docker from "../svg/tools/Docker";
 import Insomnia from "../svg/tools/Insomnia";
-
-// Icons
-import Location from "../svg/Location";
 
 function SkillSet() {
     return (
@@ -90,10 +88,18 @@ export default function About() {
     return (
         <section id="about">
             <Title text="About" />
-            <div className="flex flex-col lg:flex-row justify-center items-center">
-                <div className="flex flex-col w-full justify-center items-center">
-                    <img src="me.png" alt="Me" className="rounded-full border-2 border-primary w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64" />
-                    <p className="text-justify p-4 md:p-8">
+            <div className="flex justify-center items-center px-8
+            flex-col sm:flex-row
+            gap-8 lg:gap-16
+            ">
+                <div className="flex flex-col justify-center items-center min-w-64 min-h-64 md:min-w-80 md:min-h-80 lg:min-w-96 lg:min-h-96">
+                    <img src="me.png" alt="Me" className="rounded-full border-2 border-primary w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96" />
+                </div>
+
+                <div className="flex flex-col flex-grow gap-2">
+                    <H3 className="text-3xl font-bold text-center">Musca Mihail</H3>
+                    <Divider />
+                    <P className="text-justify text-text-1">
                         {hyphenateSync(`
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id ante auctor,
                             interdum neque eu, porta ligula. Vivamus commodo imperdiet nulla, eu eleifend massa
@@ -102,15 +108,11 @@ export default function About() {
                             nisi. Donec ut efficitur arcu. Aenean convallis elit lacus, sit amet varius velit
                             luctus in. Nunc suscipit congue auctor.
                             `)}
-                    </p>
-                </div>
-
-                <div className="flex flex-col w-full gap-2">
-                    <Info name="Location" value="Timisoara, Romania" href="https://www.google.com/maps/place/Timișoara/" IconComponent={Location} />
+                    </P>
                     <Button text="View Resume" />
                 </div>
             </div>
-            <div className="flex flex-col justify-center items-center mask-smooth-sm">
+            <div className="flex mask-smooth-sm mt-16">
                 <div className="flex w-full overflow-hidden masked">
                     <div className="flex animation-slide hover:animation-pause">
                         <SkillSet />
