@@ -98,8 +98,7 @@ export default function About() {
 
                 <div className="flex flex-col flex-grow">
                     <div className="flex flex-col gap-2">
-                        <h2 className="text-3xl font-bold text-center">Musca Mihail</h2>
-                        <Divider />
+                        <h2 className="font-bold text-center lg:text-end">Musca Mihail</h2>
                         <p className="text-justify text-text-1">
                             {hyphenateSync(`
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id ante auctor,
@@ -116,8 +115,8 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            <div className="flex mask-smooth-sm mt-16">
-                <div className="flex w-full overflow-hidden masked">
+            <div className="flex mt-16">
+                <div className="flex w-full overflow-hidden mask-smooth-sm">
                     <div className="flex animation-slide hover:animation-pause">
                         <SkillSet />
                         <SkillSet />

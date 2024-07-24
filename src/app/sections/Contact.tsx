@@ -106,7 +106,7 @@ export default function Contact() {
             ">
                 <p className="
                 mb-8 md:mb-12
-                max-w-xl text-center
+                max-w-xl text-center text-text-1
                 ">
                     {hyphenateSync(`Have a question or want to work together? 
                         Leave your details and I'll get back to you as soon as possible.`)}
