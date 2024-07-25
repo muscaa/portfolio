@@ -6,6 +6,7 @@ export default function Info({ name, value, href, IconComponent }:
     return (
         <Link href={href} target="_blank" className="flex items-center gap-4 p-2
         bg-background-4 bg-opacity-25 backdrop-blur-sm rounded-md
+        shadow-md shadow-background-1 border border-background-4 border-opacity-25
         transform transition-transform duration-200 ease-in-out hover:scale-105
         ">
             <IconComponent className="w-8 h-8 text-primary" />

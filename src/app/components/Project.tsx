@@ -9,7 +9,8 @@ export default function Project({ name, description, skills, imageSrc, demoUrl, 
     { name: string, description: string, skills: string[], imageSrc: string, demoUrl: string, githubUrl: string }) {
     return (
         <Reveal>
-            <div className="w-80 h-112 sm:w-96 sm:h-120 lg:w-112 lg:h-128 bg-background-3 bg-opacity-25 backdrop-blur-sm shadow-md shadow-background-1
+            <div className="w-80 h-112 sm:w-96 sm:h-120 lg:w-112 lg:h-128 bg-background-3 bg-opacity-25 backdrop-blur-sm
+            shadow-md shadow-background-1 border border-background-3 border-opacity-25
             rounded-lg overflow-hidden flex flex-col transform transition-shadow duration-200 ease-in-out hover:shadow-glow-lg hover:shadow-text-2">
                 <Image className="w-full h-40 object-cover" src={imageSrc} width={320} height={180} alt={`${name} screenshot`} />
                 <div className="p-4 flex flex-col h-full justify-between">

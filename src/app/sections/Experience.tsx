@@ -11,6 +11,7 @@ export default function Experience() {
             date: "2020 - 2021",
             description: `This is a description of Job ${i}. Here you can write about your responsibilities, achievements, and skills you gained.`,
             icon: `job.png`,
+            skills: [ "React", "TypeScript", "Tailwind CSS" ],
         });
     }
 
@@ -26,6 +27,7 @@ export default function Experience() {
                         date={job.date}
                         description={job.description}
                         icon={job.icon}
+                        skills={job.skills}
                     />
                 ))}
             </div>

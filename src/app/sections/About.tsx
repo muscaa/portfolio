@@ -46,7 +46,7 @@ import Insomnia from "../svg/tools/Insomnia";
 
 function SkillSet() {
     return (
-        <div className="flex">
+        <>
             <Skill name="Java" IconComponent={Java} />
             <Skill name="Spring" IconComponent={Spring} />
 
@@ -81,7 +81,7 @@ function SkillSet() {
             <Skill name="Bash" IconComponent={Bash} />
             <Skill name="Docker" IconComponent={Docker} />
             <Skill name="Insomnia" IconComponent={Insomnia} />
-        </div>
+        </>
     );
 }
 
@@ -94,7 +94,8 @@ export default function About() {
             gap-8 lg:gap-16
             ">
                 <div className="flex flex-col justify-center items-center min-w-64 min-h-64 md:min-w-80 md:min-h-80 lg:min-w-96 lg:min-h-96">
-                    <Image className="rounded-full shadow-glow-lg shadow-text-2 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96" src="me.png" width={384} height={384} alt="Me" />
+                    <Image className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full
+                    shadow-glow-lg shadow-text-2 border border-background-4 border-opacity-25" src="me.png" width={384} height={384} alt="Me" />
                 </div>
 
                 <div className="flex flex-col flex-grow">
@@ -138,8 +139,10 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            <div className="flex mt-16">
-                <div className="flex w-full overflow-hidden mask-smooth-sm">
+            <div className="flex mt-8 lg:mt-16">
+                <div className="flex w-full overflow-hidden mask-smooth-sm
+                bg-background-4 bg-opacity-25 backdrop-blur-sm
+                shadow-md shadow-background-1 border border-background-4 border-opacity-25">
                     <div className="flex animation-slide hover:animation-pause">
                         <SkillSet />
                         <SkillSet />
