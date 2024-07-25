@@ -1,17 +1,17 @@
 import Link from "next/link";
 import { ComponentType } from "react";
 import UserMale from "../svg/UserMale";
-import Star from "../svg/Star";
 import CheckAll from "../svg/CheckAll";
 import Briefcase from "../svg/Briefcase";
 import Contacts from "../svg/Contacts";
 import Menu from "../svg/Menu";
-import Maxi from "./Maxi";
+import ProfileIcon from "./ProfileIcon";
 import {
     useIsMobile,
     useActiveSection
 } from "../States";
 import { openPopupMenu } from "./PopupMenu";
+import * as Config from "../Config";
 
 export function Tab({ href, text, IconComponent, active, target }:
     { href: string, text: string, IconComponent: ComponentType<{ className?: string }>, active?: boolean, target?: string }) {
@@ -20,7 +20,7 @@ export function Tab({ href, text, IconComponent, active, target }:
             <Link href={href} target={target} className={`flex items-center md:text-xl text-sm text-center font-medium
             transition-colors duration-200 ease-in-out hover:text-primary ${active ? "text-primary" : ""}`}>
                 <div className="relative flex items-center">
-                    <IconComponent className="w-6 h-6 mr-1" />
+                    <IconComponent className="w-6 h-6 mr-2" />
                     <p>{text}</p>
                 </div>
             </Link>
@@ -56,7 +56,7 @@ export default function Navbar() {
         <nav className="bg-background-2 bg-opacity-25 backdrop-blur-lg shadow-md shadow-shadow sticky top-0 z-50 flex justify-center items-center">
             <div className="flex w-full max-w-6xl">
                 <ul className="inline-flex w-full justify-start">
-                    <Tab href="#home" text="muscaa" IconComponent={Maxi} />
+                    <Tab href="#home" text={Config.userInfo.nickName} IconComponent={ProfileIcon} />
                 </ul>
                 
                 {useIsMobile() ? (

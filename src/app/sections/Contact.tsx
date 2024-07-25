@@ -19,6 +19,7 @@ import { hyphenateSync } from "hyphen/en";
 import IconLink from "../components/IconLink";
 import Info from "../components/Info";
 import Divider from "../components/Divider";
+import * as Config from "../Config";
 
 // Icons
 import Github from "../svg/Github";
@@ -122,15 +123,15 @@ export default function Contact() {
                     </div>
                     <div className="w-full max-w-md">
                         <div className="flex flex-col gap-2">
-                            <Info name="Location" value="Timisoara, Romania" href="https://www.google.com/maps/place/Timișoara/" IconComponent={Location} />
-                            <Info name="Phone" value="+40 738 479 198" href="tel:+40738479198" IconComponent={Phone} />
-                            <Info name="E-mail" value="muscamihailp@gmail.com" href="mailto:muscamihailp@gmail.com" IconComponent={Mail} />
+                            <Info name="Location" value={Config.contactInfo.location} href={"https://www.google.com/maps/place/" + Config.contactInfo.location} IconComponent={Location} />
+                            <Info name="Phone" value={Config.contactInfo.phone} href={"tel:" + Config.contactInfo.phone.replaceAll(" ", "")} IconComponent={Phone} />
+                            <Info name="E-mail" value={Config.contactInfo.email} href={"mailto:" + Config.contactInfo.email} IconComponent={Mail} />
                         </div>
                         <Divider className="my-4" />
                         <div className="flex gap-2 justify-center items-center">
-                            <IconLink href="https://github.com/muscaa/" IconComponent={Github} />
-                            <IconLink href="https://www.instagram.com/musca.mihail/" IconComponent={Instagram} />
-                            <IconLink href="https://www.linkedin.com/in/muscaa/" IconComponent={Linkedin} />
+                            <IconLink href={Config.contactInfo.github} IconComponent={Github} />
+                            <IconLink href={Config.contactInfo.instagram} IconComponent={Instagram} />
+                            <IconLink href={Config.contactInfo.linkedin} IconComponent={Linkedin} />
                         </div>
                     </div>
                 </div>
