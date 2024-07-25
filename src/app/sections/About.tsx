@@ -94,7 +94,7 @@ export default function About() {
             gap-8 lg:gap-16
             ">
                 <div className="flex flex-col justify-center items-center min-w-64 min-h-64 md:min-w-80 md:min-h-80 lg:min-w-96 lg:min-h-96">
-                    <Image className="rounded-full border-2 border-text-2 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96" src="me.png" width={384} height={384} alt="Me" />
+                    <Image className="rounded-full shadow-glow-lg shadow-text-2 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96" src="me.png" width={384} height={384} alt="Me" />
                 </div>
 
                 <div className="flex flex-col flex-grow">
@@ -102,7 +102,7 @@ export default function About() {
                         <h2 className="font-bold text-center">Musca Mihail</h2>
                         <Divider />
                         <div className="h3 font-bold">
-                            <span>I am a </span>
+                            <span>I'm a </span>
                             <ReactTyped
                                 strings={[
                                     "computer science student",
@@ -119,7 +119,7 @@ export default function About() {
                                 backDelay={2500}
                                 startDelay={500}
                                 loop
-                                className="text-text-3"
+                                className="text-primary"
                             />
                         </div>
                         <p className="text-justify text-text-1">

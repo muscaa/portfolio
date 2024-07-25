@@ -17,7 +17,7 @@ export default function Experience() {
     return (
         <section id="experience">
             <Title text="Experience" />
-            <div className="flex flex-wrap gap-12 justify-center mx-8">
+            <div className="flex flex-wrap gap-4 md:gap-12 justify-center">
                 {jobs.map((job, index) => (
                     <Job
                         key={index}
