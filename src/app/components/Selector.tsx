@@ -34,7 +34,7 @@ export default function Selector({ options, selected, onSelect, className }:
             <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center justify-between w-full
+                className="flex items-center justify-between w-full h-full
                 apearance-none outline-none p-3 text-left
                 bg-background-4 bg-opacity-25 backdrop-blur-sm rounded-md
                 shadow-md shadow-background-1 border border-background-4 border-opacity-25"
