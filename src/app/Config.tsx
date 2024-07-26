@@ -1,4 +1,5 @@
 import * as Classes from "./Classes";
+import Anchor from "./components/Anchor";
 
 export const userInfo = {
     fullName: "Musca Mihail",
@@ -56,13 +57,41 @@ export const skills = [
 ];
 export const projects = [
     new Classes.Project(
-        "Project 1",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Logic Gate Simulator",
+        <>
+            Created an app for designing and simulating logic gate systems.
+            Users can build, save, and load their own logic circuits, making
+            it easy to experiment with and understand digital logic concepts.
+        </>,
         Classes.Status.complete,
-        [ "Java", "Spring", "Angular", "PostgreSQL" ],
+        [ "core java", "opengl / lwjgl", "slick2d" ],
+        "projects/logic-gate-sim.png",
+        undefined,
+        "https://github.com/muscaa/logic-gates-sim"
+    ),
+    new Classes.Project(
+        "Fluff Libraries",
+        <>
+            Developed a collection of open source, small, versatile, modular libraries.
+            Each one is designed to be efficient and easy to use in various projects.
+        </>,
+        Classes.Status.complete,
+        [ "core java", "gradle", "jitpack" ],
         "black.png",
-        "idk",
-        "git"
+        undefined,
+        "https://github.com/muscaa/fluff-core"
+    ),
+    new Classes.Project(
+        "Quill",
+        <>
+            Created a cross-platform package manager for tools and libraries.
+            Features a command-line interface for package installation and updates.
+        </>,
+        Classes.Status.inDev,
+        [ "core java", "gradle", "fluff" ],
+        "black.png",
+        undefined,
+        "https://github.com/muscaa/quill-system"
     ),
 ];
 export const jobs = [
@@ -71,8 +100,8 @@ export const jobs = [
         "Fiverr",
         "Mar 2022 - May 2022",
         <>
-        I created Minecraft mods & plugins, bringing fun and unique ideas to life.
-        It was a great way to improve my skills and earn some money.
+            I created Minecraft mods & plugins, bringing fun and unique ideas to life.
+            It was a great way to improve my skills and earn some money.
         </>,
         "jobs/fiverr.png",
         [ "core java", "minecraft", "opengl / lwjgl" ]
@@ -82,13 +111,14 @@ export const jobs = [
         "Cloudflight Coding Contest",
         "20 Oct 2023",
         <>
-        Won second place in West University of Timisoara and ranked <a className="text-primary" target="_blank" href="
-        https://register.codingcontest.org/contest/5271/results?page.page=3&activeId=29120#29120">#124</a> globally in the Cloudflight Coding Contest.
+            Won second place in West University of Timisoara and
+            ranked <Anchor href="https://register.codingcontest.org/contest/5271/results?page.page=3&activeId=29120#29120">#124</Anchor> globally
+            in the Cloudflight Coding Contest.
         </>,
-        "jobs/ccc.jpg",
+        "jobs/cloudflight.png",
         [ "core java" ]
     ),
-    /*open source contributor?*/
+    /*open source contributor ??*/
 ];
 export const contactInfo = {
     formspreeKey: "xrbzglbe",

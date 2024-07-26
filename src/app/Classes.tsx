@@ -88,6 +88,26 @@ export class Skill {
     static insomnia: Skill = new Skill("Insomnia", Insomnia);
 }
 
+function hyphenateJSX(element: React.ReactNode): React.ReactNode {
+    if (typeof element === 'string') {
+        return hyphenateSync(element);
+    }
+
+    if (React.isValidElement(element)) {
+        const children = React.Children.map(element.props.children, child =>
+            hyphenateJSX(child)
+        );
+
+        return React.cloneElement(element, {}, children);
+    }
+
+    if (Array.isArray(element)) {
+        return element.map(child => hyphenateJSX(child));
+    }
+
+    return element;
+}
+
 export class Status {
     text: string;
     color: string;
@@ -106,7 +126,7 @@ export class Status {
 
 export class Project {
     name: string;
-    description: string;
+    description: JSX.Element;
     status: Status;
     skills: string[];
     image: string;
@@ -115,7 +135,7 @@ export class Project {
 
     constructor(
         name: string,
-        description: string,
+        description: JSX.Element,
         status: Status,
         skills: string[],
         image: string,
@@ -123,7 +143,7 @@ export class Project {
         githubUrl?: string
     ) {
         this.name = name;
-        this.description = description;
+        this.description = hyphenateJSX(description) as JSX.Element;
         this.status = status;
         this.skills = skills;
         this.image = image;
@@ -151,30 +171,8 @@ export class Job {
         this.name = name;
         this.company = company;
         this.date = date;
+        this.description = hyphenateJSX(description) as JSX.Element;
         this.image = image;
         this.skills = skills;
-
-        // Hyphenate the description while preserving JSX structure
-        this.description = this.hyphenateJSX(description) as JSX.Element;
-    }
-
-    private hyphenateJSX(element: React.ReactNode): React.ReactNode {
-        if (typeof element === 'string') {
-            return hyphenateSync(element);
-        }
-
-        if (React.isValidElement(element)) {
-            const children = React.Children.map(element.props.children, child =>
-                this.hyphenateJSX(child)
-            );
-
-            return React.cloneElement(element, {}, children);
-        }
-
-        if (Array.isArray(element)) {
-            return element.map(child => this.hyphenateJSX(child));
-        }
-
-        return element;
     }
 }

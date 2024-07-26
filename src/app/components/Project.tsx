@@ -22,12 +22,12 @@ export default function Project({ project }: { project: Classes.Project }) {
                     </Reveal>
                     <Reveal className="flex flex-wrap gap-1" direction="down" delay={0.4}>
                         {project.skills.map((skill, index) => (
-                            <span key={index} className={`text-secondary font-normal bg-secondary bg-opacity-10 px-2 rounded-lg h6`}>{skill}</span>
+                            <span key={index} className={`text-secondary font-normal bg-secondary bg-opacity-10 px-2 py-0.5 rounded-lg h6`}>{skill}</span>
                         ))}
                     </Reveal>
                     <Reveal direction="right" delay={0.6}>
                         <p className="text-justify text-text-1">
-                            {hyphenateSync(project.description)}
+                            {project.description}
                         </p>
                     </Reveal>
                 </div>
