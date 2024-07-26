@@ -12,7 +12,7 @@ export default function Project({ project }: { project: Classes.Project }) {
         shadow-md shadow-background-1 border border-background-3 border-opacity-25
         rounded-lg overflow-hidden flex flex-col transform transition-shadow duration-200 ease-in-out hover:shadow-glow-lg hover:shadow-text-2">
             <Image className="w-full h-40 object-cover" src={project.image} width={320} height={180} alt={`${project.name} screenshot`} />
-            <div className="p-4 flex flex-col h-full justify-between">
+            <div className="p-4 flex flex-col h-full justify-between gap-4">
                 <div className="flex flex-col gap-2">
                     <Reveal direction="up" delay={0.4}>
                         <h3 className="font-bold">{project.name}</h3>

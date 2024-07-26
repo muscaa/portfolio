@@ -70,6 +70,18 @@ export const projects = [
         "https://github.com/muscaa/logic-gates-sim"
     ),
     new Classes.Project(
+        "React Portfolio",
+        <>
+            Built this portfolio to highlight my skills and projects. It servesas a
+            central hub for showcasing my work and achievements in software development.
+        </>,
+        Classes.Status.complete,
+        [ "next js", "react", "tailwind css", "formspree", "atropos js", "framer motion" ],
+        "projects/portfolio.png",
+        "https://muscaa.github.io/portfolio",
+        "https://github.com/muscaa/portfolio"
+    ),
+    new Classes.Project(
         "Fluff Libraries",
         <>
             Developed a collection of open source, small, versatile, modular libraries.
@@ -91,7 +103,7 @@ export const projects = [
         [ "core java", "gradle", "fluff" ],
         "black.png",
         undefined,
-        "https://github.com/muscaa/quill-system"
+        "https://github.com/muscaa/quill"
     ),
 ];
 export const jobs = [
