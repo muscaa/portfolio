@@ -57,6 +57,7 @@ export default function About() {
                         <div className="grid grid-cols-[70%_30%] gap-2 lg:gap-4">
                             <DoubleButton className="w-full" text="View Resume" IconComponent={Download} />
                             <Selector
+                                className="h-full"
                                 options={["EN", "RO"]}
                                 selected={0}
                                 onSelect={(option, index) => console.log(option + " : " + index)}
