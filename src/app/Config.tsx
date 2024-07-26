@@ -62,7 +62,7 @@ export const projects = [
             it easy to experiment with and understand digital logic concepts.
         </>,
         Classes.Status.complete,
-        [ "java", "opengl / lwjgl", "slick2d" ],
+        [ "java", "gradle", "opengl / lwjgl", "slick2d" ],
         "projects/logic-gate-sim.png",
         undefined,
         "https://github.com/muscaa/logic-gates-sim"
@@ -74,7 +74,7 @@ export const projects = [
             central hub for showcasing my work and achievements in software development.
         </>,
         Classes.Status.complete,
-        [ "next js", "react", "tailwind css", "formspree", "atropos js", "framer motion" ],
+        [ "typescript", "next.js", "react", "tailwind css", "framer motion", "tsparticles", "formspree", "atropos.js" ],
         "projects/portfolio.png",
         "https://muscaa.github.io/portfolio",
         "https://github.com/muscaa/portfolio"
