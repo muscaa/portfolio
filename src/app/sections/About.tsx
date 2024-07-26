@@ -65,7 +65,7 @@ export default function About() {
                     </Reveal>
                 </div>
             </div>
-            <Reveal className="flex mt-8 lg:mt-16" delay={0.8}>
+            <Reveal className="flex mt-8 lg:mt-16" delay={0.6}>
                 <div className="flex w-full overflow-hidden mask-smooth-sm
                 bg-background-4 bg-opacity-25 backdrop-blur-sm
                 shadow-md shadow-background-1 border border-background-4 border-opacity-25">

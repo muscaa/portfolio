@@ -68,9 +68,9 @@ export const projects = [
         "https://github.com/muscaa/logic-gates-sim"
     ),
     new Classes.Project(
-        "React Portfolio",
+        "Developer Portfolio",
         <>
-            Built this portfolio to highlight my skills and projects. It servesas a
+            Built this portfolio to highlight my skills and projects. It serves as a
             central hub for showcasing my work and achievements in software development.
         </>,
         Classes.Status.complete,
