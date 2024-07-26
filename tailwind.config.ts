@@ -26,6 +26,7 @@ const config: Config = {
                 "primary": "rgb(118, 73, 254)",
                 "secondary": "rgb(73, 254, 208)",
                 "shadow": "rgb(17, 20, 23)",
+                "navbar-opaque": "rgb(27, 30, 33)",
             },
             width: {
                 "112": "28rem",

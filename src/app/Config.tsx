@@ -60,21 +60,23 @@ export const projects = [
         Classes.Status.complete,
         [ "Java", "Spring", "Angular", "PostgreSQL" ],
         "black.png",
-        undefined,
-        undefined
+        "idk",
+        "git"
     ),
 ];
 export const jobs = [
     new Classes.Job(
         "Freelancer",
-        "Fiver",
-        "2020 - 2021",
+        "Fiverr",
+        "Mar 2022 - May 2022",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "black.png",
-        [ "React", "TypeScript", "Tailwind CSS" ]
+        [ "java" ]
     ),
 ];
 export const contactInfo = {
+    formspreeKey: "xrbzglbe",
+    reCaptchaKey: "6LdLCQkqAAAAAJqQeo3ss5PdqytaM9QWrol9x5vY",
     location: "Timisoara, Romania",
     phone: "+40 738 479 198",
     email: "muscamihailp@gmail.com",

@@ -31,7 +31,7 @@ import Location from "../svg/Location";
 
 function ContactForm() {
     const { executeRecaptcha } = useGoogleReCaptcha();
-    const [state, handleSubmit] = useForm("xrbzglbe", {
+    const [state, handleSubmit] = useForm(Config.contactInfo.formspreeKey, {
         data: { "g-recaptcha-response": executeRecaptcha }
     });
     const [nameEmpty, setNameEmpty] = useState(true);
@@ -114,7 +114,7 @@ export default function Contact() {
                 </p>
                 <div className="flex flex-col lg:flex-row justify-center items-center w-full">
                     <div className="w-full max-w-md">
-                        <GoogleReCaptchaProvider reCaptchaKey="6LdLCQkqAAAAAJqQeo3ss5PdqytaM9QWrol9x5vY">
+                        <GoogleReCaptchaProvider reCaptchaKey={Config.contactInfo.reCaptchaKey}>
                             <ContactForm />
                         </GoogleReCaptchaProvider>
                     </div>
