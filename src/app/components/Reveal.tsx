@@ -7,27 +7,28 @@ function getOffsets(direction: "up" | "down" | "left" | "right") {
         case "up":
             return {
                 x: 0,
-                y: 50,
+                y: 20,
             }
         case "down":
             return {
                 x: 0,
-                y: -50,
+                y: -20,
             }
         case "left":
             return {
-                x: 50,
+                x: 20,
                 y: 0,
             }
         case "right":
             return {
-                x: -50,
+                x: -20,
                 y: 0,
             }
     }
 }
 
-export default function Reveal({ children, direction = "up", delay = 0 }: { children: JSX.Element, direction?: "up" | "down" | "left" | "right", delay?: number }) {
+export default function Reveal({ children, direction = "up", delay = 0.2, className }:
+    { children: JSX.Element[] | JSX.Element, direction?: "up" | "down" | "left" | "right", delay?: number, className?: string }) {
     const offsets = getOffsets(direction);
     const ref = useRef(null);
     const inView = useInView(ref, { once: true });
@@ -40,30 +41,30 @@ export default function Reveal({ children, direction = "up", delay = 0 }: { chil
     }, [inView]);
 
     return (
-        <div className="relative" ref={ref}>
-            <motion.div
-                variants={{
-                    hidden: {
-                        opacity: 0,
-                        x: offsets.x,
-                        y: offsets.y,
-                    },
-                    visible: {
-                        opacity: 1,
-                        x: 0,
-                        y: 0,
-                    }
-                }}
-                initial="hidden"
-                animate={controls}
-                transition={{
-                    easings: "easeInOut",
-                    duration: 0.4,
-                    delay: delay,
-                }}
-            >
-                {children}
-            </motion.div>
-        </div>
+        <motion.div
+            variants={{
+                hidden: {
+                    opacity: 0,
+                    x: offsets.x,
+                    y: offsets.y,
+                },
+                visible: {
+                    opacity: 1,
+                    x: 0,
+                    y: 0,
+                }
+            }}
+            initial="hidden"
+            animate={controls}
+            transition={{
+                easings: "easeInOut",
+                duration: 0.4,
+                delay: delay,
+            }}
+            className={className}
+            ref={ref}
+        >
+            {Array.isArray(children) ? children : [children]}
+        </motion.div>
     );
 }

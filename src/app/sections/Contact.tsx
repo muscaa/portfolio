@@ -20,6 +20,7 @@ import IconLink from "../components/IconLink";
 import Info from "../components/Info";
 import Divider from "../components/Divider";
 import * as Config from "../Config";
+import Reveal from "../components/Reveal";
 
 // Icons
 import Github from "../svg/Github";
@@ -39,60 +40,62 @@ function ContactForm() {
     const [messageEmpty, setMessageEmpty] = useState(true);
 
     return (
-        <form onSubmit={handleSubmit} autoComplete="on" className="flex flex-col gap-2">
-            <Input
-                id="name"
-                type="text"
-                name="name"
-                placeholder="Name"
-                className="min-w-max"
-                onChange={e => setNameEmpty(e.target.value.trim().length === 0)}
-            />
-            <ValidationError
-                prefix="Name"
-                field="name"
-                errors={state.errors}
-            />
-            <Input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="Email"
-                className="min-w-max"
-                onChange={e => setEmailEmpty(e.target.value.trim().length === 0)}
-            />
-            <ValidationError
-                prefix="Email"
-                field="email"
-                errors={state.errors}
-            />
-            <InputArea
-                id="message"
-                name="message"
-                placeholder="Message"
-                className="min-w-max"
-                onChange={e => setMessageEmpty(e.target.value.trim().length === 0)}
-            />
-            <ValidationError
-                prefix="Message"
-                field="message"
-                errors={state.errors}
-            />
-            <div className="grid grid-cols-2 my-2">
-                <div className="flex justify-center items-center h-full text-text-2">
-                    <Shield className="w-6 h-6 md:w-8 md:h-8 mr-2 sm:ml-0 ml-2 flex-shrink-0" />
-                    <div className="flex flex-col">
-                        <h5>Protected by</h5>
-                        <h5>reCAPTCHA</h5>
-                    </div>
-                </div>
-                <Button
-                    type="submit"
-                    disabled={nameEmpty || emailEmpty || messageEmpty || state.submitting || state.succeeded}
-                    text={state.succeeded ? "Sent!" : "Send"}
+        <Reveal>
+            <form onSubmit={handleSubmit} autoComplete="on" className="flex flex-col gap-2">
+                <Input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    className="min-w-max"
+                    onChange={e => setNameEmpty(e.target.value.trim().length === 0)}
                 />
-            </div>
-        </form>
+                <ValidationError
+                    prefix="Name"
+                    field="name"
+                    errors={state.errors}
+                />
+                <Input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    className="min-w-max"
+                    onChange={e => setEmailEmpty(e.target.value.trim().length === 0)}
+                />
+                <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                />
+                <InputArea
+                    id="message"
+                    name="message"
+                    placeholder="Message"
+                    className="min-w-max"
+                    onChange={e => setMessageEmpty(e.target.value.trim().length === 0)}
+                />
+                <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                />
+                <Reveal className="grid grid-cols-2 my-2" direction="down" delay={0.4}>
+                    <div className="flex justify-center items-center h-full text-text-2">
+                        <Shield className="w-6 h-6 md:w-8 md:h-8 mr-2 sm:ml-0 ml-2 flex-shrink-0" />
+                        <div className="flex flex-col">
+                            <h5>Protected by</h5>
+                            <h5>reCAPTCHA</h5>
+                        </div>
+                    </div>
+                    <Button
+                        type="submit"
+                        disabled={nameEmpty || emailEmpty || messageEmpty || state.submitting || state.succeeded}
+                        text={state.succeeded ? "Sent!" : "Send"}
+                    />
+                </Reveal>
+            </form>
+        </Reveal>
     );
 }
 
@@ -105,34 +108,38 @@ export default function Contact() {
                 mb-24 md:mb-32
                 px-8 md:px-16
             ">
-                <p className="
-                mb-8 md:mb-12
-                max-w-xl text-center text-text-1
-                ">
-                    {hyphenateSync(`Have a question or want to work together? 
-                        Leave your details and I'll get back to you as soon as possible.`)}
-                </p>
+                <Reveal>
+                    <p className="
+                    mb-8 md:mb-12
+                    max-w-xl text-center text-text-1
+                    ">
+                        {hyphenateSync(`Have a question or want to work together? 
+                            Leave your details and I'll get back to you as soon as possible.`)}
+                    </p>
+                </Reveal>
                 <div className="flex flex-col lg:flex-row justify-center items-center w-full">
                     <div className="w-full max-w-md">
                         <GoogleReCaptchaProvider reCaptchaKey={Config.contactInfo.reCaptchaKey}>
                             <ContactForm />
                         </GoogleReCaptchaProvider>
                     </div>
-                    <div className="flex justify-center items-center p-4 text-text-2">
+                    <Reveal className="flex justify-center items-center p-4 text-text-2">
                         <p>OR</p>
-                    </div>
+                    </Reveal>
                     <div className="w-full max-w-md">
-                        <div className="flex flex-col gap-2">
+                        <Reveal className="flex flex-col gap-2" direction="up" delay={0.4}>
                             <Info name="Location" value={Config.contactInfo.location} href={"https://www.google.com/maps/place/" + Config.contactInfo.location} IconComponent={Location} />
                             <Info name="Phone" value={Config.contactInfo.phone} href={"tel:" + Config.contactInfo.phone.replaceAll(" ", "")} IconComponent={Phone} />
                             <Info name="E-mail" value={Config.contactInfo.email} href={"mailto:" + Config.contactInfo.email} IconComponent={Mail} />
-                        </div>
-                        <Divider className="my-4" />
-                        <div className="flex gap-2 justify-center items-center">
+                        </Reveal>
+                        <Reveal direction="right">
+                            <Divider className="my-4" />
+                        </Reveal>
+                        <Reveal className="flex gap-2 justify-center items-center" direction="down" delay={0.4}>
                             <IconLink href={Config.contactInfo.github} IconComponent={Github} />
                             <IconLink href={Config.contactInfo.instagram} IconComponent={Instagram} />
                             <IconLink href={Config.contactInfo.linkedin} IconComponent={Linkedin} />
-                        </div>
+                        </Reveal>
                     </div>
                 </div>
             </div>

@@ -3,8 +3,7 @@
 }
 
 body {
-    @apply bg-background-1;
-    @apply text-text;
+    @apply bg-background-1 text-text;
 }
 
 #home-atropos {
@@ -12,10 +11,10 @@ body {
     min-height: 140vh;
     left: calc(50vw - 70vh * 1.65);
     top: -20vh;
+}
 
-    & > .atropos-scale > .atropos-rotate > * {
-        @apply absolute inset-0 w-full h-full;
-    }
+#home-atropos > .atropos-scale > .atropos-rotate > * {
+    @apply absolute inset-0 w-full h-full;
 }
 
 ::-webkit-scrollbar {

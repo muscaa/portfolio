@@ -1,4 +1,6 @@
+import React from "react";
 import { ComponentType } from "react";
+import { hyphenateSync } from "hyphen/en";
 
 // Languages
 import Java from "./svg/languages/Java";
@@ -20,6 +22,7 @@ import Arduino from "./svg/frameworks/Arduino";
 import DotNet from "./svg/frameworks/DotNet";
 import ElectronJs from "./svg/frameworks/ElectronJs";
 import TailwindCss from "./svg/frameworks/TailwindCss";
+import LWJGL from "./svg/frameworks/LWJGL";
 
 // Databases
 import MySql from "./svg/databases/MySql";
@@ -68,6 +71,7 @@ export class Skill {
     static reactJs: Skill = new Skill("React", ReactJs);
     static electronJs: Skill = new Skill("Electron", ElectronJs);
     static tailwindCss: Skill = new Skill("Tailwind", TailwindCss);
+    static lwjgl: Skill = new Skill("LWJGL", LWJGL);
 
     static mySql: Skill = new Skill("MySQL", MySql);
     static sqLite: Skill = new Skill("SQLite", SqLite);
@@ -132,7 +136,7 @@ export class Job {
     name: string;
     company: string;
     date: string;
-    description: string;
+    description: JSX.Element;
     skills: string[];
     image: string;
 
@@ -140,15 +144,37 @@ export class Job {
         name: string,
         company: string,
         date: string,
-        description: string,
+        description: JSX.Element,
         image: string,
         skills: string[]
     ) {
         this.name = name;
         this.company = company;
         this.date = date;
-        this.description = description;
         this.image = image;
         this.skills = skills;
+
+        // Hyphenate the description while preserving JSX structure
+        this.description = this.hyphenateJSX(description) as JSX.Element;
+    }
+
+    private hyphenateJSX(element: React.ReactNode): React.ReactNode {
+        if (typeof element === 'string') {
+            return hyphenateSync(element);
+        }
+
+        if (React.isValidElement(element)) {
+            const children = React.Children.map(element.props.children, child =>
+                this.hyphenateJSX(child)
+            );
+
+            return React.cloneElement(element, {}, children);
+        }
+
+        if (Array.isArray(element)) {
+            return element.map(child => this.hyphenateJSX(child));
+        }
+
+        return element;
     }
 }

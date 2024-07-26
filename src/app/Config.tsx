@@ -24,6 +24,7 @@ export const userInfo = {
 export const skills = [
     Classes.Skill.java,
     Classes.Skill.spring,
+    Classes.Skill.lwjgl,
 
     Classes.Skill.cpp,
     Classes.Skill.c,
@@ -69,10 +70,25 @@ export const jobs = [
         "Freelancer",
         "Fiverr",
         "Mar 2022 - May 2022",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "black.png",
-        [ "java" ]
+        <>
+        I created Minecraft mods & plugins, bringing fun and unique ideas to life.
+        It was a great way to improve my skills and earn some money.
+        </>,
+        "jobs/fiverr.png",
+        [ "core java", "minecraft", "opengl / lwjgl" ]
     ),
+    new Classes.Job(
+        "Competitive Programmer",
+        "Cloudflight Coding Contest",
+        "20 Oct 2023",
+        <>
+        Won second place in West University of Timisoara and ranked <a className="text-primary" target="_blank" href="
+        https://register.codingcontest.org/contest/5271/results?page.page=3&activeId=29120#29120">#124</a> globally in the Cloudflight Coding Contest.
+        </>,
+        "jobs/ccc.jpg",
+        [ "core java" ]
+    ),
+    /*open source contributor?*/
 ];
 export const contactInfo = {
     formspreeKey: "xrbzglbe",
