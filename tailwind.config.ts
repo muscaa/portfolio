@@ -24,6 +24,7 @@ const config: Config = {
                 "text-2": "rgb(173, 172, 171)",
                 "text-3": "rgb(113, 112, 111)",
                 "primary": "rgb(118, 73, 254)",
+                "primary-light": "rgb(144, 111, 252)",
                 "secondary": "rgb(73, 254, 208)",
                 "shadow": "rgb(17, 20, 23)",
                 "navbar-opaque": "rgb(27, 30, 33)",

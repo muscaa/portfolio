@@ -32,7 +32,7 @@ export default function Home() {
                         <Parallax.ForestBack data-atropos-offset="0" />
                         <Parallax.ForestMid data-atropos-offset="2" />
                         <Parallax.ForestFront data-atropos-offset="4" />
-                        <div className="flex flex-col justify-center items-center" data-atropos-offset="5">
+                        <div className="flex flex-col justify-center items-center" data-atropos-offset="6">
                             <div className="flex-grow"></div>
                             <div className="flex-grow"></div>
                             <Reveal direction="up">

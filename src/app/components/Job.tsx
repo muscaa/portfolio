@@ -9,7 +9,7 @@ export default function Job({ job }: { job: Classes.Job }) {
     return (
         <Reveal className="w-80 bg-background-3 bg-opacity-25 backdrop-blur-sm
         shadow-md shadow-background-1 border border-background-3 border-opacity-25
-        rounded-lg overflow-hidden flex flex-col transform transition-shadow duration-200 ease-in-out hover:shadow-glow-lg hover:shadow-text-2">
+        rounded-lg overflow-hidden flex flex-col transform transition-shadow duration-200 ease-in-out hover:shadow-glow-lg hover:shadow-background-4 hover:z-10">
             <div className="p-4 flex flex-col gap-2">
                 <div className="flex gap-4 justify-between">
                     <Reveal className="flex flex-col" direction="up" delay={0.4}>

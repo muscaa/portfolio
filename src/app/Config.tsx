@@ -6,12 +6,10 @@ export const userInfo = {
     shortName: "Mihail",
     nickName: "muscaa",
     description: `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id ante auctor,
-        interdum neque eu, porta ligula. Vivamus commodo imperdiet nulla, eu eleifend massa
-        rhoncus a. Morbi eget tristique enim. Cras dapibus tortor vitae urna commodo, semper
-        rutrum metus efficitur. Etiam nibh magna, pellentesque at risus id, venenatis rhoncus
-        nisi. Donec ut efficitur arcu. Aenean convallis elit lacus, sit amet varius velit
-        luctus in. Nunc suscipit congue auctor.
+        I'm a Computer Science student with a solid Java foundation that began in 8th grade. 
+        I enjoy tackling complex problems and adapting to new challenges. Passionate 
+        about technology, I'm excited to pursue a career as a full-stack developer. 
+        Outside of tech, I love photography, music, and spending time with my pet parrot.
     `,
     roles: [
         "computer science student",
@@ -64,7 +62,7 @@ export const projects = [
             it easy to experiment with and understand digital logic concepts.
         </>,
         Classes.Status.complete,
-        [ "core java", "opengl / lwjgl", "slick2d" ],
+        [ "java", "opengl / lwjgl", "slick2d" ],
         "projects/logic-gate-sim.png",
         undefined,
         "https://github.com/muscaa/logic-gates-sim"
@@ -88,7 +86,7 @@ export const projects = [
             Each one is designed to be efficient and easy to use in various projects.
         </>,
         Classes.Status.complete,
-        [ "core java", "gradle", "jitpack" ],
+        [ "java", "gradle", "jitpack" ],
         "black.png",
         undefined,
         "https://github.com/muscaa/fluff-core"
@@ -100,7 +98,7 @@ export const projects = [
             Features a command-line interface for package installation and updates.
         </>,
         Classes.Status.inDev,
-        [ "core java", "gradle", "fluff" ],
+        [ "java", "gradle", "fluff" ],
         "black.png",
         undefined,
         "https://github.com/muscaa/quill"
@@ -112,11 +110,11 @@ export const jobs = [
         "Fiverr",
         "Mar 2022 - May 2022",
         <>
-            I created Minecraft mods & plugins, bringing fun and unique ideas to life.
+            Developed Minecraft mods & plugins, bringing fun and unique ideas to life.
             It was a great way to improve my skills and earn some money.
         </>,
         "jobs/fiverr.png",
-        [ "core java", "minecraft", "opengl / lwjgl" ]
+        [ "java", "minecraft", "opengl / lwjgl" ]
     ),
     new Classes.Job(
         "Competitive Programmer",
@@ -128,7 +126,7 @@ export const jobs = [
             in the Cloudflight Coding Contest.
         </>,
         "jobs/cloudflight.png",
-        [ "core java" ]
+        [ "java" ]
     ),
     /*open source contributor ??*/
 ];
@@ -142,4 +140,4 @@ export const contactInfo = {
     instagram: "https://www.instagram.com/musca.mihail/",
     linkedin: "https://www.linkedin.com/in/muscaa/",
 };
-export const footer = "© 2024 Musca Mihail";
+export const footer = "© 2024 Musca Mihail. I use arch btw.";

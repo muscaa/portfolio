@@ -10,7 +10,7 @@ export default function Project({ project }: { project: Classes.Project }) {
     return (
         <Reveal className="w-80 sm:w-96 lg:w-112 bg-background-3 bg-opacity-25 backdrop-blur-sm
         shadow-md shadow-background-1 border border-background-3 border-opacity-25
-        rounded-lg overflow-hidden flex flex-col transform transition-shadow duration-200 ease-in-out hover:shadow-glow-lg hover:shadow-text-2">
+        rounded-lg overflow-hidden flex flex-col transform transition-shadow duration-200 ease-in-out hover:shadow-glow-lg hover:shadow-background-4 hover:z-10">
             <Image className="w-full h-40 object-cover" src={project.image} width={320} height={180} alt={`${project.name} screenshot`} />
             <div className="p-4 flex flex-col h-full justify-between gap-4">
                 <div className="flex flex-col gap-2">

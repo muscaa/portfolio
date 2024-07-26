@@ -49,7 +49,7 @@ export default function ButtonArrow({ direction = "right", href, className }: { 
                     },
                 }}
             >
-                <button className={`p-3 bg-primary rounded-full transform transition-transform duration-200 ease-in-out hover:scale-110 ${rotation.class}`}>
+                <button className={`p-3 bg-primary rounded-full transition-colors duration-200 ease-in-out hover:bg-primary-light ${rotation.class}`}>
                     <svg
                         className="w-8 h-8"
                         fill="none"
