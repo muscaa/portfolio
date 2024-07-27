@@ -18,7 +18,12 @@ export const userInfo = {
         "linux &amp; windows user",
         "photography &amp; music lover",
         "bird lover",
-    ]
+    ],
+    education: {
+        link: "https://info.uvt.ro/en/",
+        school: "West University of Timisoara",
+        period: "Bachelor's degree 2023 - 2026",
+    },
 };
 export const skills = [
     Classes.Skill.java,

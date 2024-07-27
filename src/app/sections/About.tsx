@@ -10,7 +10,11 @@ import * as Config from "../Config";
 import Reveal from "../components/Reveal";
 import Selector from "../components/Selector";
 import DoubleButton from "../components/DoubleButton";
+import Info from "../components/Info";
+
+// Icons
 import Download from "../svg/Download";
+import School from "../svg/School";
 
 export default function About() {
     return (
@@ -53,8 +57,9 @@ export default function About() {
                             </p>
                         </Reveal>
                     </div>
-                    <Reveal className="flex flex-col h-full justify-end" direction="right" delay={0.4}>
-                        <div className="grid grid-cols-[70%_30%] gap-2 lg:gap-4">
+                    <Reveal className="flex flex-col h-full gap-2 lg:gap-4" delay={0.4}>
+                        <Info name={Config.userInfo.education.school} value={Config.userInfo.education.period} href={Config.userInfo.education.link} IconComponent={School} />
+                        <div className="grid grid-cols-[70%_30%] space-x-2 lg:space-x-4">
                             <DoubleButton className="w-full" text="View Resume" IconComponent={Download} />
                             <Selector
                                 className="h-full"
