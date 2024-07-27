@@ -51,7 +51,7 @@ export default function Selector({ options, selected, onSelect, className }:
                         <button
                             key={index}
                             onClick={() => handleSelect(option, index)}
-                            className="w-full text-left px-3 py-1 h5
+                            className="w-full text-left p-3
                             transition-colors duration-200 ease-in-out
                             hover:bg-primary rounded-md"
                         >

@@ -1,5 +1,6 @@
 import React from "react";
 import { ComponentType } from "react";
+import Button from "./Button";
 
 export default function DoubleButton({ id, className, type, disabled, onClick, text, iconType, iconDisabled, onIconClick, IconComponent }:
     { id?: string, className?: string,
@@ -15,7 +16,7 @@ export default function DoubleButton({ id, className, type, disabled, onClick, t
                 disabled={disabled}
                 onClick={onClick}
                 className="appearance-none outline-none p-3 bg-primary disabled:bg-background-4 rounded-[0.375rem_0_0_0.375rem]
-                transition-colors duration-200 ease-in-out hover:bg-primary-light disabled:hover:bg-background-4 w-full"
+                transition-colors duration-200 ease-in-out hover:bg-primary-light disabled:hover:bg-background-4 w-full active:bg-primary"
             >
                 {text}
             </button>
@@ -25,7 +26,7 @@ export default function DoubleButton({ id, className, type, disabled, onClick, t
                 disabled={iconDisabled}
                 onClick={onIconClick}
                 className="appearance-none outline-none p-3 bg-primary disabled:bg-background-4 rounded-[0_0.375rem_0.375rem_0]
-                transition-colors duration-200 ease-in-out hover:bg-primary-light disabled:hover:bg-background-4"
+                transition-colors duration-200 ease-in-out hover:bg-primary-light disabled:hover:bg-background-4 active:bg-primary"
             >
                 <IconComponent />
             </button>
