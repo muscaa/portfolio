@@ -118,7 +118,7 @@ export const jobs = [
             Developed Minecraft mods & plugins, bringing fun and unique ideas to life.
             It was a great way to improve my skills and earn some money.
         </>,
-        "jobs/fiverr.png",
+        "jobs/fiverr_128x128.png",
         [ "java", "minecraft", "opengl / lwjgl" ]
     ),
     new Classes.Job(
@@ -130,7 +130,7 @@ export const jobs = [
             ranked <Anchor href="https://register.codingcontest.org/contest/5271/results?page.page=3&activeId=29120#29120">#124</Anchor> globally
             in the Cloudflight Coding Contest.
         </>,
-        "jobs/cloudflight.png",
+        "jobs/cloudflight_128x128.png",
         [ "java" ]
     ),
     /*open source contributor ??*/
