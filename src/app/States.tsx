@@ -6,7 +6,10 @@ export function useWindowSize() {
         height: 0,
     });
     useEffect(() => {
+        let inited = false;
         const handleResize = () => {
+            if (inited) return;
+
             setWindowSize({
                 width: window.innerWidth,
                 height: window.innerHeight,
@@ -15,9 +18,10 @@ export function useWindowSize() {
 
         handleResize();
 
-        window.addEventListener("resize", handleResize);
+        //window.addEventListener("resize", handleResize);
         return () => {
-            window.removeEventListener("resize", handleResize);
+            //window.removeEventListener("resize", handleResize);
+            inited = true;
         };
     }, []);
 
