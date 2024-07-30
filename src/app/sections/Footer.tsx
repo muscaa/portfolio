@@ -9,7 +9,9 @@ export default function Footer() {
                 <ButtonArrow direction="up" href="#home" />
             </Reveal>
             <Reveal>
-                <h6 className="font-light text-text-2">{Config.footer}</h6>
+                {Config.footer.map((text, index) => (
+                    <h6 className="font-light text-text-2">{text}</h6>
+                ))}
             </Reveal>
         </footer>
     );

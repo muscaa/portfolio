@@ -24,7 +24,7 @@ export default function Job({ job }: { job: Classes.Job }) {
                 </Reveal>
                 <Reveal className="flex flex-wrap gap-1" direction="down" delay={0.4}>
                     {job.skills.map((skill, index) => (
-                        <span key={index} className={`text-secondary font-normal bg-secondary bg-opacity-10 px-2 py-0.5 rounded-lg h6`}>{skill}</span>
+                        <span key={index} className={`text-secondary font-normal bg-secondary bg-opacity-10 px-2 py-0.5 rounded-lg h6 flex-grow text-center`}>{skill}</span>
                     ))}
                 </Reveal>
                 <Reveal direction="right" delay={0.6}>

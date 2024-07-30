@@ -88,6 +88,16 @@ export class Skill {
     static insomnia: Skill = new Skill("Insomnia", Insomnia);
 }
 
+export class SkillSet {
+    name: string;
+    skills: Skill[];
+
+    constructor(name: string, skills: Skill[]) {
+        this.name = name;
+        this.skills = skills;
+    }
+}
+
 function hyphenateJSX(element: React.ReactNode): React.ReactNode {
     if (typeof element === 'string') {
         return hyphenateSync(element);

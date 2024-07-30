@@ -18,38 +18,56 @@ export const userInfo = {
         period: "Bachelor's degree 2023 - 2026",
     },
 };
-export const skills = [
-    Classes.Skill.java,
-    Classes.Skill.spring,
-    Classes.Skill.lwjgl,
-
-    Classes.Skill.cpp,
-    Classes.Skill.c,
-    Classes.Skill.cSharp,
-
-    Classes.Skill.dart,
-    Classes.Skill.flutter,
-
-    Classes.Skill.html5,
-    Classes.Skill.css3,
-    Classes.Skill.javaScript,
-    Classes.Skill.typeScript,
-    Classes.Skill.nextJs,
-    Classes.Skill.reactJs,
-    Classes.Skill.tailwindCss,
-
-    Classes.Skill.mySql,
-    Classes.Skill.sqLite,
-
-    Classes.Skill.eclipse,
-    Classes.Skill.intelliJ,
-    Classes.Skill.vsCode,
-    Classes.Skill.visualStudio,
-
-    Classes.Skill.git,
-    Classes.Skill.bash,
-    Classes.Skill.docker,
-    Classes.Skill.insomnia,
+export const skillSets = [
+    new Classes.SkillSet(
+        "Languages",
+        [
+            Classes.Skill.java,
+            Classes.Skill.cpp,
+            Classes.Skill.c,
+            Classes.Skill.cSharp,
+            Classes.Skill.dart,
+            Classes.Skill.javaScript,
+            Classes.Skill.typeScript,
+        ]
+    ),
+    new Classes.SkillSet(
+        "Front-End",
+        [
+            Classes.Skill.html5,
+            Classes.Skill.css3,
+            Classes.Skill.nextJs,
+            Classes.Skill.reactJs,
+            Classes.Skill.tailwindCss,
+            Classes.Skill.flutter,
+        ]
+    ),
+    new Classes.SkillSet(
+        "Back-End",
+        [
+            Classes.Skill.spring,
+            Classes.Skill.mySql,
+            Classes.Skill.sqLite,
+        ]
+    ),
+    new Classes.SkillSet(
+        "IDEs",
+        [
+            Classes.Skill.eclipse,
+            Classes.Skill.intelliJ,
+            Classes.Skill.vsCode,
+            Classes.Skill.visualStudio,
+        ]
+    ),
+    new Classes.SkillSet(
+        "Tools",
+        [
+            Classes.Skill.git,
+            Classes.Skill.bash,
+            Classes.Skill.docker,
+            Classes.Skill.insomnia,
+        ]
+    ),
 ];
 export const jobs = [
     new Classes.Job(
@@ -138,4 +156,7 @@ export const contactInfo = {
     instagram: "https://www.instagram.com/musca.mihail/",
     linkedin: "https://www.linkedin.com/in/muscaa/",
 };
-export const footer = "© 2024 Musca Mihail. I use arch btw.";
+export const footer = [
+    "© 2024 Musca Mihail",
+    "I use arch btw",
+];
