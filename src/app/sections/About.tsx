@@ -4,7 +4,6 @@ import { hyphenateSync } from "hyphen/en";
 import Skill from "../components/Skill";
 import Button from "../components/Button";
 import Image from "next/image";
-import { ReactTyped } from "react-typed";
 import Divider from "../components/Divider";
 import * as Config from "../Config";
 import Reveal from "../components/Reveal";
@@ -34,22 +33,10 @@ export default function About() {
                 <div className="flex flex-col flex-grow gap-8">
                     <div className="flex flex-col gap-2">
                         <Reveal direction="up" delay={0.4}>
-                            <h2 className="font-bold text-center">{Config.userInfo.fullName}</h2>
+                            <h2 className="font-bold text-center md:text-left">{Config.userInfo.fullName}</h2>
                         </Reveal>
                         <Reveal direction="right">
                             <Divider />
-                        </Reveal>
-                        <Reveal className="h3 font-bold" direction="down" delay={0.4}>
-                            <span>I'm a </span>
-                            <ReactTyped
-                                strings={Config.userInfo.roles}
-                                typeSpeed={50}
-                                backSpeed={30}
-                                backDelay={2500}
-                                startDelay={500}
-                                loop
-                                className="text-primary"
-                            />
                         </Reveal>
                         <Reveal direction="right" delay={0.6}>
                             <p className="text-justify text-text-1">

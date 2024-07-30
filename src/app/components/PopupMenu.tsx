@@ -51,8 +51,8 @@ function Options({ activeSection }: { activeSection: string }) {
         <div className="flex flex-col h-full">
             <div className="flex-grow"></div>
             <Option href="#about" text="About" IconComponent={UserMale} active={activeSection == "about"} />
-            <Option href="#projects" text="Projects" IconComponent={CheckAll} active={activeSection == "projects"} />
             <Option href="#experience" text="Experience" IconComponent={Briefcase} active={activeSection == "experience"} />
+            <Option href="#projects" text="Projects" IconComponent={CheckAll} active={activeSection == "projects"} />
             <Option href="#contact" text="Contact" IconComponent={Contacts} active={activeSection == "contact"} />
             <div className="flex-grow"></div>
             <div className="flex-grow"></div>
@@ -67,7 +67,7 @@ export default function PopupMenu() {
 
     if (!useIsMobile()) return null;
     return (
-        <div id="popupMenu" className="fixed right-0 top-0 w-0 transition-all duration-200 ease-in-out h-full bg-background-1 bg-opacity-25 backdrop-blur-3xl z-50">
+        <div id="popupMenu" className="fixed right-0 top-0 w-0 transition-all duration-200 ease-in-out h-full bg-background-1 bg-opacity-95 backdrop-blur-sm z-50">
             <div className="absolute inset-0 w-screen h-screen flex flex-col">
                 <div className="flex justify-end md:py-4 py-2">
                     <button onClick={closePopupMenu}>

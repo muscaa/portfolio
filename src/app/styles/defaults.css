@@ -13,7 +13,7 @@ body {
     top: -20vh;
 }
 
-#home-atropos > .atropos-scale > .atropos-rotate > * {
+#home-atropos > .atropos-scale > .atropos-rotate > .atropos-inner > * {
     @apply absolute inset-0 w-full h-full;
 }
 

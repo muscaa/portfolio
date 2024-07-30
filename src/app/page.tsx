@@ -21,8 +21,8 @@ export default function Main() {
                     <div className="flex justify-center items-center">
                         <div className="flex flex-col w-full max-w-6xl">
                             <About />
-                            <Projects />
                             <Experience />
+                            <Projects />
                             <Contact />
                         </div>
                     </div>

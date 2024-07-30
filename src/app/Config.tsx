@@ -11,14 +11,7 @@ export const userInfo = {
         about technology, I'm excited to pursue a career as a full-stack developer. 
         Outside of tech, I love photography, music, and spending time with my pet parrot.
     `,
-    roles: [
-        "computer science student",
-        "java fanatic",
-        "full-stack developer",
-        "linux &amp; windows user",
-        "photography &amp; music lover",
-        "bird lover",
-    ],
+    role: "Full-Stack Developer",
     education: {
         link: "https://info.uvt.ro/en/",
         school: "West University of Timisoara",
@@ -57,6 +50,32 @@ export const skills = [
     Classes.Skill.bash,
     Classes.Skill.docker,
     Classes.Skill.insomnia,
+];
+export const jobs = [
+    new Classes.Job(
+        "Freelancer",
+        "Fiverr",
+        "Mar 2022 - May 2022",
+        <>
+            Developed Minecraft mods & plugins, bringing fun and unique ideas to life.
+            It was a great way to improve my skills and earn some money.
+        </>,
+        "jobs/fiverr.png",
+        [ "java", "minecraft", "opengl / lwjgl" ]
+    ),
+    new Classes.Job(
+        "Competitive Programmer",
+        "Cloudflight Coding Contest",
+        "20 Oct 2023",
+        <>
+            Won second place in West University of Timisoara and
+            ranked <Anchor href="https://register.codingcontest.org/contest/5271/results?page.page=3&activeId=29120#29120">#124</Anchor> globally
+            in the Cloudflight Coding Contest.
+        </>,
+        "jobs/cloudflight.png",
+        [ "java" ]
+    ),
+    /*open source contributor ??*/
 ];
 export const projects = [
     new Classes.Project(
@@ -108,32 +127,6 @@ export const projects = [
         undefined,
         "https://github.com/muscaa/quill"
     ),
-];
-export const jobs = [
-    new Classes.Job(
-        "Freelancer",
-        "Fiverr",
-        "Mar 2022 - May 2022",
-        <>
-            Developed Minecraft mods & plugins, bringing fun and unique ideas to life.
-            It was a great way to improve my skills and earn some money.
-        </>,
-        "jobs/fiverr_128x128.png",
-        [ "java", "minecraft", "opengl / lwjgl" ]
-    ),
-    new Classes.Job(
-        "Competitive Programmer",
-        "Cloudflight Coding Contest",
-        "20 Oct 2023",
-        <>
-            Won second place in West University of Timisoara and
-            ranked <Anchor href="https://register.codingcontest.org/contest/5271/results?page.page=3&activeId=29120#29120">#124</Anchor> globally
-            in the Cloudflight Coding Contest.
-        </>,
-        "jobs/cloudflight_128x128.png",
-        [ "java" ]
-    ),
-    /*open source contributor ??*/
 ];
 export const contactInfo = {
     formspreeKey: "xrbzglbe",

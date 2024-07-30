@@ -12,7 +12,7 @@ import {
 
 function calculateParticles(windowSize: { width: number, height: number }) {
     const area = windowSize.width * windowSize.height;
-    return Math.floor(area / 8000);
+    return Math.floor(area / 16000);
 };
 
 export default function ParticlesBackground({ className }: { className?: string }) {
