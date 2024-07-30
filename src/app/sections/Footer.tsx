@@ -10,7 +10,7 @@ export default function Footer() {
             </Reveal>
             <Reveal>
                 {Config.footer.map((text, index) => (
-                    <h6 className="font-light text-text-2">{text}</h6>
+                    <h6 key={index} className="font-light text-text-2">{text}</h6>
                 ))}
             </Reveal>
         </footer>
