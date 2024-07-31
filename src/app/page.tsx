@@ -12,30 +12,37 @@ import PopupMenu from "./components/PopupMenu";
 import { useState, useEffect } from "react";
 
 export default function Main() {
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [isPageLoaded, setIsPageLoaded] = useState(false);
-
     useEffect(() => {
-        setIsLoaded(true);
-    }, []);
+        const handleComplete = () => {
+            console.log(document.readyState);
 
-    useEffect(() => {
-        if (isLoaded) {
-            setIsPageLoaded(true);
+            // Use requestAnimationFrame to ensure the browser has finished painting
+            requestAnimationFrame(() => {
+                console.log(document.readyState);
+
+                requestAnimationFrame(() => {
+                    console.log(document.readyState);
+
+                    const pp = document.getElementsByClassName("pp-svg")[0] as HTMLElement;
+                    if (pp == null) return;
+                    
+                    pp.style.display = "block";
+                });
+            });
+        };
+
+        console.log(document.readyState);
+
+        if (document.readyState === 'complete') {
+            handleComplete();
+        } else {
+            window.addEventListener('load', handleComplete);
         }
-    }, [isLoaded]);
 
-    useEffect(() => {
-        const pp = document.getElementsByClassName("pp-svg")[0] as HTMLElement;
-        console.log("hello");
-        if (pp == null) return;
-    
-        pp.style.display = "none";
-
-        setTimeout(() => {
-            pp.style.display = "block";
-        }, 1000);
-    }, [isPageLoaded]);
+        return () => {
+            window.removeEventListener('load', handleComplete);
+        };
+    }, []);
 
     return (
         <>

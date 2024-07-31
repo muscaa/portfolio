@@ -33,7 +33,7 @@ export default function Home() {
                 <Reveal direction="up">
                     <ButtonArrow direction="down" href="#about" />
                 </Reveal>
-                <PartyParrot className="pp-svg" />
+                <PartyParrot className="pp-svg hidden" />
                 <div className="flex-grow"></div>
                 <div className="flex-grow"></div>
             </div>
