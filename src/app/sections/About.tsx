@@ -26,7 +26,7 @@ export default function About() {
                 ">
                     <div className="flex flex-col justify-center items-center min-w-64 min-h-64 md:min-w-80 md:min-h-80 lg:min-w-96 lg:min-h-96">
                         <Reveal direction="down">
-                            <Image className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shadow-glow-lg shadow-background-4
+                            <Image loading="lazy" className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shadow-glow-lg shadow-background-4
                                 border border-background-4 border-opacity-25" src="profile.png" width={384} height={384} alt="Me" />
                         </Reveal>
                     </div>

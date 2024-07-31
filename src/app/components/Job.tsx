@@ -17,7 +17,7 @@ export default function Job({ job }: { job: Classes.Job }) {
                         <h5 className="text-text-3 font-bold">{job.company}</h5>
                         <h5 className="text-text-3">{job.date}</h5>
                     </Reveal>
-                    <Image className="w-16 h-16 rounded-xl" src={job.image} width={64} height={64} alt="" />
+                    <Image loading="lazy" className="w-16 h-16 rounded-xl" src={job.image} width={64} height={64} alt="" />
                 </div>
                 <Reveal direction="right">
                     <Divider />
