@@ -10,15 +10,12 @@
   },
   "dependencies": {
     "@formspree/react": "^2.5.1",
-    "@tsparticles/engine": "^3.4.0",
-    "@tsparticles/react": "^3.0.0",
     "framer-motion": "^11.0.8",
     "hyphen": "^1.10.4",
     "next": "14.1.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-google-recaptcha-v3": "^1.10.1",
-    "tsparticles": "^3.4.0"
+    "react-google-recaptcha-v3": "^1.10.1"
   },
   "devDependencies": {
     "@types/hyphen": "^1.6.7",

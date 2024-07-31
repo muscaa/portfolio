@@ -10,14 +10,18 @@ function MotionDiv({ ImageComponent, x, y, offset }:
     return (
         <motion.div
             transition={{
-                easings: "easeInOut",
-                duration: 0.1,
+                duration: 0,
             }}
             animate={{
                 x: x * offset,
                 //y: y * offset,
             }}
-            className="absolute w-[calc(140vh*1.65)] h-[140vh] left-[calc(50vw-70vh*1.65)] top-[-25vh]"
+            className="absolute
+            w-[max(140vw,calc(140vh*1.65))]
+            h-[max(140vh,calc(140vw*0.60))]
+            left-[calc(50vw-max(140vw,calc(140vh*1.65))/2)]
+            top-[calc(50vh-max(140vh,calc(140vw*0.60))/2)]
+            "
         >
             <ImageComponent className="absolute inset-0 w-full h-full" />
         </motion.div>
