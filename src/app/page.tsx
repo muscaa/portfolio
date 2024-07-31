@@ -9,8 +9,34 @@ import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import PopupMenu from "./components/PopupMenu";
+import { useState, useEffect } from "react";
 
 export default function Main() {
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+    useEffect(() => {
+        setIsLoaded(true);
+    }, []);
+
+    useEffect(() => {
+        if (isLoaded) {
+            setIsPageLoaded(true);
+        }
+    }, [isLoaded]);
+
+    useEffect(() => {
+        const pp = document.getElementsByClassName("pp-svg")[0] as HTMLElement;
+        console.log("hello");
+        if (pp == null) return;
+    
+        pp.style.display = "none";
+
+        setTimeout(() => {
+            pp.style.display = "block";
+        }, 1000);
+    }, [isPageLoaded]);
+
     return (
         <>
             <ParticlesBackground className="fixed inset-0 -z-50" />

@@ -5,10 +5,33 @@ import {
     MoveDirection,
     OutMode,
 } from "@tsparticles/engine";
-import { loadFull } from "tsparticles";
-import {
-    useWindowSize
-} from "../States";
+import { loadSlim } from "@tsparticles/slim";
+
+function useWindowSize() {
+    const [windowSize, setWindowSize] = useState({
+        width: 0,
+        height: 0,
+    });
+    useEffect(() => {
+        let inited = false;
+        const handleResize = () => {
+            if (inited) return;
+
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        };
+
+        handleResize();
+
+        return () => {
+            inited = true;
+        };
+    }, []);
+
+    return windowSize;
+}
 
 function calculateParticles(windowSize: { width: number, height: number }) {
     const area = windowSize.width * windowSize.height;
@@ -19,7 +42,7 @@ export default function ParticlesBackground({ className }: { className?: string 
     const [init, setInit] = useState(false);
     useEffect(() => {
         initParticlesEngine(async (engine) => {
-            await loadFull(engine);
+            await loadSlim(engine);
         }).then(() => {
             setInit(true);
         });

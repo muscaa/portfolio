@@ -116,7 +116,7 @@ export const projects = [
             central hub for showcasing my work and achievements in software development.
         </>,
         Classes.Status.complete,
-        [ "typescript", "next.js", "react", "tailwind css", "framer motion", "tsparticles", "formspree", "atropos.js" ],
+        [ "typescript", "next", "react", "tailwind css", "framer motion", "tsparticles", "formspree" ],
         "projects/portfolio.png",
         "https://muscaa.github.io/portfolio",
         "https://github.com/muscaa/portfolio"
