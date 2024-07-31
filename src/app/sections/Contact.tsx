@@ -119,7 +119,14 @@ export default function Contact() {
                 </Reveal>
                 <div className="flex flex-col lg:flex-row justify-center items-center w-full">
                     <div className="w-full max-w-md">
-                        <GoogleReCaptchaProvider reCaptchaKey={Config.contactInfo.reCaptchaKey}>
+                        <GoogleReCaptchaProvider
+                            reCaptchaKey={Config.contactInfo.reCaptchaKey}
+                            scriptProps={{
+                                async: true,
+                                defer: true,
+                                appendTo: "body"
+                            }}
+                        >
                             <ContactForm />
                         </GoogleReCaptchaProvider>
                     </div>

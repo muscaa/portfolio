@@ -42,7 +42,7 @@ export default function ParticlesBackground({ className }: { className?: string 
     const [init, setInit] = useState(false);
     useEffect(() => {
         initParticlesEngine(async (engine) => {
-            await loadSlim(engine);
+            loadSlim(engine);
         }).then(() => {
             setInit(true);
         });

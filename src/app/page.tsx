@@ -14,13 +14,8 @@ import { useState, useEffect } from "react";
 export default function Main() {
     useEffect(() => {
         const handleComplete = () => {
-            console.log(document.readyState);
-
-            // Use requestAnimationFrame to ensure the browser has finished painting
             requestAnimationFrame(() => {
-                console.log(document.readyState);
-
-                requestAnimationFrame(() => {
+                queueMicrotask(() => {
                     console.log(document.readyState);
 
                     const pp = document.getElementsByClassName("pp-svg")[0] as HTMLElement;
