@@ -4,7 +4,7 @@ import * as Config from "./Config";
  
 import "./styles/main.css";
 
-const font = Montserrat({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
+const font = Montserrat({ subsets: ["latin"], weight: [ "400" ] });
 
 export const metadata: Metadata = {
     title: Config.userInfo.shortName + "'s Portfolio",

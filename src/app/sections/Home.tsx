@@ -18,9 +18,9 @@ export default function Home() {
             <div className="flex flex-col w-full h-full justify-center items-center z-10">
                 <div className="flex-grow"></div>
                 <div className="flex-grow"></div>
-                {/*<Reveal direction="right">
+                <Reveal direction="right">
                     <h1 className="font-bold">Hi, I'm {Config.userInfo.shortName}</h1>
-                </Reveal>*/}
+                </Reveal>
                 <Reveal direction="right" delay={0.4}>
                     <h2 className="font-bold">{Config.userInfo.role}</h2>
                 </Reveal>
