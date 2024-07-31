@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
-/*import Particles, { initParticlesEngine } from "@tsparticles/react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
     type ISourceOptions,
     MoveDirection,
     OutMode,
 } from "@tsparticles/engine";
-import { loadSlim } from "@tsparticles/slim";*/
+import { loadSlim } from "@tsparticles/slim";
 
 function useWindowSize() {
     const [windowSize, setWindowSize] = useState({
@@ -39,7 +39,7 @@ function calculateParticles(windowSize: { width: number, height: number }) {
 };
 
 export default function ParticlesBackground({ className }: { className?: string }) {
-    /*const [init, setInit] = useState(false);
+    const [init, setInit] = useState(false);
     useEffect(() => {
         initParticlesEngine(async (engine) => {
             await loadSlim(engine);
@@ -114,7 +114,7 @@ export default function ParticlesBackground({ className }: { className?: string 
                 />
             </div>
         );
-    }*/
+    }
 
     return <></>;
 }

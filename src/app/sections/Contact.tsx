@@ -7,10 +7,10 @@ import {
 import Input from "../components/Input"
 import InputArea from "../components/InputArea"
 import Button from "../components/Button"
-import {
+/*import {
     GoogleReCaptchaProvider,
     useGoogleReCaptcha
-} from "react-google-recaptcha-v3";
+} from "react-google-recaptcha-v3";*/
 import Shield from "../svg/Shield";
 import {
     useState
@@ -30,7 +30,7 @@ import Mail from "../svg/Mail";
 import Phone from "../svg/Phone";
 import Location from "../svg/Location";
 
-function ContactForm() {
+/*function ContactForm() {
     const { executeRecaptcha } = useGoogleReCaptcha();
     const [state, handleSubmit] = useForm(Config.contactInfo.formspreeKey, {
         data: { "g-recaptcha-response": executeRecaptcha }
@@ -97,7 +97,7 @@ function ContactForm() {
             </form>
         </Reveal>
     );
-}
+}*/
 
 export default function Contact() {
     return (
@@ -119,9 +119,9 @@ export default function Contact() {
                 </Reveal>
                 <div className="flex flex-col lg:flex-row justify-center items-center w-full">
                     <div className="w-full max-w-md">
-                        <GoogleReCaptchaProvider reCaptchaKey={Config.contactInfo.reCaptchaKey}>
+                        {/*<GoogleReCaptchaProvider reCaptchaKey={Config.contactInfo.reCaptchaKey}>
                             <ContactForm />
-                        </GoogleReCaptchaProvider>
+                        </GoogleReCaptchaProvider>*/}
                     </div>
                     <Reveal className="flex justify-center items-center p-4 text-text-2">
                         <p>OR</p>

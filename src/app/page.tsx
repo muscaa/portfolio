@@ -37,9 +37,9 @@ export default function Main() {
         }, 1000);
     }, [isPageLoaded]);
 
-    //<ParticlesBackground className="fixed inset-0 -z-50" />
     return (
         <>
+            <ParticlesBackground className="fixed inset-0 -z-50" />
             <div className="flex flex-col h4 font-medium text-text">
                 <Home />
                 <Navbar />
