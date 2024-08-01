@@ -45,19 +45,19 @@ export default function ParallaxBackground({ interact }: { interact: boolean }) 
             });
         };
 
-        const handleTouchMove = (ev: TouchEvent) => {
+        const handleTouchMove = (event: TouchEvent) => {
             if (!interact) return;
 
             setMousePosition({
-                x: ev.touches[0].clientX / window.innerWidth,
+                x: event.touches[0].clientX / window.innerWidth,
                 //y: event.touches[0].clientY / window.innerHeight,
             });
         }
         
-        window.addEventListener("touchmove", handleTouchMove);
+        window.addEventListener("touchmove", handleTouchMove as any);
         window.addEventListener("mousemove", handleMouseMove);
         return () => {
-            window.removeEventListener("touchmove", handleTouchMove);
+            window.removeEventListener("touchmove", handleTouchMove as any);
             window.removeEventListener("mousemove", handleMouseMove);
         };
     }, [interact]);
