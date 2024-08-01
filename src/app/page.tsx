@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import ParticlesBackground from "./components/ParticlesBackground";
 import Home from "./sections/Home";
 import Navbar from "./components/Navbar";
@@ -12,11 +13,18 @@ import PopupMenu from "./components/PopupMenu";
 import LoadingScreen from "./components/LoadingScreen";
 
 export default function Main() {
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 2500);
+    });
+
     return (
         <>
             <ParticlesBackground className="fixed inset-0 -z-50" />
             <div className="flex flex-col h4 font-medium text-text">
-                <Home />
+                <Home delay={loading ? 3.0 : 0.0} />
                 <Navbar />
                 <main className="relative">
                     <div className="flex justify-center items-center">
@@ -31,7 +39,7 @@ export default function Main() {
                 <Footer />
             </div>
             <PopupMenu />
-            <LoadingScreen />
+            <LoadingScreen loading={loading} />
         </>
     );
 }
