@@ -1,4 +1,4 @@
-import React from "react";
+import React, { TouchEvent } from "react";
 import { useState, useEffect } from "react";
 import { ComponentType } from "react";
 import * as Parallax from "../svg/Parallax";
@@ -10,7 +10,8 @@ function MotionDiv({ ImageComponent, x, y, offset }:
     return (
         <motion.div
             transition={{
-                duration: 0,
+                ease: "easeOut",
+                duration: 0.02,
             }}
             animate={{
                 x: x * offset,
@@ -28,7 +29,7 @@ function MotionDiv({ ImageComponent, x, y, offset }:
     );
 }
 
-export default function ParallaxBackground() {
+export default function ParallaxBackground({ interact }: { interact: boolean }) {
     const [mousePosition, setMousePosition] = useState({
         x: 0.5,
         //y: 0.5
@@ -36,17 +37,30 @@ export default function ParallaxBackground() {
 
     useEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {
+            if (!interact) return;
+
             setMousePosition({
                 x: event.clientX / window.innerWidth,
                 //y: event.clientY / window.innerHeight,
             });
         };
 
+        const handleTouchMove = (ev: TouchEvent) => {
+            if (!interact) return;
+
+            setMousePosition({
+                x: ev.touches[0].clientX / window.innerWidth,
+                //y: event.touches[0].clientY / window.innerHeight,
+            });
+        }
+        
+        window.addEventListener("touchmove", handleTouchMove);
         window.addEventListener("mousemove", handleMouseMove);
         return () => {
+            window.removeEventListener("touchmove", handleTouchMove);
             window.removeEventListener("mousemove", handleMouseMove);
         };
-    }, []);
+    }, [interact]);
   
     const x = (mousePosition.x - 0.5);
     //const y = (mousePosition.y - 0.5);

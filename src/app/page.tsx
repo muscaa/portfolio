@@ -9,36 +9,9 @@ import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import PopupMenu from "./components/PopupMenu";
-import { useState, useEffect } from "react";
+import LoadingScreen from "./components/LoadingScreen";
 
 export default function Main() {
-    useEffect(() => {
-        const handleComplete = () => {
-            requestAnimationFrame(() => {
-                queueMicrotask(() => {
-                    console.log(document.readyState);
-
-                    const pp = document.getElementsByClassName("pp-svg")[0] as HTMLElement;
-                    if (pp == null) return;
-                    
-                    pp.style.display = "block";
-                });
-            });
-        };
-
-        console.log(document.readyState);
-
-        if (document.readyState === 'complete') {
-            handleComplete();
-        } else {
-            window.addEventListener('load', handleComplete);
-        }
-
-        return () => {
-            window.removeEventListener('load', handleComplete);
-        };
-    }, []);
-
     return (
         <>
             <ParticlesBackground className="fixed inset-0 -z-50" />
@@ -58,6 +31,7 @@ export default function Main() {
                 <Footer />
             </div>
             <PopupMenu />
+            <LoadingScreen />
         </>
     );
 }

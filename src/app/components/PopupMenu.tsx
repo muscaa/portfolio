@@ -16,7 +16,7 @@ import Close from "../svg/Close";
 import ProfileIcon from "./ProfileIcon";
 
 export function openPopupMenu() {
-    const popupMenu = document.getElementById("popupMenu");
+    const popupMenu = document.getElementById("popup-menu");
     if (popupMenu == null) return;
 
     popupMenu.style.width = "100%";
@@ -24,7 +24,7 @@ export function openPopupMenu() {
 }
 
 export function closePopupMenu() {
-    const popupMenu = document.getElementById("popupMenu");
+    const popupMenu = document.getElementById("popup-menu");
     if (popupMenu == null) return;
 
     popupMenu.style.width = "0%";
@@ -67,7 +67,7 @@ export default function PopupMenu() {
 
     if (!useIsMobile()) return null;
     return (
-        <div id="popupMenu" className="fixed right-0 top-0 w-0 transition-all duration-200 ease-in-out h-full bg-background-1 bg-opacity-95 backdrop-blur-sm z-50">
+        <div id="popup-menu" className="fixed right-0 top-0 w-0 transition-all duration-200 ease-in-out h-full bg-background-1 bg-opacity-95 backdrop-blur-sm z-50">
             <div className="absolute inset-0 w-screen h-screen flex flex-col">
                 <div className="flex justify-end md:py-4 py-2">
                     <button onClick={closePopupMenu}>
