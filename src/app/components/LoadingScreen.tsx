@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import PartyParrot from "../svg/PartyParrot";
 
 export default function LoadingScreen({ loading }: { loading: boolean }) {
