@@ -124,7 +124,7 @@ export default function Contact() {
                             scriptProps={{
                                 async: true,
                                 defer: true,
-                                appendTo: "body"
+                                appendTo: "head",
                             }}
                         >
                             <ContactForm />
