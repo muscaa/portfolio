@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 
 function getRotation(direction: "up" | "down" | "left" | "right") {
     switch (direction) {
@@ -34,7 +34,7 @@ export default function ButtonArrow({ direction = "right", href, className }: { 
     const rotation = getRotation(direction);
 
     return (
-        <div className={className}>
+        /*<div className={className}>
             <motion.a
                 href={href}
                 className="inline-block"
@@ -65,6 +65,28 @@ export default function ButtonArrow({ direction = "right", href, className }: { 
                     </svg>
                 </button>
             </motion.a>
+        </div>*/
+        <div className={className}>
+            <a
+                href={href}
+                className="inline-block"
+            >
+                <button className={`p-3 bg-primary rounded-full transition-colors duration-200 ease-in-out hover:bg-primary-light active:bg-primary ${rotation.class}`}>
+                    <svg
+                        className="w-8 h-8"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M13 5l7 7-7 7M5 5l7 7-7 7"
+                        ></path>
+                    </svg>
+                </button>
+            </a>
         </div>
     );
 }

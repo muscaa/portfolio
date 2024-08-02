@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef, useEffect } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+//import { motion, useInView, useAnimation } from "framer-motion";
 
 function getOffsets(direction: "up" | "down" | "left" | "right") {
     switch (direction) {
@@ -31,17 +31,17 @@ export default function Reveal({ children, direction = "up", delay = 0.2, classN
     { children: JSX.Element[] | JSX.Element, direction?: "up" | "down" | "left" | "right", delay?: number, className?: string }) {
     const offsets = getOffsets(direction);
     const ref = useRef(null);
-    const inView = useInView(ref, { once: true });
+    /*const inView = useInView(ref, { once: true });
     const controls = useAnimation();
 
     useEffect(() => {
         if (inView) {
             controls.start("visible");
         }
-    }, [inView]);
+    }, [inView]);*/
 
     return (
-        <motion.div
+        /*<motion.div
             variants={{
                 hidden: {
                     opacity: 0,
@@ -65,6 +65,12 @@ export default function Reveal({ children, direction = "up", delay = 0.2, classN
             ref={ref}
         >
             {Array.isArray(children) ? children : [children]}
-        </motion.div>
+        </motion.div>*/
+        <div
+            className={className}
+            ref={ref}
+        >
+            {Array.isArray(children) ? children : [children]}
+        </div>
     );
 }
