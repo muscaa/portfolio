@@ -13,12 +13,12 @@ import PopupMenu from "./components/PopupMenu";
 import LoadingScreen from "./components/LoadingScreen";
 
 export default function Main() {
-    const [loading, setLoading] = useState(true);
-    useEffect(() => {
+    const [loading, setLoading] = useState(false);
+    /*useEffect(() => {
         setTimeout(() => {
             setLoading(false);
         }, 2500);
-    });
+    });*/
 
     return (
         <>
@@ -39,7 +39,7 @@ export default function Main() {
                 <Footer />
             </div>
             <PopupMenu />
-            <LoadingScreen loading={loading} />
+            {/*<LoadingScreen loading={loading} />*/}
         </>
     );
 }
