@@ -2,37 +2,22 @@ import React, { TouchEvent } from "react";
 import { useState, useEffect } from "react";
 import { ComponentType } from "react";
 import * as Parallax from "../svg/Parallax";
-//import { motion } from "framer-motion";
 
 function MotionDiv({ ImageComponent, x, y, offset }:
     { ImageComponent: ComponentType<{ className?: string }>, x: number, y: number, offset: number }) {
 
     return (
-        /*<motion.div
-            transition={{
-                ease: "easeOut",
-                duration: 0.02,
-            }}
-            animate={{
-                x: x * offset,
-                //y: y * offset,
-            }}
-            className="absolute
-            w-[max(140vw,calc(140vh*1.65))]
-            h-[max(140vh,calc(140vw*0.60))]
-            left-[calc(50vw-max(140vw,calc(140vh*1.65))/2)]
-            top-[calc(50vh-max(140vh,calc(140vw*0.60))/2)]
-            "
-        >
-            <ImageComponent className="absolute inset-0 w-full h-full" />
-        </motion.div>*/
         <div
             className="absolute
             w-[max(140vw,calc(140vh*1.65))]
             h-[max(140vh,calc(140vw*0.60))]
             left-[calc(50vw-max(140vw,calc(140vh*1.65))/2)]
             top-[calc(50vh-max(140vh,calc(140vw*0.60))/2)]
+            transition-transform duration-[100ms] ease-out
             "
+            style={{
+                transform: `translateX(${x * offset}px)`,
+            }}
         >
             <ImageComponent className="absolute inset-0 w-full h-full" />
         </div>

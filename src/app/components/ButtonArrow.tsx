@@ -1,5 +1,6 @@
 import React from "react";
-//import { motion } from "framer-motion";
+import { useSpring, animated } from "@react-spring/web";
+import { useEffect } from "react";
 
 function getRotation(direction: "up" | "down" | "left" | "right") {
     switch (direction) {
@@ -32,43 +33,40 @@ function getRotation(direction: "up" | "down" | "left" | "right") {
 
 export default function ButtonArrow({ direction = "right", href, className }: { direction: "up" | "down" | "left" | "right", href: string, className?: string }) {
     const rotation = getRotation(direction);
+    const [springs, api] = useSpring(() => ({
+        from: {
+            x: rotation.x[0],
+            y: rotation.y[0],
+        },
+    }));
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            api.start({
+                to: async (next) => {
+                    for (let i = 0; i < 5; i++) {
+                        await next({
+                            x: rotation.x[i],
+                            y: rotation.y[i],
+                            config: {
+                                duration: 120,
+                            }
+                        });
+                    }
+                },
+            });
+        }, 2500);
+
+        return () => clearInterval(interval);
+    }, [api]);
 
     return (
-        /*<div className={className}>
-            <motion.a
+        <div
+            className={className}
+        >
+            <animated.a
                 href={href}
-                className="inline-block"
-                animate={{
-                    x: rotation.x,
-                    y: rotation.y,
-                    transition: {
-                        duration: 0.5,
-                        ease: "easeInOut",
-                        repeat: Infinity,
-                        repeatDelay: 2,
-                    },
-                }}
-            >
-                <button className={`p-3 bg-primary rounded-full transition-colors duration-200 ease-in-out hover:bg-primary-light active:bg-primary ${rotation.class}`}>
-                    <svg
-                        className="w-8 h-8"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M13 5l7 7-7 7M5 5l7 7-7 7"
-                        ></path>
-                    </svg>
-                </button>
-            </motion.a>
-        </div>*/
-        <div className={className}>
-            <a
-                href={href}
+                style={springs}
                 className="inline-block"
             >
                 <button className={`p-3 bg-primary rounded-full transition-colors duration-200 ease-in-out hover:bg-primary-light active:bg-primary ${rotation.class}`}>
@@ -86,7 +84,7 @@ export default function ButtonArrow({ direction = "right", href, className }: { 
                         ></path>
                     </svg>
                 </button>
-            </a>
+            </animated.a>
         </div>
     );
 }

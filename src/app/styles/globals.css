@@ -13,23 +13,6 @@
         box-shadow: 0 0 100px -50px var(--tw-shadow-color);
     }
 
-    .animation-slide {
-        animation: slide 30s infinite linear;
-    }
-
-    .animation-pause {
-        animation-play-state: paused;
-    }
-
-    @keyframes slide {
-        0% {
-            transform: translateX(0%);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-    }
-
     .masked {
         mask-image: linear-gradient(black, black);
     }
