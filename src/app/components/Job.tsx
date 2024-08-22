@@ -1,6 +1,5 @@
 import React from "react";
 import Reveal from "./Reveal";
-import { hyphenateSync } from "hyphen/en";
 import Image from "next/image";
 import Divider from "./Divider";
 import * as Classes from "../Classes";

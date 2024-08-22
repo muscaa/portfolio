@@ -31,7 +31,7 @@ export default function Home({ delay }: { delay: number }) {
     });
 
     return (
-        <section id="home" ref={ref} className="flex h-screen overflow-hidden bg-navbar-opaque">
+        <section id="home" ref={ref} className="relative flex h-screen overflow-hidden bg-navbar-opaque">
             <ParallaxBackground interact={interact} />
             <div className="flex flex-col w-full h-full justify-center items-center z-10">
                 <div className="flex-grow"></div>

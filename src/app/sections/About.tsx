@@ -2,7 +2,6 @@ import React from "react";
 import Title from "../components/Title";
 import { hyphenateSync } from "hyphen/en";
 import SkillSet from "../components/SkillSet";
-import Button from "../components/Button";
 import Image from "next/image";
 import Divider from "../components/Divider";
 import * as Config from "../Config";
@@ -47,14 +46,18 @@ export default function About() {
                         </div>
                         <Reveal className="flex flex-col h-full gap-2 lg:gap-4" delay={0.4}>
                             <Info name={Config.userInfo.education.school} value={Config.userInfo.education.period} href={Config.userInfo.education.link} IconComponent={School} />
-                            <div className="grid grid-cols-[70%_30%] space-x-2 lg:space-x-4">
-                                <DoubleButton className="w-full" text="View Resume" IconComponent={Download} />
-                                <Selector
-                                    className="h-full"
-                                    options={["EN", "RO"]}
-                                    selected={0}
-                                    onSelect={(option, index) => console.log(option + " : " + index)}
-                                />
+                            <div className="relative grid grid-cols-[70%_30%] space-x-2 lg:space-x-4">
+                                <div>
+                                    <DoubleButton className="w-full" text="View Resume" IconComponent={Download} />
+                                </div>
+                                <div>
+                                    <Selector
+                                        className="h-full"
+                                        options={Object.entries(Config.userInfo.resumes).map(([key, value]) => key)}
+                                        selected={0}
+                                        onSelect={(option, index) => console.log(option + " : " + index)}
+                                    />
+                                </div>
                             </div>
                         </Reveal>
                     </div>

@@ -17,6 +17,10 @@ export const userInfo = {
         school: "West University of Timisoara",
         period: "Bachelor's degree 2023 - 2026",
     },
+    resumes: {
+        "EN": "resumes/Musca_Mihail_Resume_EN.pdf",
+        "RO": "resumes/Musca_Mihail_Resume_RO.pdf",
+    }
 };
 export const skillSets = [
     new Classes.SkillSet(

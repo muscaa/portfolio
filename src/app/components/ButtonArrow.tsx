@@ -1,5 +1,5 @@
 import React from "react";
-import { useSpring, animated } from "@react-spring/web";
+import { motion } from "framer-motion";
 import { useEffect } from "react";
 
 function getRotation(direction: "up" | "down" | "left" | "right") {
@@ -33,41 +33,24 @@ function getRotation(direction: "up" | "down" | "left" | "right") {
 
 export default function ButtonArrow({ direction = "right", href, className }: { direction: "up" | "down" | "left" | "right", href: string, className?: string }) {
     const rotation = getRotation(direction);
-    const [springs, api] = useSpring(() => ({
-        from: {
-            x: rotation.x[0],
-            y: rotation.y[0],
-        },
-    }));
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            api.start({
-                to: async (next) => {
-                    for (let i = 0; i < 5; i++) {
-                        await next({
-                            x: rotation.x[i],
-                            y: rotation.y[i],
-                            config: {
-                                duration: 120,
-                            }
-                        });
-                    }
-                },
-            });
-        }, 2500);
-
-        return () => clearInterval(interval);
-    }, [api]);
 
     return (
         <div
             className={className}
         >
-            <animated.a
+            <motion.a
                 href={href}
-                style={springs}
                 className="inline-block"
+                animate={{
+                    x: rotation.x,
+                    y: rotation.y,
+                    transition: {
+                        duration: 0.5,
+                        ease: "easeInOut",
+                        repeat: Infinity,
+                        repeatDelay: 2,
+                    },
+                }}
             >
                 <button className={`p-3 bg-primary rounded-full transition-colors duration-200 ease-in-out hover:bg-primary-light active:bg-primary ${rotation.class}`}>
                     <svg
@@ -84,7 +67,7 @@ export default function ButtonArrow({ direction = "right", href, className }: { 
                         ></path>
                     </svg>
                 </button>
-            </animated.a>
+            </motion.a>
         </div>
     );
 }

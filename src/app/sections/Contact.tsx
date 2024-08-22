@@ -80,19 +80,24 @@ function ContactForm() {
                     field="message"
                     errors={state.errors}
                 />
-                <Reveal className="grid grid-cols-2 my-2" direction="down" delay={0.4}>
-                    <div className="flex justify-center items-center h-full text-text-2">
-                        <Shield className="w-6 h-6 md:w-8 md:h-8 mr-2 sm:ml-0 ml-2 flex-shrink-0" />
-                        <div className="flex flex-col">
-                            <h5>Protected by</h5>
-                            <h5>reCAPTCHA</h5>
+                <Reveal className="relative grid grid-cols-2 my-2" direction="down" delay={0.4}>
+                    <div>
+                        <div className="flex justify-center items-center h-full text-text-2">
+                            <Shield className="w-6 h-6 md:w-8 md:h-8 mr-2 sm:ml-0 ml-2 flex-shrink-0" />
+                            <div className="flex flex-col">
+                                <h5>Protected by</h5>
+                                <h5>reCAPTCHA</h5>
+                            </div>
                         </div>
                     </div>
-                    <Button
-                        type="submit"
-                        disabled={nameEmpty || emailEmpty || messageEmpty || state.submitting || state.succeeded}
-                        text={state.succeeded ? "Sent!" : "Send"}
-                    />
+                    <div>
+                        <Button
+                            type="submit"
+                            disabled={nameEmpty || emailEmpty || messageEmpty || state.submitting || state.succeeded}
+                            text={state.succeeded ? "Sent!" : "Send"}
+                            className="w-full"
+                        />
+                    </div>
                 </Reveal>
             </form>
         </Reveal>

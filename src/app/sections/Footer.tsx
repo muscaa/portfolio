@@ -4,7 +4,7 @@ import Reveal from "../components/Reveal";
 
 export default function Footer() {
     return (
-        <footer className="bg-background-2 bg-opacity-25 backdrop-blur-lg flex flex-col justify-center items-center text-center py-8 space-y-4">
+        <footer className="bg-background-2 bg-opacity-25 backdrop-blur-lg relative flex flex-col justify-center items-center text-center py-8 space-y-4">
             <Reveal className="absolute -top-8">
                 <ButtonArrow direction="up" href="#home" />
             </Reveal>

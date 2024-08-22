@@ -1,6 +1,5 @@
 import React from "react";
 import { ComponentType } from "react";
-import Button from "./Button";
 
 export default function DoubleButton({ id, className, type, disabled, onClick, text, iconType, iconDisabled, onIconClick, IconComponent }:
     { id?: string, className?: string,
@@ -9,7 +8,7 @@ export default function DoubleButton({ id, className, type, disabled, onClick, t
     return (
         <div
             id={id}
-            className={`flex ${className}`}
+            className={`flex h-full ${className}`}
         >
             <button
                 type={type}
