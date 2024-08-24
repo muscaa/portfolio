@@ -78,10 +78,15 @@ export const jobs = [
         "Freelancer",
         "Fiverr",
         "Mar 2022 - May 2022",
-        <>
-            Developed Minecraft mods & plugins, bringing fun and unique ideas to life.
-            It was a great way to improve my skills and earn some money.
-        </>,
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Developed Minecraft mods & plugins, bringing fun and unique ideas to life.
+                    It was a great way to improve my skills and earn some money.
+                </>
+            ),
+        ],
         "jobs/fiverr.png",
         [ "java", "minecraft", "opengl / lwjgl" ]
     ),
@@ -89,11 +94,16 @@ export const jobs = [
         "Competitive Programmer",
         "Cloudflight Coding Contest",
         "20 Oct 2023",
-        <>
-            Won second place in West University of Timisoara and
-            ranked <Anchor href="https://register.codingcontest.org/contest/5271/results?page.page=3&activeId=29120#29120">#124</Anchor> globally
-            in the Cloudflight Coding Contest.
-        </>,
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Won second place in West University of Timisoara and
+                    ranked <Anchor href="https://register.codingcontest.org/contest/5271/results?page.page=3&activeId=29120#29120">#124</Anchor> globally
+                    in the Cloudflight Coding Contest.
+                </>
+            ),
+        ],
         "jobs/cloudflight.png",
         [ "java" ]
     ),
@@ -102,11 +112,16 @@ export const jobs = [
 export const projects = [
     new Classes.Project(
         "Logic Gate Simulator",
-        <>
-            Created an app for designing and simulating logic gate systems.
-            Users can build, save, and load their own logic circuits, making
-            it easy to experiment with and understand digital logic concepts.
-        </>,
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Created an app for designing and simulating logic gate systems.
+                    Users can build, save, and load their own logic circuits, making
+                    it easy to experiment with and understand digital logic concepts.
+                </>
+            ),
+        ],
         Classes.Status.complete,
         [ "java", "gradle", "opengl / lwjgl", "slick2d" ],
         "projects/logic-gate-sim.png",
@@ -115,10 +130,15 @@ export const projects = [
     ),
     new Classes.Project(
         "Developer Portfolio",
-        <>
-            Built this portfolio to highlight my skills and projects. It serves as a
-            central hub for showcasing my work and achievements in software development.
-        </>,
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Built this portfolio to highlight my skills and projects. It serves as a
+                    central hub for showcasing my work and achievements in software development.
+                </>
+            ),
+        ],
         Classes.Status.complete,
         [ "typescript", "next", "react", "tailwind css", "framer motion", "tsparticles", "formspree" ],
         "projects/portfolio.png",
@@ -127,10 +147,15 @@ export const projects = [
     ),
     new Classes.Project(
         "Fluff Libraries",
-        <>
-            Developed a collection of open source, small, versatile, modular libraries.
-            Each one is designed to be efficient and easy to use in various projects.
-        </>,
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Developed a collection of open source, small, versatile, modular libraries.
+                    Each one is designed to be efficient and easy to use in various projects.
+                </>
+            ),
+        ],
         Classes.Status.complete,
         [ "java", "gradle", "jitpack" ],
         "black.png",
@@ -139,10 +164,15 @@ export const projects = [
     ),
     new Classes.Project(
         "Quill",
-        <>
-            Created a cross-platform package manager for tools and libraries.
-            Features a command-line interface for package installation and updates.
-        </>,
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Created a cross-platform package manager for tools and libraries.
+                    Features a command-line interface for package installation and updates.
+                </>
+            ),
+        ],
         Classes.Status.inDev,
         [ "java", "gradle", "fluff" ],
         "black.png",

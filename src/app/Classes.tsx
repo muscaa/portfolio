@@ -134,9 +134,22 @@ export class Status {
     static complete: Status = new Status("Complete", "text-green-700");
 }
 
+export class Detail {
+    title: string;
+    content: JSX.Element;
+
+    constructor(
+        title: string,
+        content: JSX.Element
+    ) {
+        this.title = title;
+        this.content = hyphenateJSX(content) as JSX.Element;
+    }
+}
+
 export class Project {
     name: string;
-    description: JSX.Element;
+    details: Detail[];
     status: Status;
     skills: string[];
     image: string;
@@ -145,7 +158,7 @@ export class Project {
 
     constructor(
         name: string,
-        description: JSX.Element,
+        details: Detail[],
         status: Status,
         skills: string[],
         image: string,
@@ -153,7 +166,7 @@ export class Project {
         githubUrl?: string
     ) {
         this.name = name;
-        this.description = hyphenateJSX(description) as JSX.Element;
+        this.details = details;
         this.status = status;
         this.skills = skills;
         this.image = image;
@@ -166,7 +179,7 @@ export class Job {
     name: string;
     company: string;
     date: string;
-    description: JSX.Element;
+    details: Detail[];
     skills: string[];
     image: string;
 
@@ -174,14 +187,14 @@ export class Job {
         name: string,
         company: string,
         date: string,
-        description: JSX.Element,
+        details: Detail[],
         image: string,
         skills: string[]
     ) {
         this.name = name;
         this.company = company;
         this.date = date;
-        this.description = hyphenateJSX(description) as JSX.Element;
+        this.details = details;
         this.image = image;
         this.skills = skills;
     }

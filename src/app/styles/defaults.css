@@ -6,17 +6,6 @@ body {
     @apply bg-background-1 text-text;
 }
 
-#home-atropos {
-    min-width: calc(140vh * 1.65);
-    min-height: 140vh;
-    left: calc(50vw - 70vh * 1.65);
-    top: -20vh;
-}
-
-#home-atropos > .atropos-scale > .atropos-rotate > .atropos-inner > * {
-    @apply absolute inset-0 w-full h-full;
-}
-
 ::-webkit-scrollbar {
     width: 10px;
 }

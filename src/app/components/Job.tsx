@@ -3,12 +3,13 @@ import Reveal from "./Reveal";
 import Image from "next/image";
 import Divider from "./Divider";
 import * as Classes from "../Classes";
+import Details from "./Details";
 
 export default function Job({ job }: { job: Classes.Job }) {
     return (
         <Reveal className="w-80 bg-background-3 bg-opacity-25 backdrop-blur-sm
         shadow-md shadow-background-1 border border-background-3 border-opacity-25
-        rounded-lg overflow-hidden flex flex-col transform transition-shadow duration-200 ease-in-out hover:shadow-glow-lg hover:shadow-background-4 hover:z-10">
+        rounded-lg overflow-hidden flex flex-col">
             <div className="p-4 flex flex-col gap-2">
                 <div className="flex gap-4 justify-between">
                     <Reveal className="flex flex-col" direction="up" delay={0.4}>
@@ -26,10 +27,14 @@ export default function Job({ job }: { job: Classes.Job }) {
                         <span key={index} className={`text-secondary font-normal bg-secondary bg-opacity-10 px-2 py-0.5 rounded-lg h6 flex-grow text-center`}>{skill}</span>
                     ))}
                 </Reveal>
-                <Reveal direction="right" delay={0.6}>
-                    <p className="text-justify text-text-1">
-                        {job.description}
-                    </p>
+                <Reveal direction="right" delay={0.6} className="space-y-1">
+                    {job.details.map((detail, index) => (
+                        <Details key={index} title={detail.title}>
+                            <p className="text-justify text-text-1">
+                                {detail.content}
+                            </p>
+                        </Details>
+                    ))}
                 </Reveal>
             </div>
         </Reveal>

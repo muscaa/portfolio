@@ -13,22 +13,6 @@
         box-shadow: 0 0 100px -50px var(--tw-shadow-color);
     }
 
-    .masked {
-        mask-image: linear-gradient(black, black);
-    }
-
-    .mask-smooth-sm {
-        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-    }
-
-    .mask-smooth-md {
-        mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
-    }
-
-    .mask-smooth-lg {
-        mask-image: linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%);
-    }
-
     .h1 {
         @apply text-4xl sm:text-5xl lg:text-6xl;
     }
