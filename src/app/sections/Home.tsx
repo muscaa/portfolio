@@ -10,6 +10,7 @@ import { useState, useEffect, useRef } from "react";
 import Github from "../svg/Github";
 import Instagram from "../svg/Instagram";
 import Linkedin from "../svg/Linkedin";
+import Telegram from "../svg/Telegram";
 
 export default function Home({ delay }: { delay: number }) {
     const ref = useRef<HTMLDivElement>(null);
@@ -44,6 +45,7 @@ export default function Home({ delay }: { delay: number }) {
                 </Reveal>
                 <Reveal className="flex gap-2 justify-center items-center mt-4 lg:mt-8" direction="right" delay={delay + 0.6}>
                     <IconLink href={Config.contactInfo.github} IconComponent={Github} />
+                    <IconLink href={Config.contactInfo.telegram} IconComponent={Telegram} />
                     <IconLink href={Config.contactInfo.instagram} IconComponent={Instagram} />
                     <IconLink href={Config.contactInfo.linkedin} IconComponent={Linkedin} />
                 </Reveal>

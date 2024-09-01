@@ -5,14 +5,17 @@ import * as Config from "../Config";
 import { useState, useEffect } from "react";
 import Button from "../components/Button";
 
+function getMin(array: any[]) {
+    const max = window.innerWidth < 816 ? 1 : 2;
+    return array.length <= max ? array : array.slice(0, max);
+}
+
 export default function Projects() {
     const array = Config.projects;
     const [sliced, setSliced] = useState(array);
 
     useEffect(() => {
-        const max = window.innerWidth < 816 ? 1 : 2;
-
-        setSliced(array.length <= max ? array : array.slice(0, max));
+        setSliced(getMin(array));
     }, []);
 
     return (
@@ -23,11 +26,14 @@ export default function Projects() {
                     <Project key={index} project={project} />
                 ))}
             </div>
-            {sliced !== array && (
-                <div className="flex justify-center items-center mt-4 md:mt-12">
-                    <Button text="Show All" onClick={() => setSliced(array)} />
-                </div>
-            )}
+            <div className="flex justify-center items-center mt-4 md:mt-12">
+                {sliced !== array && (
+                    <Button text="Show More" onClick={() => setSliced(array)} />
+                )}
+                {sliced === array && (
+                    <Button text="Show Less" onClick={() => setSliced(getMin(array))} />
+                )}
+            </div>
         </section>
     );
 }

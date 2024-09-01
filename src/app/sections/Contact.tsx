@@ -29,6 +29,7 @@ import Linkedin from "../svg/Linkedin";
 import Mail from "../svg/Mail";
 import Phone from "../svg/Phone";
 import Location from "../svg/Location";
+import Telegram from "../svg/Telegram";
 
 function ContactForm() {
     const { executeRecaptcha } = useGoogleReCaptcha();
@@ -149,6 +150,7 @@ export default function Contact() {
                         </Reveal>
                         <Reveal className="flex gap-2 justify-center items-center" direction="down" delay={0.4}>
                             <IconLink href={Config.contactInfo.github} IconComponent={Github} />
+                            <IconLink href={Config.contactInfo.telegram} IconComponent={Telegram} />
                             <IconLink href={Config.contactInfo.instagram} IconComponent={Instagram} />
                             <IconLink href={Config.contactInfo.linkedin} IconComponent={Linkedin} />
                         </Reveal>

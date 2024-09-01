@@ -10,6 +10,7 @@ import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import PopupMenu from "./components/PopupMenu";
+import ProjectMenu from "./components/ProjectMenu";
 import LoadingScreen from "./components/LoadingScreen";
 
 export default function Main() {
@@ -39,6 +40,7 @@ export default function Main() {
                 <Footer />
             </div>
             <PopupMenu />
+            <ProjectMenu />
             <LoadingScreen loading={loading} />
         </>
     );
