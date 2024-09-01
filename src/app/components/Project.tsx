@@ -9,22 +9,11 @@ import Github from "../svg/Github";
 import { openProjectMenu } from "./ProjectMenu";
 
 export default function Project({ project }: { project: Classes.Project }) {
-    /*
-                    <Reveal direction="right" delay={0.6} className="space-y-1">
-                        {project.details.map((detail, index) => (
-                            <Details key={index} title={detail.title}>
-                                <p className="text-justify text-text-1">
-                                    {detail.content}
-                                </p>
-                            </Details>
-                        ))}
-                    </Reveal>
-    */
     return (
-        <Reveal className="w-80 sm:w-96 lg:w-112 bg-background-3 bg-opacity-25 backdrop-blur-sm
-        shadow-md shadow-background-1 border border-background-3 border-opacity-25
+        <Reveal className="w-80 sm:w-96 lg:w-112 bg-background-3 bg-opacity-15 backdrop-blur-sm
+        shadow-md shadow-shadow border border-background-3 border-opacity-25
         rounded-lg overflow-hidden flex flex-col">
-            <Image loading="lazy" className="w-full h-40 object-cover" src={project.image} width={320} height={180} alt={`${project.name} screenshot`} />
+            <Image loading="lazy" className="absolute w-full h-full object-cover -z-10 opacity-25 brightness-150 blur-md" src={project.image} width={320} height={180} alt={`${project.name} screenshot`} />
             <div className="p-4 flex flex-col h-full justify-between gap-4">
                 <div className="flex flex-col gap-2">
                     <Reveal direction="up" delay={0.4}>
