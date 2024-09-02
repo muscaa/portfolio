@@ -15,13 +15,12 @@ export function openProjectMenu(project: Classes.Project) {
     if (projectMenu == null) return;
 
     projectMenu.style.display = "block";
-    document.body.style.overflow = "hidden";
 
     setTimeout(() => {
+        setOpenProject(project);
+
         projectMenu.style.opacity = "100%";
     }, 0);
-
-    setOpenProject(project);
 }
 
 function closeProjectMenu() {
@@ -29,13 +28,12 @@ function closeProjectMenu() {
     if (projectMenu == null) return;
 
     projectMenu.style.opacity = "0%";
-    document.body.style.overflow = "auto";
 
     setTimeout(() => {
+        setOpenProject(null);
+
         projectMenu.style.display = "none";
     }, 200);
-
-    setOpenProject(null);
 }
 
 export default function ProjectMenu() {
@@ -46,14 +44,14 @@ export default function ProjectMenu() {
     }, []);
 
     return (
-        <div id="project-menu" className="fixed right-0 top-0 w-full hidden transition-all duration-200 ease-in-out h-full bg-background-1 bg-opacity-95 backdrop-blur-sm z-50">
+        <div id="project-menu" className="fixed right-0 top-0 w-full opacity-0 hidden transition-all duration-200 ease-in-out h-full bg-background-1 bg-opacity-95 backdrop-blur-sm z-50">
             <div className="absolute inset-0 w-screen h-screen flex flex-col">
                 <Button text="Close" onClick={closeProjectMenu} />
                 {project && (
                     <div className="flex w-full h-full justify-center items-center">
-                        <div className="w-80 sm:w-96 lg:w-112 bg-background-3 bg-opacity-25 backdrop-blur-sm
+                        <div className="w-80 sm:w-112 lg:w-160 max-h-[70vh] bg-background-3 bg-opacity-25 backdrop-blur-sm
                         shadow-md shadow-background-1 border border-background-3 border-opacity-25
-                        rounded-lg overflow-hidden flex flex-col">
+                        rounded-lg overflow-auto flex flex-col">
                             <Image loading="lazy" className="w-full h-40 object-cover" src={project.image} width={320} height={180} alt={`${project.name} screenshot`} />
                             <div className="p-4 flex flex-col h-full justify-between gap-4">
                                 <div className="flex flex-col gap-2">
@@ -70,7 +68,7 @@ export default function ProjectMenu() {
                                     </div>
                                     <div className="space-y-1">
                                         {project.details.map((detail, index) => (
-                                            <Details key={index} title={detail.title}>
+                                            <Details key={index} title={detail.title} open={true}>
                                                 <p className="text-justify text-text-1">
                                                     {detail.content}
                                                 </p>

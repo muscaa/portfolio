@@ -3,8 +3,8 @@ import Arrow from "../svg/Arrow";
 import { useState } from "react";
 import Divider from "./Divider";
 
-export default function Details({ className, title, children }: { className?: string, title: string, children: JSX.Element[] | JSX.Element }) {
-    const [isOpen, setIsOpen] = useState(false);
+export default function Details({ className, title, children, open = false }: { className?: string, title: string, children: JSX.Element[] | JSX.Element, open?: boolean }) {
+    const [isOpen, setIsOpen] = useState(open);
 
     return (
         <div className={`

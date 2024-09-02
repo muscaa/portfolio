@@ -15,7 +15,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     return (
         <html lang="en">
             <body className={`${font.className} overflow-hidden`}>
-                {children}
+                <div id="main-content" className="block max-h-screen overflow-auto">
+                    {children}
+                </div>
             </body>
         </html>
     );

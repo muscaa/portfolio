@@ -28,6 +28,9 @@ export function useActiveSection() {
     const [activeSection, setActiveSection] = useState("");
     useEffect(() => {
         const handleScroll = () => {
+            const mainContent = document.getElementById("main-content");
+            if (!mainContent) return;
+
             let active = "home";
 
             document.querySelectorAll("section").forEach(section => {
@@ -35,7 +38,7 @@ export function useActiveSection() {
                 const height = section.offsetHeight;
                 const id = section.getAttribute("id") || "home";
 
-                if (window.scrollY >= offset && window.scrollY < offset + height) {
+                if (mainContent.scrollTop >= offset && mainContent.scrollTop < offset + height) {
                     active = id;
                 }
             });
@@ -45,9 +48,14 @@ export function useActiveSection() {
 
         handleScroll();
 
-        window.addEventListener("scroll", handleScroll);
+        const mainContent = document.getElementById("main-content");
+        if (mainContent) {
+            mainContent.addEventListener("scroll", handleScroll);
+        }
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            if (mainContent) {
+                mainContent.removeEventListener("scroll", handleScroll);
+            }
         };
     }, []);
 

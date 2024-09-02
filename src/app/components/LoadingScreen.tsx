@@ -11,7 +11,6 @@ export default function LoadingScreen({ loading }: { loading: boolean }) {
 
         loadingScreen.style.opacity = "0";
         loadingScreen.style.scale = "2";
-        document.body.style.overflow = "auto";
         
         setTimeout(() => {
             loadingScreen.style.display = "none";

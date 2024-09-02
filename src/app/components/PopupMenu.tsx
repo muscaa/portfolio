@@ -20,7 +20,6 @@ export function openPopupMenu() {
     if (popupMenu == null) return;
 
     popupMenu.style.width = "100%";
-    document.body.style.overflow = "hidden";
 }
 
 export function closePopupMenu() {
@@ -28,7 +27,6 @@ export function closePopupMenu() {
     if (popupMenu == null) return;
 
     popupMenu.style.width = "0%";
-    document.body.style.overflow = "auto";
 }
 
 function Option({ href, text, IconComponent, active, target }:
