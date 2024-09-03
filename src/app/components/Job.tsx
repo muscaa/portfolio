@@ -7,7 +7,7 @@ import Details from "./Details";
 
 export default function Job({ job }: { job: Classes.Job }) {
     return (
-        <Reveal className="w-80 bg-background-3 bg-opacity-25 backdrop-blur-sm
+        <Reveal className="w-full bg-background-3 bg-opacity-25 backdrop-blur-sm
         shadow-md shadow-background-1 border border-background-3 border-opacity-25
         rounded-lg overflow-hidden flex flex-col">
             <div className="p-4 flex flex-col gap-2">

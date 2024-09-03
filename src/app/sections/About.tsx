@@ -25,8 +25,8 @@ export default function About() {
                 ">
                     <div className="flex flex-col justify-center items-center min-w-64 min-h-64 md:min-w-80 md:min-h-80 lg:min-w-96 lg:min-h-96">
                         <Reveal direction="down">
-                            <Image loading="lazy" className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shadow-glow-lg shadow-background-4
-                                border border-background-4 border-opacity-25" src="profile.png" width={384} height={384} alt="Me" />
+                            <Image loading="lazy" className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shadow-glow-lg shadow-text
+                                border border-text border-opacity-25" src="profile.png" width={512} height={512} alt="Me" />
                         </Reveal>
                     </div>
 
@@ -40,7 +40,7 @@ export default function About() {
                             </Reveal>
                             <Reveal direction="right" delay={0.6}>
                                 <p className="text-justify text-text-1">
-                                    {hyphenateSync(Config.userInfo.description)}
+                                    {Config.userInfo.description.content}
                                 </p>
                             </Reveal>
                         </div>

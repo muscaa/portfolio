@@ -5,12 +5,19 @@ export const userInfo = {
     fullName: "Musca Mihail",
     shortName: "Mihail",
     nickName: "muscaa",
-    description: `
-        I'm a Computer Science student with a solid Java foundation that began in 8th grade. 
-        I enjoy tackling complex problems and adapting to new challenges. Passionate 
-        about technology, I'm excited to pursue a career as a full-stack developer. 
-        Outside of tech, I love photography, music, and spending time with my pet parrot.
-    `,
+    description: new Classes.Detail(
+        "Description",
+        <>
+            Hi there!
+            I'm a Computer Science student who got into coding back in 8th grade with Java.
+            I love diving into tough problems and figuring out solutions (even if it means a bit
+            of keyboard smashing). I'm aiming to be a full-stack developer—because why choose one
+            side when you can do it all?
+            <br /><br />
+            When I'm not coding, I'm either snapping photos, vibing to music, or hanging out with
+            my parrot, who's convinced he's the real star here.
+        </>
+    ),
     role: "Full-Stack Developer",
     education: {
         link: "https://info.uvt.ro/en/",
@@ -82,8 +89,8 @@ export const jobs = [
             new Classes.Detail(
                 "Description",
                 <>
-                    Developed Minecraft mods & plugins, bringing fun and unique ideas to life.
-                    It was a great way to improve my skills and earn some money.
+                    Created Minecraft mods and plugins, turning creative ideas into reality.
+                    This experience helped me sharpen my skills and earn some extra income.
                 </>
             ),
         ],
@@ -98,9 +105,9 @@ export const jobs = [
             new Classes.Detail(
                 "Description",
                 <>
-                    Won second place in West University of Timisoara and
+                    Secured second place in my university and
                     ranked <Anchor href="https://register.codingcontest.org/contest/5271/results?page.page=3&activeId=29120#29120">#124</Anchor> globally
-                    in the Cloudflight Coding Contest.
+                    in the <Anchor href="https://codingcontest.org/">Cloudflight Coding Contest</Anchor>.
                 </>
             ),
         ],
@@ -116,9 +123,9 @@ export const projects = [
             new Classes.Detail(
                 "Description",
                 <>
-                    Created an app for designing and simulating logic gate systems.
-                    Users can build, save, and load their own logic circuits, making
-                    it easy to experiment with and understand digital logic concepts.
+                    Developed an app for designing and simulating logic gate systems.
+                    Users can build, save, and load custom logic circuits, making it
+                    easier to experiment with and understand digital logic concepts.
                 </>
             ),
         ],

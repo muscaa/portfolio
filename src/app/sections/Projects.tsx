@@ -5,8 +5,12 @@ import * as Config from "../Config";
 import { useState, useEffect } from "react";
 import Button from "../components/Button";
 
+function getMax() {
+    return window.innerWidth < 816 ? 2 : 4;
+}
+
 function getMin(array: any[]) {
-    const max = window.innerWidth < 816 ? 1 : 2;
+    const max = getMax();
     return array.length <= max ? array : array.slice(0, max);
 }
 
@@ -30,7 +34,7 @@ export default function Projects() {
                 {sliced !== array && (
                     <Button text="Show More" onClick={() => setSliced(array)} />
                 )}
-                {sliced === array && (
+                {sliced === array && array.length != getMax() && (
                     <Button text="Show Less" onClick={() => setSliced(getMin(array))} />
                 )}
             </div>
