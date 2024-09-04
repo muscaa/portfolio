@@ -5,22 +5,19 @@ import * as Config from "../Config";
 import { useState, useEffect } from "react";
 import Button from "../components/Button";
 
-function getMax() {
-    return window.innerWidth < 816 ? 2 : 4;
-}
-
-function getMin(array: any[]) {
-    const max = getMax();
+function slice(array: any[], max: number) {
     return array.length <= max ? array : array.slice(0, max);
 }
 
 export default function Projects() {
     const array = Config.projects;
+    const [max, setMax] = useState(0);
     const [sliced, setSliced] = useState(array);
 
     useEffect(() => {
-        setSliced(getMin(array));
-    }, []);
+        setMax(window.innerWidth < 816 ? 2 : 4);
+        setSliced(slice(array, max));
+    }, [ max ]);
 
     return (
         <section id="projects">
@@ -34,8 +31,8 @@ export default function Projects() {
                 {sliced !== array && (
                     <Button text="Show More" onClick={() => setSliced(array)} />
                 )}
-                {sliced === array && array.length != getMax() && (
-                    <Button text="Show Less" onClick={() => setSliced(getMin(array))} />
+                {sliced === array && array.length != max && (
+                    <Button text="Show Less" onClick={() => setSliced(slice(array, max))} />
                 )}
             </div>
         </section>

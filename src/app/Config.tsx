@@ -11,7 +11,7 @@ export const userInfo = {
             Hi there!
             I'm a Computer Science student who got into coding back in 8th grade with Java.
             I love diving into tough problems and figuring out solutions (even if it means a bit
-            of keyboard smashing). I'm aiming to be a full-stack developer—because why choose one
+            of keyboard smashing). I'm aiming to be a full-stack developer — because why choose one
             side when you can do it all?
             <br /><br />
             When I'm not coding, I'm either snapping photos, vibing to music, or hanging out with
@@ -107,7 +107,7 @@ export const jobs = [
                 <>
                     Secured second place in my university and
                     ranked <Anchor href="https://register.codingcontest.org/contest/5271/results?page.page=3&activeId=29120#29120">#124</Anchor> globally
-                    in the <Anchor href="https://codingcontest.org/">Cloudflight Coding Contest</Anchor>.
+                    in the Cloudflight Coding Contest.
                 </>
             ),
         ],
@@ -141,8 +141,8 @@ export const projects = [
             new Classes.Detail(
                 "Description",
                 <>
-                    Built this portfolio to highlight my skills and projects. It serves as a
-                    central hub for showcasing my work and achievements in software development.
+                    Built this portfolio to show my work and what I'm
+                    passionate about in software development.
                 </>
             ),
         ],
@@ -158,8 +158,8 @@ export const projects = [
             new Classes.Detail(
                 "Description",
                 <>
-                    Developed a collection of open source, small, versatile, modular libraries.
-                    Each one is designed to be efficient and easy to use in various projects.
+                    Developed a set of small, versatile, and modular libraries,
+                    designed to be efficient and easy to use in different projects.
                 </>
             ),
         ],
@@ -175,8 +175,8 @@ export const projects = [
             new Classes.Detail(
                 "Description",
                 <>
-                    Created a cross-platform package manager for tools and libraries.
-                    Features a command-line interface for package installation and updates.
+                    Built a cross-platform package manager with a command-line
+                    interface for installing and updating tools and libraries.
                 </>
             ),
         ],
