@@ -1,6 +1,5 @@
 import React from "react";
 import Title from "../components/Title";
-import { hyphenateSync } from "hyphen/en";
 import SkillSet from "../components/SkillSet";
 import Image from "next/image";
 import Divider from "../components/Divider";
@@ -9,12 +8,15 @@ import Reveal from "../components/Reveal";
 import Selector from "../components/Selector";
 import DoubleButton from "../components/DoubleButton";
 import Info from "../components/Info";
+import { useState } from "react";
 
 // Icons
 import Download from "../svg/Download";
 import School from "../svg/School";
 
 export default function About() {
+    const [resumeLanguage, setResumeLanguage] = useState(0);
+
     return (
         <section id="about">
             <Title text="About" />
@@ -52,11 +54,11 @@ export default function About() {
                                         className="w-full"
                                         text="View Resume"
                                         IconComponent={Download}
-                                        onClick={() => window.open("resume.pdf", "_blank")}
+                                        onClick={() => window.open(Object.entries(Config.userInfo.resumes)[resumeLanguage][1], "_blank")}
                                         onIconClick={() => {
                                             var link = document.createElement("a");
-                                            link.download = `Resume_${Config.userInfo.fullName.replaceAll(" ", "_")}.pdf`;
-                                            link.href = "resume.pdf";
+                                            link.download = `Resume_${Config.userInfo.fullName.replaceAll(" ", "_")}_${Object.entries(Config.userInfo.resumes)[resumeLanguage][0]}.pdf`;
+                                            link.href = Object.entries(Config.userInfo.resumes)[resumeLanguage][1];
                                             link.click();
                                             link.remove();
                                         }}
@@ -66,8 +68,8 @@ export default function About() {
                                     <Selector
                                         className="h-full"
                                         options={Object.entries(Config.userInfo.resumes).map(([key, value]) => key)}
-                                        selected={0}
-                                        onSelect={(option, index) => console.log(option + " : " + index)}
+                                        selected={resumeLanguage}
+                                        onSelect={(option, index) => setResumeLanguage(index)}
                                     />
                                 </div>
                             </div>

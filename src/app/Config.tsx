@@ -25,9 +25,9 @@ export const userInfo = {
         period: "Bachelor's degree 2023 - 2026",
     },
     resumes: {
-        "EN": "resumes/Musca_Mihail_Resume_EN.pdf",
-        "RO": "resumes/Musca_Mihail_Resume_RO.pdf",
-    }
+        EN: "resumes/EN.pdf",
+        RO: "resumes/RO.pdf",
+    },
 };
 export const skillSets = [
     new Classes.SkillSet(
