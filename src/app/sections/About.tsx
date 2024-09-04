@@ -48,7 +48,19 @@ export default function About() {
                             <Info name={Config.userInfo.education.school} value={Config.userInfo.education.period} href={Config.userInfo.education.link} IconComponent={School} />
                             <div className="relative grid grid-cols-[70%_30%] space-x-2 lg:space-x-4">
                                 <div>
-                                    <DoubleButton className="w-full" text="View Resume" IconComponent={Download} />
+                                    <DoubleButton
+                                        className="w-full"
+                                        text="View Resume"
+                                        IconComponent={Download}
+                                        onClick={() => window.open("resume.pdf", "_blank")}
+                                        onIconClick={() => {
+                                            var link = document.createElement("a");
+                                            link.download = `Resume_${Config.userInfo.fullName.replaceAll(" ", "_")}.pdf`;
+                                            link.href = "resume.pdf";
+                                            link.click();
+                                            link.remove();
+                                        }}
+                                    />
                                 </div>
                                 <div>
                                     <Selector
