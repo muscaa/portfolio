@@ -6,6 +6,8 @@ import {
 } from "../States";
 import { openPopupMenu } from "./PopupMenu";
 import * as Config from "../Config";
+import { useEffect } from "react";
+import * as Tracker from "../Tracker";
 
 // Icons
 import UserMale from "../svg/UserMale";
@@ -53,6 +55,10 @@ function Tabs({ activeSection }: { activeSection: string }) {
 
 export default function Navbar() {
     const activeSection = useActiveSection();
+
+    useEffect(() => {
+        Tracker.onChangeSection(activeSection);
+    }, [ activeSection ]);
 
     return (
         <nav className="bg-background-2 bg-opacity-25 backdrop-blur-lg shadow-md shadow-shadow sticky top-0 z-50 flex justify-center items-center">

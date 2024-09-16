@@ -4,6 +4,7 @@ import Image from "next/image";
 import Divider from "./Divider";
 import * as Classes from "../Classes";
 import Details from "./Details";
+import * as Tracker from "../Tracker";
 
 export default function Job({ job }: { job: Classes.Job }) {
     return (
@@ -29,7 +30,7 @@ export default function Job({ job }: { job: Classes.Job }) {
                 </Reveal>
                 <Reveal direction="right" delay={0.6} className="space-y-1">
                     {job.details.map((detail, index) => (
-                        <Details key={index} title={detail.title}>
+                        <Details key={index} title={detail.title} onOpen={() => Tracker.onJobView(job.name)}>
                             <p className="text-justify text-text-1">
                                 {detail.content}
                             </p>

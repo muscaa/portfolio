@@ -8,6 +8,7 @@ import IconLink from "./IconLink";
 import Github from "../svg/Github";
 import Details from "./Details";
 import Close from "../svg/Close";
+import * as Tracker from "../Tracker";
 
 let setOpenProject: (project: Classes.Project | null) => void;
 
@@ -18,6 +19,8 @@ export function openProjectMenu(project: Classes.Project) {
     projectMenu.style.display = "block";
 
     setTimeout(() => {
+        Tracker.onProjectView(project.name);
+
         setOpenProject(project);
 
         projectMenu.style.opacity = "100%";

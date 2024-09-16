@@ -3,7 +3,8 @@ import Arrow from "../svg/Arrow";
 import { useState } from "react";
 import Divider from "./Divider";
 
-export default function Details({ className, title, children, open = false }: { className?: string, title: string, children: JSX.Element[] | JSX.Element, open?: boolean }) {
+export default function Details({ className, title, children, open = false, onOpen, onClose }:
+    { className?: string, title: string, children: JSX.Element[] | JSX.Element, open?: boolean, onOpen?: () => void, onClose?: () => void }) {
     const [isOpen, setIsOpen] = useState(open);
 
     return (
@@ -14,7 +15,12 @@ export default function Details({ className, title, children, open = false }: { 
         ${className}`}>
             <button
                 type="button"
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => {
+                    if (isOpen && onClose) onClose();
+                    else if (!isOpen && onOpen) onOpen();
+
+                    setIsOpen(!isOpen)
+                }}
                 className="flex items-center justify-between w-full h-full
                 apearance-none outline-none px-3 py-1 text-left"
             >

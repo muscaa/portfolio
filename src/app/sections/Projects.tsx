@@ -4,6 +4,7 @@ import Project from "../components/Project";
 import * as Config from "../Config";
 import { useState, useEffect } from "react";
 import Button from "../components/Button";
+import * as Tracker from "../Tracker";
 
 function slice(array: any[], max: number) {
     return array.length <= max ? array : array.slice(0, max);
@@ -29,10 +30,18 @@ export default function Projects() {
             </div>
             <div className="flex justify-center items-center mt-4 md:mt-12">
                 {sliced !== array && (
-                    <Button text="Show More" onClick={() => setSliced(array)} />
+                    <Button text="Show More" onClick={() => {
+                        Tracker.onButtonClick("Show More");
+
+                        setSliced(array)
+                    }} />
                 )}
                 {sliced === array && array.length != max && (
-                    <Button text="Show Less" onClick={() => setSliced(slice(array, max))} />
+                    <Button text="Show Less" onClick={() => {
+                        Tracker.onButtonClick("Show Less");
+
+                        setSliced(slice(array, max))
+                    }} />
                 )}
             </div>
         </section>

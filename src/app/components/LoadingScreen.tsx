@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import PartyParrot from "../svg/PartyParrot";
+import * as Tracker from "../Tracker";
 
 export default function LoadingScreen({ loading }: { loading: boolean }) {
     const [visible, setVisible] = useState(true);
@@ -14,6 +15,8 @@ export default function LoadingScreen({ loading }: { loading: boolean }) {
         loadingScreen.style.scale = "2";
         
         setTimeout(() => {
+            Tracker.onEnter();
+
             loadingScreen.style.display = "none";
             setVisible(false);
         }, 500);

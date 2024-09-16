@@ -9,6 +9,7 @@ import Selector from "../components/Selector";
 import DoubleButton from "../components/DoubleButton";
 import Info from "../components/Info";
 import { useState } from "react";
+import * as Tracker from "../Tracker";
 
 // Icons
 import Download from "../svg/Download";
@@ -54,8 +55,14 @@ export default function About() {
                                         className="w-full"
                                         text="View Resume"
                                         IconComponent={Download}
-                                        onClick={() => window.open(Object.entries(Config.userInfo.resumes)[resumeLanguage][1], "_blank")}
+                                        onClick={() => {
+                                            Tracker.onButtonClick("View Resume");
+
+                                            window.open(Object.entries(Config.userInfo.resumes)[resumeLanguage][1], "_blank")
+                                        }}
                                         onIconClick={() => {
+                                            Tracker.onButtonClick("Download Resume");
+
                                             var link = document.createElement("a");
                                             link.download = `Resume_${Config.userInfo.fullName.replaceAll(" ", "_")}_${Object.entries(Config.userInfo.resumes)[resumeLanguage][0]}.pdf`;
                                             link.href = Object.entries(Config.userInfo.resumes)[resumeLanguage][1];

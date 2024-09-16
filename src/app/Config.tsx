@@ -202,3 +202,7 @@ export const footer = [
     "© 2024 Musca Mihail",
     "I use arch btw",
 ];
+export const tracker = {
+    toggled: true,
+    url: "http://musca.home.ro:45575/",
+};
