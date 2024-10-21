@@ -118,24 +118,6 @@ export const jobs = [
 ];
 export const projects = [
     new Classes.Project(
-        "Logic Gate Simulator",
-        [
-            new Classes.Detail(
-                "Description",
-                <>
-                    Developed an app for designing and simulating logic gate systems.
-                    Users can build, save, and load custom logic circuits, making it
-                    easier to experiment with and understand digital logic concepts.
-                </>
-            ),
-        ],
-        Classes.Status.complete,
-        [ "java", "gradle", "opengl / lwjgl", "slick2d" ],
-        "projects/logic-gate-sim.png",
-        undefined,
-        "https://github.com/muscaa/logic-gates-sim"
-    ),
-    new Classes.Project(
         "Free CV Maker",
         [
             new Classes.Detail(
@@ -170,6 +152,24 @@ export const projects = [
         "projects/portfolio.png",
         "https://muscaa.github.io/portfolio",
         "https://github.com/muscaa/portfolio"
+    ),
+    new Classes.Project(
+        "Logic Gate Simulator",
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Developed an app for designing and simulating logic gate systems.
+                    Users can build, save, and load custom logic circuits, making it
+                    easier to experiment with and understand digital logic concepts.
+                </>
+            ),
+        ],
+        Classes.Status.complete,
+        [ "java", "gradle", "opengl / lwjgl", "slick2d" ],
+        "projects/logic-gate-sim.png",
+        undefined,
+        "https://github.com/muscaa/logic-gates-sim"
     ),
     new Classes.Project(
         "Fluff Libraries",
