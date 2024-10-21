@@ -136,6 +136,25 @@ export const projects = [
         "https://github.com/muscaa/logic-gates-sim"
     ),
     new Classes.Project(
+        "Free CV Maker",
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Created a free CV maker web app where users can choose from
+                    existing templates or integrate their own custom designs using
+                    a JavaScript API. Projects can be saved in the browser or downloaded,
+                    with an easy way to manage your saved projects and templates.
+                </>
+            ),
+        ],
+        Classes.Status.inDev,
+        [ "typescript", "next", "react", "tailwind css" ],
+        "projects/cv-maker.png",
+        "https://muscaa.github.io/cv-maker",
+        "https://github.com/muscaa/cv-maker"
+    ),
+    new Classes.Project(
         "Developer Portfolio",
         [
             new Classes.Detail(
