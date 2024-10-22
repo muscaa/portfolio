@@ -98,6 +98,20 @@ export const jobs = [
         [ "java", "minecraft", "opengl / lwjgl" ]
     ),
     new Classes.Job(
+        "Self Employed",
+        "",
+        "Aug 2024 - present",
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                </>
+            ),
+        ],
+        "black.png",
+        [ "java", "typescript", "next", "react" ]
+    ),
+    new Classes.Job(
         "Competitive Programmer",
         "Cloudflight Coding Contest",
         "20 Oct 2023",
