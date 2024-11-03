@@ -12,10 +12,13 @@ import Footer from "./sections/Footer";
 import PopupMenu from "./components/PopupMenu";
 import ProjectMenu from "./components/ProjectMenu";
 import LoadingScreen from "./components/LoadingScreen";
+import * as Tracker from "./Tracker";
 
 export default function Main() {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
+        Tracker.init();
+
         setTimeout(() => {
             setLoading(false);
         }, 2500);
