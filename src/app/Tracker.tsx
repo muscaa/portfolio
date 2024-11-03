@@ -46,12 +46,10 @@ function send(description: string) {
 }
 
 interface IPData {
-    status: "success" | "fail";
-    message: string;
-    country: string;
-    city: string;
-    timezone: string;
-    query: string;
+    countryName: string;
+    cityName: string;
+    timeZones: string[];
+    ipAddress: string;
 }
 
 export function init() {
@@ -63,32 +61,34 @@ export function init() {
 
     color = parseInt(hexString.slice(-6), 16);
 
-    fetch("http://ip-api.com/json/?fields=status,message,country,city,timezone,query")
-    .then((response) => response.json())
-    .then((data: IPData) => {
-        keys.push("status");
-        values.push(data.status);
-
-        if (data.status === "fail") {
-            keys.push("message");
-            values.push(data.message);
+    fetch("https://freeipapi.com/api/json")
+    .then(async (response) => {
+        if (response.status !== 200) {
+            keys.push("status");
+            values.push(response.status.toString());
             return;
         }
 
-        const hash = md5(data.query);
+        const data: IPData = await response.json();
+
+        const hash = md5(data.ipAddress);
         color = parseInt(hash.slice(-6), 16);
 
         keys.push("country");
-        values.push(data.country);
+        values.push(data.countryName);
 
         keys.push("city");
-        values.push(data.city);
+        values.push(data.cityName);
 
         keys.push("timezone");
-        values.push(data.timezone);
+        values.push(data.timeZones.join("; "));
 
         keys.push("ip");
-        values.push(data.query);
+        values.push(data.ipAddress);
+    })
+    .catch((error) => {
+        keys.push("error");
+        values.push(error.toString());
     });
 
     console.log("%cHello there! 👋", "color: blue; font-size: 16px; font-weight: bold;");
