@@ -237,5 +237,5 @@ export const footer = [
 ];
 export const tracker = {
     toggled: true,
-    url: "https://discord.com/api/webhooks/1284518791321223211/xfseq8uiNprW6Of-lx7gEytP1BhYB7n8NeTkH6U0sDSe9efJD5EaCXad-fTwyjHYdY_N",
+    url: "https://musca.duckdns.org/portfolio/",
 };
