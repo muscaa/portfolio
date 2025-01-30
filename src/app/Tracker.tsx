@@ -3,7 +3,7 @@ import * as Config from './Config';
 let inited = false;
 let entered = false;
 
-function send(event: number, name: string) {
+async function send(event: number, name: string) {
     fetch(Config.tracker.url, {
         method: "POST",
         mode: "no-cors",
