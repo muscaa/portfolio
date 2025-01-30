@@ -11,9 +11,9 @@ export default function SqLite({ className }: { className?: string }) {
         >
             <defs>
                 <linearGradient id="sqlite-original-a" x1="-15.615" x2="-6.741" y1="-9.108" y2="-9.108" gradientTransform="rotate(90 -90.486 64.634) scale(9.2712)" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#95d7f4" offset="0" />
-                    <stop stop-color="#0f7fcc" offset=".92" />
-                    <stop stop-color="#0f7fcc" offset="1" />
+                    <stop stopColor="#95d7f4" offset="0" />
+                    <stop stopColor="#0f7fcc" offset=".92" />
+                    <stop stopColor="#0f7fcc" offset="1" />
                 </linearGradient>
             </defs>
             <path d="M69.5 99.176c-.059-.73-.094-1.2-.094-1.2S67.2 83.087 64.57 78.642c-.414-.707.043-3.594 1.207-7.88.68 1.169 3.54 6.192 4.118 7.81.648 1.824.78 2.347.78 2.347s-1.57-8.082-4.144-12.797a162.286 162.286 0 012.004-6.265c.973 1.71 3.313 5.859 3.828 7.3.102.293.192.543.27.774.023-.137.05-.274.074-.414-.59-2.504-1.75-6.86-3.336-10.082 3.52-18.328 15.531-42.824 27.84-53.754H16.9c-5.387 0-9.789 4.406-9.789 9.789v88.57c0 5.383 4.406 9.789 9.79 9.789h52.897a118.657 118.657 0 01-.297-14.652" fill="#0b7fcc" />

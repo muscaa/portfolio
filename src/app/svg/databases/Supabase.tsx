@@ -14,12 +14,12 @@ export default function Supabase({ className }: { className?: string }) {
             <path d="M45.317 2.07103C48.1765 -1.53037 53.9745 0.442937 54.0434 5.041L54.4849 72.2922H9.83113C1.64038 72.2922 -2.92775 62.8321 2.1655 56.4175L45.317 2.07103Z" fill="#3ECF8E" />
             <defs>
                 <linearGradient id="paint0_linear" x1="53.9738" y1="54.974" x2="94.1635" y2="71.8295" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#249361" />
-                    <stop offset="1" stop-color="#3ECF8E" />
+                    <stop stopColor="#249361" />
+                    <stop offset="1" stopColor="#3ECF8E" />
                 </linearGradient>
                 <linearGradient id="paint1_linear" x1="36.1558" y1="30.578" x2="54.4844" y2="65.0806" gradientUnits="userSpaceOnUse">
                     <stop />
-                    <stop offset="1" stop-opacity="0" />
+                    <stop offset="1" stopOpacity="0" />
                 </linearGradient>
             </defs>
         </svg>

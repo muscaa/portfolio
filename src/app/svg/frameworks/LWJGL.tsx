@@ -11,13 +11,13 @@ export default function LWJGL({ className }: { className?: string }) {
         >
             <defs>
                 <linearGradient id="face" y1="0" x1="0" x2="100%" y2="0">
-                    <stop stop-color="#d7d7d7" offset="0" />
-                    <stop stop-color="#e7e7e7" offset=".5" />
-                    <stop stop-color="#d7d7d7" offset="1" />
+                    <stop stopColor="#d7d7d7" offset="0" />
+                    <stop stopColor="#e7e7e7" offset=".5" />
+                    <stop stopColor="#d7d7d7" offset="1" />
                 </linearGradient>
                 <linearGradient id="bevel" x1="0" y1="0" x2="0" y2="100%">
-                    <stop stop-color="#d8d8d8" offset="0" />
-                    <stop stop-color="#a3a3a3" offset="1" />
+                    <stop stopColor="#d8d8d8" offset="0" />
+                    <stop stopColor="#a3a3a3" offset="1" />
                 </linearGradient>
                 <symbol id="btn-key" viewBox="0 0 60 60">
                     <rect x="0" y="0" rx="3" ry="3" width="54" height="58" fill="url(#bevel)" />

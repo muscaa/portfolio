@@ -11,12 +11,12 @@ export default function Eclipse({ className }: { className?: string }) {
         >
             <defs>
                 <linearGradient id="b" gradientUnits="userSpaceOnUse" x1=".5" y1="8.965" x2=".5" y2="-3.524" gradientTransform="matrix(76.53125 0 0 6.78125 32.176 67.191)">
-                    <stop offset=".303" stop-color="#473788" />
-                    <stop offset=".872" stop-color="#2c2255" />
+                    <stop offset=".303" stopColor="#473788" />
+                    <stop offset=".872" stopColor="#2c2255" />
                 </linearGradient>
                 <linearGradient id="c" gradientUnits="userSpaceOnUse" x1=".5" y1="2.152" x2=".5" y2="-1.667" gradientTransform="matrix(69.61719 0 0 22.17969 35.633 80.27)">
-                    <stop offset=".303" stop-color="#473788" />
-                    <stop offset=".863" stop-color="#2c2255" />
+                    <stop offset=".303" stopColor="#473788" />
+                    <stop offset=".863" stopColor="#2c2255" />
                 </linearGradient>
             </defs>
             <path fill="#2c2255" d="M35.633 80.27H16.375c2.55 8.75 7.281 16.59 14.21 23.515 11.044 11.047 24.325 16.563 39.852 16.563 3.106 0 6.114-.23 9.036-.672 11.699-1.766 21.941-7.055 30.715-15.89 6.972-6.927 11.738-14.766 14.308-23.516ZM25.016 54.113H14.953a58.89 58.89 0 0 0-.734 6.782h112.445a58.833 58.833 0 0 0-.738-6.782M14.219 67.191a59.14 59.14 0 0 0 .734 6.782H125.93c.375-2.246.62-4.508.738-6.782M124.5 47.812c-2.57-8.769-7.336-16.648-14.313-23.624-8.75-8.754-18.964-14.004-30.624-15.77a60.963 60.963 0 0 0-9.122-.684c-15.53 0-28.812 5.489-39.855 16.453-6.93 6.977-11.668 14.856-14.215 23.625" />
