@@ -1,4 +1,4 @@
-import React from "react";
+import React, { type JSX } from "react";
 import { useRef, useEffect } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
