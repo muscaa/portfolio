@@ -1,4 +1,4 @@
-import * as Config from './Config';
+import * as Config from "@/Config";
 
 let inited = false;
 let entered = false;

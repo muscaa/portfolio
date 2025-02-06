@@ -1,9 +1,9 @@
 import React from "react";
-import Title from "../components/Title";
-import Job from "../components/Job";
-import * as Config from "../Config";
-import * as Classes from "../Classes";
-import { useWindowSize } from "../States";
+import Title from "@/components/Title";
+import Job from "@/components/Job";
+import * as Config from "@/Config";
+import * as Classes from "@/Classes";
+import { useWindowSize } from "@/States";
 
 function Milestone({ job, odd }: { job: Classes.Job, odd: boolean }) {
     const oneSided = useWindowSize().width < 768;

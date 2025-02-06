@@ -1,5 +1,5 @@
 import React from "react";
-import Arrow from "../svg/Arrow";
+import Arrow from "@/svg/Arrow";
 import { useState } from "react";
 import Divider from "./Divider";
 

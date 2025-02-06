@@ -1,14 +1,14 @@
 import React from "react";
-import * as Classes from "../Classes";
+import * as Classes from "@/Classes";
 import Button from "./Button";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Divider from "./Divider";
 import IconLink from "./IconLink";
-import Github from "../svg/Github";
+import Github from "@/svg/Github";
 import Details from "./Details";
-import Close from "../svg/Close";
-import * as Tracker from "../Tracker";
+import Close from "@/svg/Close";
+import * as Tracker from "@/Tracker";
 
 let setOpenProject: (project: Classes.Project | null) => void;
 

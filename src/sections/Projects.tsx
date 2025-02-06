@@ -1,10 +1,10 @@
 import React from "react";
-import Title from "../components/Title";
-import Project from "../components/Project";
-import * as Config from "../Config";
+import Title from "@/components/Title";
+import Project from "@/components/Project";
+import * as Config from "@/Config";
 import { useState, useEffect } from "react";
-import Button from "../components/Button";
-import * as Tracker from "../Tracker";
+import Button from "@/components/Button";
+import * as Tracker from "@/Tracker";
 
 function slice(array: any[], max: number) {
     return array.length <= max ? array : array.slice(0, max);

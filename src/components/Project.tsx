@@ -3,9 +3,9 @@ import Reveal from "./Reveal";
 import Button from "./Button";
 import Image from "next/image";
 import Divider from "./Divider";
-import * as Classes from "../Classes";
+import * as Classes from "@/Classes";
 import IconLink from "./IconLink";
-import Github from "../svg/Github";
+import Github from "@/svg/Github";
 import { openProjectMenu } from "./ProjectMenu";
 
 export default function Project({ project }: { project: Classes.Project }) {

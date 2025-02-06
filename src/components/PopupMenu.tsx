@@ -2,17 +2,17 @@ import React from "react";
 import {
     useIsMobile,
     useActiveSection
-} from "../States";
+} from "@/States";
 import Link from "next/link";
 import { ComponentType } from "react";
-import * as Config from "../Config";
+import * as Config from "@/Config";
 
 // Icons
-import UserMale from "../svg/UserMale";
-import CheckAll from "../svg/CheckAll";
-import Briefcase from "../svg/Briefcase";
-import Contacts from "../svg/Contacts";
-import Close from "../svg/Close";
+import UserMale from "@/svg/UserMale";
+import CheckAll from "@/svg/CheckAll";
+import Briefcase from "@/svg/Briefcase";
+import Contacts from "@/svg/Contacts";
+import Close from "@/svg/Close";
 import ProfileIcon from "./ProfileIcon";
 
 export function openPopupMenu() {

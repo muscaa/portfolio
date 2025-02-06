@@ -1,5 +1,5 @@
-import * as Classes from "./Classes";
-import Anchor from "./components/Anchor";
+import * as Classes from "@/Classes";
+import Anchor from "@/components/Anchor";
 
 export const userInfo = {
     fullName: "Musca Mihail",

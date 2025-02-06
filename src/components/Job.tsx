@@ -2,9 +2,9 @@ import React from "react";
 import Reveal from "./Reveal";
 import Image from "next/image";
 import Divider from "./Divider";
-import * as Classes from "../Classes";
+import * as Classes from "@/Classes";
 import Details from "./Details";
-import * as Tracker from "../Tracker";
+import * as Tracker from "@/Tracker";
 
 export default function Job({ job }: { job: Classes.Job }) {
     return (

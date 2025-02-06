@@ -4,7 +4,7 @@ import {
     useRef,
     useEffect
 } from "react";
-import Arrow from "../svg/Arrow";
+import Arrow from "@/svg/Arrow";
 
 export default function Selector({ options, selected, onSelect, className }:
     { options: string[], selected: number, onSelect: (option: string, index: number) => void, className?: string }) {

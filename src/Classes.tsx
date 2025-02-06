@@ -3,43 +3,43 @@ import { ComponentType } from "react";
 import { hyphenateSync } from "hyphen/en";
 
 // Languages
-import Java from "./svg/languages/Java";
-import Cpp from "./svg/languages/Cpp";
-import C from "./svg/languages/C";
-import CSharp from "./svg/languages/CSharp";
-import Dart from "./svg/languages/Dart";
-import Html5 from "./svg/languages/Html5";
-import Css3 from "./svg/languages/Css3";
-import JavaScript from "./svg/languages/JavaScript";
-import TypeScript from "./svg/languages/TypeScript";
+import Java from "@/svg/languages/Java";
+import Cpp from "@/svg/languages/Cpp";
+import C from "@/svg/languages/C";
+import CSharp from "@/svg/languages/CSharp";
+import Dart from "@/svg/languages/Dart";
+import Html5 from "@/svg/languages/Html5";
+import Css3 from "@/svg/languages/Css3";
+import JavaScript from "@/svg/languages/JavaScript";
+import TypeScript from "@/svg/languages/TypeScript";
 
 // Frameworks
-import Flutter from "./svg/frameworks/Flutter";
-import Spring from "./svg/frameworks/Spring";
-import ReactJs from "./svg/frameworks/ReactJs";
-import NextJs from "./svg/frameworks/NextJs";
-import Arduino from "./svg/frameworks/Arduino";
-import DotNet from "./svg/frameworks/DotNet";
-import ElectronJs from "./svg/frameworks/ElectronJs";
-import TailwindCss from "./svg/frameworks/TailwindCss";
-import LWJGL from "./svg/frameworks/LWJGL";
+import Flutter from "@/svg/frameworks/Flutter";
+import Spring from "@/svg/frameworks/Spring";
+import ReactJs from "@/svg/frameworks/ReactJs";
+import NextJs from "@/svg/frameworks/NextJs";
+import Arduino from "@/svg/frameworks/Arduino";
+import DotNet from "@/svg/frameworks/DotNet";
+import ElectronJs from "@/svg/frameworks/ElectronJs";
+import TailwindCss from "@/svg/frameworks/TailwindCss";
+import LWJGL from "@/svg/frameworks/LWJGL";
 
 // Databases
-import MySql from "./svg/databases/MySql";
-import SqLite from "./svg/databases/SqLite";
-import Supabase from "./svg/databases/Supabase";
+import MySql from "@/svg/databases/MySql";
+import SqLite from "@/svg/databases/SqLite";
+import Supabase from "@/svg/databases/Supabase";
 
 // IDEs
-import Eclipse from "./svg/ides/Eclipse";
-import IntelliJ from "./svg/ides/IntelliJ";
-import VSCode from "./svg/ides/VSCode";
-import VisualStudio from "./svg/ides/VisualStudio";
+import Eclipse from "@/svg/ides/Eclipse";
+import IntelliJ from "@/svg/ides/IntelliJ";
+import VSCode from "@/svg/ides/VSCode";
+import VisualStudio from "@/svg/ides/VisualStudio";
 
 // Tools
-import Git from "./svg/tools/Git";
-import Bash from "./svg/tools/Bash";
-import Docker from "./svg/tools/Docker";
-import Insomnia from "./svg/tools/Insomnia";
+import Git from "@/svg/tools/Git";
+import Bash from "@/svg/tools/Bash";
+import Docker from "@/svg/tools/Docker";
+import Insomnia from "@/svg/tools/Insomnia";
 
 export class Skill {
     name: string;

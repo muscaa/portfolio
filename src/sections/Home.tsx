@@ -1,16 +1,16 @@
 import React from "react";
-import ButtonArrow from "../components/ButtonArrow";
-import Reveal from "../components/Reveal";
-import * as Config from "../Config";
-import IconLink from "../components/IconLink";
-import ParallaxBackground from "../components/ParallaxBackground";
+import ButtonArrow from "@/components/ButtonArrow";
+import Reveal from "@/components/Reveal";
+import * as Config from "@/Config";
+import IconLink from "@/components/IconLink";
+import ParallaxBackground from "@/components/ParallaxBackground";
 import { useState, useEffect, useRef } from "react";
 
 // Icons
-import Github from "../svg/Github";
-import Instagram from "../svg/Instagram";
-import Linkedin from "../svg/Linkedin";
-import Telegram from "../svg/Telegram";
+import Github from "@/svg/Github";
+import Instagram from "@/svg/Instagram";
+import Linkedin from "@/svg/Linkedin";
+import Telegram from "@/svg/Telegram";
 
 export default function Home({ delay }: { delay: number }) {
     const ref = useRef<HTMLDivElement>(null);

@@ -1,35 +1,35 @@
 import React from "react";
-import Title from "../components/Title";
+import Title from "@/components/Title";
 import {
     useForm,
     ValidationError
 } from "@formspree/react";
-import Input from "../components/Input"
-import InputArea from "../components/InputArea"
-import Button from "../components/Button"
+import Input from "@/components/Input"
+import InputArea from "@/components/InputArea"
+import Button from "@/components/Button"
 import {
     GoogleReCaptchaProvider,
     useGoogleReCaptcha
 } from "react-google-recaptcha-v3";
-import Shield from "../svg/Shield";
+import Shield from "@/svg/Shield";
 import {
     useState
 } from "react";
 import { hyphenateSync } from "hyphen/en";
-import IconLink from "../components/IconLink";
-import Info from "../components/Info";
-import Divider from "../components/Divider";
-import * as Config from "../Config";
-import Reveal from "../components/Reveal";
+import IconLink from "@/components/IconLink";
+import Info from "@/components/Info";
+import Divider from "@/components/Divider";
+import * as Config from "@/Config";
+import Reveal from "@/components/Reveal";
 
 // Icons
-import Github from "../svg/Github";
-import Instagram from "../svg/Instagram";
-import Linkedin from "../svg/Linkedin";
-import Mail from "../svg/Mail";
-import Phone from "../svg/Phone";
-import Location from "../svg/Location";
-import Telegram from "../svg/Telegram";
+import Github from "@/svg/Github";
+import Instagram from "@/svg/Instagram";
+import Linkedin from "@/svg/Linkedin";
+import Mail from "@/svg/Mail";
+import Phone from "@/svg/Phone";
+import Location from "@/svg/Location";
+import Telegram from "@/svg/Telegram";
 
 function ContactForm() {
     const { executeRecaptcha } = useGoogleReCaptcha();

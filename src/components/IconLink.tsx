@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ComponentType } from "react";
-import * as Tracker from "../Tracker";
+import * as Tracker from "@/Tracker";
 
 export default function IconLink({ href, IconComponent }: { href: string, IconComponent: ComponentType<{ className?: string }> }) {
     return (

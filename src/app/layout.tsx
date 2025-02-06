@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import * as Config from "./Config";
+import * as Config from "@/Config";
  
 import "./styles/main.css";
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 
 function getRotation(direction: "up" | "down" | "left" | "right") {
     switch (direction) {

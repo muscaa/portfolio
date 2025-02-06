@@ -1,5 +1,5 @@
 import React from "react";
-import * as Classes from "../Classes";
+import * as Classes from "@/Classes";
 import Reveal from "./Reveal";
 
 function Skill({ skill }: { skill: Classes.Skill }) {

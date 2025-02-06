@@ -3,18 +3,18 @@ import { ComponentType } from "react";
 import {
     useIsMobile,
     useActiveSection
-} from "../States";
+} from "@/States";
 import { openPopupMenu } from "./PopupMenu";
-import * as Config from "../Config";
+import * as Config from "@/Config";
 import { useEffect } from "react";
-import * as Tracker from "../Tracker";
+import * as Tracker from "@/Tracker";
 
 // Icons
-import UserMale from "../svg/UserMale";
-import CheckAll from "../svg/CheckAll";
-import Briefcase from "../svg/Briefcase";
-import Contacts from "../svg/Contacts";
-import Menu from "../svg/Menu";
+import UserMale from "@/svg/UserMale";
+import CheckAll from "@/svg/CheckAll";
+import Briefcase from "@/svg/Briefcase";
+import Contacts from "@/svg/Contacts";
+import Menu from "@/svg/Menu";
 import ProfileIcon from "./ProfileIcon";
 
 function Tab({ href, text, IconComponent, active, target }:

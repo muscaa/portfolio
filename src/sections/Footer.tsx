@@ -1,6 +1,6 @@
-import ButtonArrow from "../components/ButtonArrow";
-import * as Config from "../Config";
-import Reveal from "../components/Reveal";
+import ButtonArrow from "@/components/ButtonArrow";
+import * as Config from "@/Config";
+import Reveal from "@/components/Reveal";
 
 export default function Footer() {
     return (

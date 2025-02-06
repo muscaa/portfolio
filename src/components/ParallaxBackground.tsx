@@ -1,7 +1,7 @@
 import React, { TouchEvent } from "react";
 import { useState, useEffect } from "react";
 import { ComponentType } from "react";
-import * as Parallax from "../svg/Parallax";
+import * as Parallax from "@/svg/Parallax";
 
 function MotionDiv({ ImageComponent, x, y, offset }:
     { ImageComponent: ComponentType<{ className?: string }>, x: number, y: number, offset: number }) {

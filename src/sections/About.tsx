@@ -1,19 +1,19 @@
 import React from "react";
-import Title from "../components/Title";
-import SkillSet from "../components/SkillSet";
+import Title from "@/components/Title";
+import SkillSet from "@/components/SkillSet";
 import Image from "next/image";
-import Divider from "../components/Divider";
-import * as Config from "../Config";
-import Reveal from "../components/Reveal";
-import Selector from "../components/Selector";
-import DoubleButton from "../components/DoubleButton";
-import Info from "../components/Info";
+import Divider from "@/components/Divider";
+import * as Config from "@/Config";
+import Reveal from "@/components/Reveal";
+import Selector from "@/components/Selector";
+import DoubleButton from "@/components/DoubleButton";
+import Info from "@/components/Info";
 import { useState } from "react";
-import * as Tracker from "../Tracker";
+import * as Tracker from "@/Tracker";
 
 // Icons
-import Download from "../svg/Download";
-import School from "../svg/School";
+import Download from "@/svg/Download";
+import School from "@/svg/School";
 
 export default function About() {
     const [resumeLanguage, setResumeLanguage] = useState(0);
