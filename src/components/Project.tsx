@@ -13,7 +13,7 @@ export default function Project({ project }: { project: Classes.Project }) {
         <Reveal className="w-80 sm:w-96 lg:w-112 bg-background-3 bg-opacity-15 backdrop-blur-sm
         shadow-md shadow-shadow border border-background-3 border-opacity-25
         rounded-lg overflow-hidden flex flex-col">
-            {project.image && <Image loading="lazy" className="absolute w-full h-full object-cover -z-10 opacity-25 brightness-150 blur-md" src={project.image} width={320} height={180} alt={`${project.name} screenshot`} />}
+            {/*project.image && <Image loading="lazy" className="absolute w-full h-full object-cover -z-10 opacity-25 brightness-150 blur-md" src={project.image} width={320} height={180} alt={`${project.name} screenshot`} />*/}
             <div className="p-4 flex flex-col h-full justify-between gap-4">
                 <div className="flex flex-col gap-2">
                     <Reveal direction="up" delay={0.4}>
