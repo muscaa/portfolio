@@ -43,7 +43,7 @@ function closeProjectMenu() {
 function MenuContent({ project }: { project: Classes.Project }) {
     return (
         <>
-            <Image loading="lazy" className="w-full" src={project.image} width={640} height={360} alt={`${project.name} screenshot`} />
+            {project.image && <Image loading="lazy" className="w-full" src={project.image} width={640} height={360} alt={`${project.name} screenshot`} />}
             <div className="p-4 flex flex-col h-full justify-between gap-4">
                 <div className="flex flex-col gap-2">
                     <div>
@@ -54,7 +54,7 @@ function MenuContent({ project }: { project: Classes.Project }) {
                     </div>
                     <div className="flex flex-wrap gap-1">
                         {project.skills.map((skill, index) => (
-                            <span key={index} className={`text-secondary font-normal bg-secondary bg-opacity-10 px-2 py-0.5 rounded-lg h6 flex-grow text-center`}>{skill}</span>
+                            <span key={index} className={`text-secondary font-normal bg-secondary bg-opacity-10 px-4 py-0.5 rounded-lg h6 flex-grow text-center`}>{skill}</span>
                         ))}
                     </div>
                     <div className="space-y-1">
@@ -98,7 +98,7 @@ export default function ProjectMenu() {
                         <div className="w-80 sm:w-112 lg:w-160 bg-background-3 bg-opacity-25 backdrop-blur-sm
                             shadow-md shadow-background-1 border border-background-3 border-opacity-25
                             rounded-lg flex flex-col overflow-hidden relative">
-                            <div className="absolute flex w-full justify-end md:py-4 py-2 bg-gradient-to-b from-shadow to-transparent">
+                            <div className={`absolute flex w-full justify-end md:py-4 py-2 ${project.image ? "bg-gradient-to-b from-shadow to-transparent" : ""}`}>
                                 <button onClick={closeProjectMenu}>
                                     <Close className="w-6 h-6 mr-4" />
                                 </button>

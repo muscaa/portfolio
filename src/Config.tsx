@@ -83,8 +83,8 @@ export const skillSets = [
 export const jobs = [
     new Classes.Job(
         "Freelancer",
-        "Fiverr",
         "Mar 2022 - May 2022",
+        "Fiverr",
         [
             new Classes.Detail(
                 "Description",
@@ -94,24 +94,26 @@ export const jobs = [
                 </>
             ),
         ],
-        "jobs/fiverr.png",
-        [ "java", "minecraft", "opengl / lwjgl" ]
+        [ "java", "minecraft", "lwjgl" ],
+        "jobs/fiverr.png"
+    ),
+    new Classes.Job(
+        "Open Source Contributor",
+        "Dec 2023 - present",
+        undefined,
+        undefined,
+        undefined,
+        undefined
     ),
     new Classes.Job(
         "Self Employed",
-        "",
         "Aug 2024 - present",
-        [
-            new Classes.Detail(
-                "Description",
-                <>
-                </>
-            ),
-        ],
-        "black.png",
-        [ "java", "typescript", "next", "react" ]
+        undefined,
+        undefined,
+        undefined,
+        undefined
     ),
-    new Classes.Job(
+    /*new Classes.Job(
         "Competitive Programmer",
         "Cloudflight Coding Contest",
         "20 Oct 2023",
@@ -125,12 +127,51 @@ export const jobs = [
                 </>
             ),
         ],
-        "jobs/cloudflight.png",
-        [ "java" ]
-    ),
-    /*open source contributor ??*/
+        [ "java" ],
+        "jobs/cloudflight.png"
+    ),*/
 ];
 export const projects = [
+    new Classes.Project(
+        "Chess",
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Developed a chess game in Java supporting both single-player mode
+                    with a BOT opponent and multiplayer mode for local or online play.
+                    The project features an integrated player chat system with command
+                    support, full modding capabilities to extend and customize gameplay,
+                    and cross-platform compatibility with Windows, macOS, and Linux.
+                    Additionally, a dedicated launcher enables users to select a specific
+                    game version or opt for the latest version with auto-updates.
+                </>
+            ),
+        ],
+        Classes.Status.complete,
+        [ "java", "gradle", "jitpack", "fluff", "libgdx", "mysql", "sqlite", "networking" ],
+        "projects/chess.png",
+        undefined,
+        "https://github.com/muscaa/chess"
+    ),
+    new Classes.Project(
+        "Logic Gate Simulator",
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Developed an app for designing and simulating logic gate systems.
+                    Users can build, save, and load custom logic circuits, making it
+                    easier to experiment with and understand digital logic concepts.
+                </>
+            ),
+        ],
+        Classes.Status.complete,
+        [ "java", "gradle", "lwjgl", "slick2d" ],
+        "projects/logic-gate-sim.png",
+        undefined,
+        "https://github.com/muscaa/logic-gates-sim"
+    ),
     new Classes.Project(
         "Free CV Maker",
         [
@@ -168,24 +209,6 @@ export const projects = [
         "https://github.com/muscaa/portfolio"
     ),
     new Classes.Project(
-        "Logic Gate Simulator",
-        [
-            new Classes.Detail(
-                "Description",
-                <>
-                    Developed an app for designing and simulating logic gate systems.
-                    Users can build, save, and load custom logic circuits, making it
-                    easier to experiment with and understand digital logic concepts.
-                </>
-            ),
-        ],
-        Classes.Status.complete,
-        [ "java", "gradle", "opengl / lwjgl", "slick2d" ],
-        "projects/logic-gate-sim.png",
-        undefined,
-        "https://github.com/muscaa/logic-gates-sim"
-    ),
-    new Classes.Project(
         "Fluff Libraries",
         [
             new Classes.Detail(
@@ -198,7 +221,7 @@ export const projects = [
         ],
         Classes.Status.complete,
         [ "java", "gradle", "jitpack" ],
-        "black.png",
+        undefined,
         undefined,
         "https://github.com/muscaa/fluff-core"
     ),
@@ -215,7 +238,7 @@ export const projects = [
         ],
         Classes.Status.inDev,
         [ "java", "gradle", "fluff" ],
-        "black.png",
+        undefined,
         undefined,
         "https://github.com/muscaa/quill"
     ),

@@ -18,25 +18,36 @@ export default function Job({ job }: { job: Classes.Job }) {
                         <h5 className="text-text-3 font-bold">{job.company}</h5>
                         <h5 className="text-text-3">{job.date}</h5>
                     </Reveal>
-                    <Image loading="lazy" className="w-16 h-16 rounded-xl" src={job.image} width={64} height={64} alt="" />
+                    {job.image && <Image loading="lazy" className="w-16 h-16 rounded-xl" src={job.image} width={64} height={64} alt="" />}
                 </div>
-                <Reveal direction="right">
-                    <Divider />
-                </Reveal>
-                <Reveal className="flex flex-wrap gap-1" direction="down" delay={0.4}>
-                    {job.skills.map((skill, index) => (
-                        <span key={index} className={`text-secondary font-normal bg-secondary bg-opacity-10 px-2 py-0.5 rounded-lg h6 flex-grow text-center`}>{skill}</span>
-                    ))}
-                </Reveal>
-                <Reveal direction="right" delay={0.6} className="space-y-1">
-                    {job.details.map((detail, index) => (
-                        <Details key={index} title={detail.title} onOpen={() => Tracker.onJobView(job.name)}>
-                            <p className="text-justify text-text-1">
-                                {detail.content}
-                            </p>
-                        </Details>
-                    ))}
-                </Reveal>
+                {
+                    (job.skills || job.details) &&
+                    <>
+                        <Reveal direction="right">
+                            <Divider />
+                        </Reveal>
+                        {
+                            job.skills &&
+                            <Reveal className="flex flex-wrap gap-1" direction="down" delay={0.4}>
+                                {job.skills.map((skill, index) => (
+                                    <span key={index} className={`text-secondary font-normal bg-secondary bg-opacity-10 px-4 py-0.5 rounded-lg h6 flex-grow text-center`}>{skill}</span>
+                                ))}
+                            </Reveal>
+                        }
+                        {
+                            job.details &&
+                            <Reveal direction="right" delay={0.6} className="space-y-1">
+                                {job.details.map((detail, index) => (
+                                    <Details key={index} title={detail.title} onOpen={() => Tracker.onJobView(job.name)}>
+                                        <p className="text-justify text-text-1">
+                                            {detail.content}
+                                        </p>
+                                    </Details>
+                                ))}
+                            </Reveal>
+                        }
+                    </>
+                }
             </div>
         </Reveal>
     );

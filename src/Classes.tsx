@@ -1,4 +1,4 @@
-import React from "react";
+import React, { type JSX } from "react";
 import { ComponentType } from "react";
 import { hyphenateSync } from "hyphen/en";
 
@@ -99,11 +99,11 @@ export class SkillSet {
 }
 
 function hyphenateJSX(element: React.ReactNode): React.ReactNode {
-    if (typeof element === 'string') {
+    if (typeof element === "string") {
         return hyphenateSync(element);
     }
 
-    if (React.isValidElement(element)) {
+    if (React.isValidElement<React.ReactPortal>(element)) {
         const children = React.Children.map(element.props.children, child =>
             hyphenateJSX(child)
         );
@@ -152,7 +152,7 @@ export class Project {
     details: Detail[];
     status: Status;
     skills: string[];
-    image: string;
+    image?: string;
     demoUrl?: string;
     githubUrl?: string;
 
@@ -161,7 +161,7 @@ export class Project {
         details: Detail[],
         status: Status,
         skills: string[],
-        image: string,
+        image?: string,
         demoUrl?: string,
         githubUrl?: string
     ) {
@@ -177,25 +177,25 @@ export class Project {
 
 export class Job {
     name: string;
-    company: string;
     date: string;
-    details: Detail[];
-    skills: string[];
-    image: string;
+    company?: string;
+    details?: Detail[];
+    skills?: string[];
+    image?: string;
 
     constructor(
         name: string,
-        company: string,
         date: string,
-        details: Detail[],
-        image: string,
-        skills: string[]
+        company?: string,
+        details?: Detail[],
+        skills?: string[],
+        image?: string
     ) {
         this.name = name;
         this.company = company;
         this.date = date;
         this.details = details;
-        this.image = image;
         this.skills = skills;
+        this.image = image;
     }
 }
