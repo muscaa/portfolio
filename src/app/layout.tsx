@@ -9,6 +9,7 @@ const font = Montserrat({ subsets: [ "latin" ] });
 export const metadata: Metadata = {
     title: Config.userInfo.shortName + "'s Portfolio",
     description: "Built by " + Config.userInfo.nickName,
+    robots: "index, follow",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
