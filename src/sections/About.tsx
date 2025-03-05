@@ -28,8 +28,39 @@ export default function About() {
                 ">
                     <div className="flex flex-col justify-center items-center min-w-64 min-h-64 md:min-w-80 md:min-h-80 lg:min-w-96 lg:min-h-96">
                         <Reveal direction="down">
-                            <Image loading="lazy" className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shadow-glow-lg shadow-text
-                                border border-text border-opacity-25" src="profile.png" width={512} height={512} alt="Me" />
+                            <div className="size-64 md:size-80 lg:size-96 relative">
+                                <div
+                                    className="absolute inset-0 rounded-full"
+                                    style={{
+                                        background: "radial-gradient(circle, rgba(250, 249, 246, 0.1) 30%, transparent 100%)",
+                                        filter: "blur(50px)",
+                                    }}
+                                ></div>
+                                <Image
+                                    loading="lazy"
+                                    className="
+                                        size-full rounded-full
+                                        border border-text border-opacity-25
+                                    "
+                                    src="profile.png"
+                                    width={512}
+                                    height={512}
+                                    alt="Me"
+                                    style={{
+                                        maskImage: "radial-gradient(circle at 15% 85%, transparent 15%, black 18%)",
+                                    }}
+                                />
+                                <div
+                                    className="
+                                        absolute left-0 bottom-0 size-[30%] flex flex-col justify-center items-center
+                                        bg-background-3 bg-opacity-25 backdrop-blur-sm rounded-full
+                                        border-4 border-secondary
+                                    "
+                                >
+                                    <h2 className="font-extrabold">{Config.userInfo.age}</h2>
+                                    <h4 className="text-text-2">y/o</h4>
+                                </div>
+                            </div>
                         </Reveal>
                     </div>
 

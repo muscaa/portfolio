@@ -1,10 +1,15 @@
 import * as Classes from "@/Classes";
-import Anchor from "@/components/Anchor";
+import moment from "moment";
 
 export const userInfo = {
     fullName: "Musca Mihail",
     shortName: "Mihail",
     nickName: "muscaa",
+    age: moment().diff(moment({
+        day: 5,
+        month: 6,
+        year: 2004,
+    }), "years"),
     description: new Classes.Detail(
         "Description",
         <>
@@ -34,9 +39,10 @@ export const skillSets = [
         "Languages",
         [
             Classes.Skill.java,
-            Classes.Skill.cpp,
             Classes.Skill.c,
+            Classes.Skill.cpp,
             Classes.Skill.cSharp,
+            Classes.Skill.rust,
             Classes.Skill.dart,
             Classes.Skill.javaScript,
             Classes.Skill.typeScript,
@@ -57,26 +63,30 @@ export const skillSets = [
         "Back-End",
         [
             Classes.Skill.spring,
+            Classes.Skill.node,
             Classes.Skill.mySql,
             Classes.Skill.sqLite,
-        ]
-    ),
-    new Classes.SkillSet(
-        "IDEs",
-        [
-            Classes.Skill.eclipse,
-            Classes.Skill.intelliJ,
-            Classes.Skill.vsCode,
-            Classes.Skill.visualStudio,
+            Classes.Skill.postgreSql,
+            Classes.Skill.supabase,
         ]
     ),
     new Classes.SkillSet(
         "Tools",
         [
-            Classes.Skill.git,
+            Classes.Skill.eclipse,
+            Classes.Skill.intelliJ,
+            Classes.Skill.vsCode,
+            Classes.Skill.visualStudio,
             Classes.Skill.bash,
+            Classes.Skill.git,
+            Classes.Skill.npm,
+            Classes.Skill.graphQL,
+            Classes.Skill.gradle,
+            Classes.Skill.nginx,
             Classes.Skill.docker,
-            Classes.Skill.insomnia,
+            Classes.Skill.postman,
+            Classes.Skill.oci,
+            Classes.Skill.hetzner,
         ]
     ),
 ];
@@ -89,47 +99,50 @@ export const jobs = [
             new Classes.Detail(
                 "Description",
                 <>
-                    Created Minecraft mods and plugins, turning creative ideas into reality.
-                    This experience helped me sharpen my skills and earn some extra income.
+                    Developed and maintained small-scale applications for freelance clients, enhancing my
+                    technical skills and project management abilities while generating additional income.
                 </>
             ),
         ],
-        [ "java", "minecraft", "lwjgl" ],
+        [ "java", "gradle", "opengl" ],
         "jobs/fiverr.png"
     ),
     new Classes.Job(
         "Open Source Contributor",
         "Dec 2023 - present",
-        undefined,
-        undefined,
-        undefined,
+        "GitHub",
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Built and maintained several public GitHub repositories that showcase my projects
+                    and coding skills. I focus on writing clean, well-documented code and use best
+                    practices like version control and automated testing. Currently, I'm managing these
+                    projects independently while looking forward to collaborating with others in the future.
+                </>
+            ),
+        ],
+        [ "java", "gradle", "jitpack", "spring", "c", "c++", "html", "css", "typescript" ],
         undefined
     ),
     new Classes.Job(
         "Self Employed",
         "Aug 2024 - present",
         undefined,
-        undefined,
-        undefined,
-        undefined
-    ),
-    /*new Classes.Job(
-        "Competitive Programmer",
-        "Cloudflight Coding Contest",
-        "20 Oct 2023",
         [
             new Classes.Detail(
                 "Description",
                 <>
-                    Secured second place in my university and
-                    ranked <Anchor href="https://register.codingcontest.org/contest/5271/results?page.page=3&activeId=29120#29120">#124</Anchor> globally
-                    in the Cloudflight Coding Contest.
+                    Working as a full-stack developer, I've had the chance to transform ideas into real,
+                    functioning products, ranging from simple websites to more complex applications.
+                    I enjoy the hands-on process of building and fine-tuning each project, and I make sure
+                    to offer practical support and guidance so my clients feel comfortable using the software.
                 </>
             ),
         ],
-        [ "java" ],
-        "jobs/cloudflight.png"
-    ),*/
+        [ "html", "css", "typescript", "next", "react", "supabase", "docker", "bash" ],
+        undefined
+    ),
 ];
 export const projects = [
     new Classes.Project(
@@ -149,7 +162,7 @@ export const projects = [
             ),
         ],
         Classes.Status.complete,
-        [ "java", "gradle", "jitpack", "fluff", "libgdx", "mysql", "sqlite", "networking" ],
+        [ "java", "gradle", "jitpack", "fluff", "swing", "libgdx", "opengl", "networking", "jdbc", "mysql", "sqlite" ],
         "projects/chess.png",
         undefined,
         "https://github.com/muscaa/chess"
@@ -167,7 +180,7 @@ export const projects = [
             ),
         ],
         Classes.Status.complete,
-        [ "java", "gradle", "lwjgl", "slick2d" ],
+        [ "java", "gradle", "opengl", "slick2d" ],
         "projects/logic-gate-sim.png",
         undefined,
         "https://github.com/muscaa/logic-gates-sim"
@@ -186,7 +199,7 @@ export const projects = [
             ),
         ],
         Classes.Status.inDev,
-        [ "typescript", "next", "react", "tailwind css" ],
+        [ "typescript", "next", "react", "tailwind css", "zustand" ],
         "projects/cv-maker.png",
         "https://muscaa.github.io/cv-maker",
         "https://github.com/muscaa/cv-maker"
@@ -237,7 +250,7 @@ export const projects = [
             ),
         ],
         Classes.Status.inDev,
-        [ "java", "gradle", "fluff" ],
+        [ "java", "gradle", "jitpack", "fluff" ],
         undefined,
         undefined,
         "https://github.com/muscaa/quill"
@@ -255,7 +268,7 @@ export const contactInfo = {
     linkedin: "https://www.linkedin.com/in/muscaa/",
 };
 export const footer = [
-    "© 2024 Musca Mihail",
+    "© " + moment().year() + " muscaa",
     "I use arch btw",
 ];
 export const tracker = {

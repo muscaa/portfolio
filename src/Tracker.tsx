@@ -19,6 +19,7 @@ async function send(event: number, name: string) {
 }
 
 export function init() {
+    if (!Config.tracker.toggled) return;
     if (inited) return;
     inited = true;
 

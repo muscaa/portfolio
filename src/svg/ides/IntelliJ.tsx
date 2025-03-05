@@ -10,7 +10,7 @@ export default function IntelliJ({ className }: { className?: string }) {
             className={className}
         >
             <defs>
-                <linearGradient x1="0%" y1="50%" x2="99.7986577%" y2="50%" id="linearGradient-1">
+                <linearGradient x1="0%" y1="50%" x2="99.7986577%" y2="50%" id="intellij_linearGradient-1">
                     <stop stopColor="#F97A12" offset="26%">
 
                     </stop>
@@ -27,7 +27,7 @@ export default function IntelliJ({ className }: { className?: string }) {
 
                     </stop>
                 </linearGradient>
-                <linearGradient x1="0.344827586%" y1="34.5396825%" x2="121.182266%" y2="77.6190476%" id="linearGradient-2">
+                <linearGradient x1="0.344827586%" y1="34.5396825%" x2="121.182266%" y2="77.6190476%" id="intellij_linearGradient-2">
                     <stop stopColor="#F97A12" offset="0%">
 
                     </stop>
@@ -59,7 +59,7 @@ export default function IntelliJ({ className }: { className?: string }) {
 
                     </stop>
                 </linearGradient>
-                <linearGradient x1="78.1690141%" y1="97.7493606%" x2="30.1056338%" y2="-6.62404092%" id="linearGradient-3">
+                <linearGradient x1="78.1690141%" y1="97.7493606%" x2="30.1056338%" y2="-6.62404092%" id="intellij_linearGradient-3">
                     <stop stopColor="#FE315D" offset="0%">
 
                     </stop>
@@ -91,7 +91,7 @@ export default function IntelliJ({ className }: { className?: string }) {
 
                     </stop>
                 </linearGradient>
-                <linearGradient x1="20%" y1="24.0865385%" x2="103.421589%" y2="132.676282%" id="linearGradient-4">
+                <linearGradient x1="20%" y1="24.0865385%" x2="103.421589%" y2="132.676282%" id="intellij_linearGradient-4">
                     <stop stopColor="#FE315D" offset="0%">
 
                     </stop>
@@ -119,16 +119,16 @@ export default function IntelliJ({ className }: { className?: string }) {
                 </linearGradient>
             </defs>
             <g>
-                <polygon fill="url(#linearGradient-1)" points="64.8 199.6 2.8 150.8 33.6 93.6 122 128">
+                <polygon fill="url(#intellij_linearGradient-1)" points="64.8 199.6 2.8 150.8 33.6 93.6 122 128">
 
                 </polygon>
-                <polygon fill="url(#linearGradient-2)" points="256 68.4 251.2 216.4 152.8 256 93.6 217.6 180 128 142.4 44.8 176.4 4">
+                <polygon fill="url(#intellij_linearGradient-2)" points="256 68.4 251.2 216.4 152.8 256 93.6 217.6 180 128 142.4 44.8 176.4 4">
 
                 </polygon>
-                <polygon fill="url(#linearGradient-3)" points="256 68.4 178 160.4 142.4 44.8 176.4 4">
+                <polygon fill="url(#intellij_linearGradient-3)" points="256 68.4 178 160.4 142.4 44.8 176.4 4">
 
                 </polygon>
-                <polygon fill="url(#linearGradient-4)" points="123.2 212.4 20.8 249.6 37.2 192 58.4 120.8 0 101.2 37.2 0 117.2 9.6 196.4 100">
+                <polygon fill="url(#intellij_linearGradient-4)" points="123.2 212.4 20.8 249.6 37.2 192 58.4 120.8 0 101.2 37.2 0 117.2 9.6 196.4 100">
 
                 </polygon>
                 <rect fill="#000000" x="48" y="48" width="160" height="160">

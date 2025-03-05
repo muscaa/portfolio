@@ -12,6 +12,7 @@ import Html5 from "@/svg/languages/Html5";
 import Css3 from "@/svg/languages/Css3";
 import JavaScript from "@/svg/languages/JavaScript";
 import TypeScript from "@/svg/languages/TypeScript";
+import Rust from "@/svg/languages/Rust";
 
 // Frameworks
 import Flutter from "@/svg/frameworks/Flutter";
@@ -23,11 +24,13 @@ import DotNet from "@/svg/frameworks/DotNet";
 import ElectronJs from "@/svg/frameworks/ElectronJs";
 import TailwindCss from "@/svg/frameworks/TailwindCss";
 import LWJGL from "@/svg/frameworks/LWJGL";
+import Node from "@/svg/frameworks/Node";
 
 // Databases
 import MySql from "@/svg/databases/MySql";
 import SqLite from "@/svg/databases/SqLite";
 import Supabase from "@/svg/databases/Supabase";
+import PostgreSql from "@/svg/databases/PostgreSql";
 
 // IDEs
 import Eclipse from "@/svg/ides/Eclipse";
@@ -39,7 +42,13 @@ import VisualStudio from "@/svg/ides/VisualStudio";
 import Git from "@/svg/tools/Git";
 import Bash from "@/svg/tools/Bash";
 import Docker from "@/svg/tools/Docker";
-import Insomnia from "@/svg/tools/Insomnia";
+import Postman from "@/svg/tools/Postman";
+import Npm from "@/svg/tools/Npm";
+import Oci from "@/svg/tools/Oci";
+import Gradle from "@/svg/tools/Gradle";
+import GraphQL from "@/svg/tools/GraphQL";
+import Hetzner from "@/svg/tools/Hetzner";
+import Nginx from "@/svg/tools/Nginx";
 
 export class Skill {
     name: string;
@@ -58,10 +67,11 @@ export class Skill {
     static c: Skill = new Skill("C", C);
     static cSharp: Skill = new Skill("C#", CSharp);
     static dart: Skill = new Skill("Dart", Dart);
-    static html5: Skill = new Skill("HTML5", Html5);
-    static css3: Skill = new Skill("CSS3", Css3);
+    static html5: Skill = new Skill("HTML", Html5);
+    static css3: Skill = new Skill("CSS", Css3);
     static javaScript: Skill = new Skill("JavaScript", JavaScript);
     static typeScript: Skill = new Skill("TypeScript", TypeScript);
+    static rust: Skill = new Skill("Rust", Rust);
 
     static spring: Skill = new Skill("Spring", Spring);
     static arduino: Skill = new Skill("Arduino", Arduino);
@@ -72,10 +82,12 @@ export class Skill {
     static electronJs: Skill = new Skill("Electron", ElectronJs);
     static tailwindCss: Skill = new Skill("Tailwind", TailwindCss);
     static lwjgl: Skill = new Skill("LWJGL", LWJGL);
+    static node: Skill = new Skill("Node", Node);
 
     static mySql: Skill = new Skill("MySQL", MySql);
     static sqLite: Skill = new Skill("SQLite", SqLite);
     static supabase: Skill = new Skill("Supabase", Supabase);
+    static postgreSql: Skill = new Skill("PostgreSQL", PostgreSql);
 
     static eclipse: Skill = new Skill("Eclipse", Eclipse);
     static intelliJ: Skill = new Skill("IntelliJ", IntelliJ);
@@ -85,7 +97,13 @@ export class Skill {
     static git: Skill = new Skill("Git", Git);
     static bash: Skill = new Skill("Bash", Bash);
     static docker: Skill = new Skill("Docker", Docker);
-    static insomnia: Skill = new Skill("Insomnia", Insomnia);
+    static postman: Skill = new Skill("Postman", Postman);
+    static npm: Skill = new Skill("NPM", Npm);
+    static oci: Skill = new Skill("OCI", Oci);
+    static gradle: Skill = new Skill("Gradle", Gradle);
+    static graphQL: Skill = new Skill("GraphQL", GraphQL);
+    static hetzner: Skill = new Skill("Hetzner", Hetzner);
+    static nginx: Skill = new Skill("Nginx", Nginx);
 }
 
 export class SkillSet {
