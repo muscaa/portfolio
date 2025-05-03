@@ -13,6 +13,7 @@ import Css3 from "@/svg/languages/Css3";
 import JavaScript from "@/svg/languages/JavaScript";
 import TypeScript from "@/svg/languages/TypeScript";
 import Rust from "@/svg/languages/Rust";
+import Python from "@/svg/languages/Python";
 
 // Frameworks
 import Flutter from "@/svg/frameworks/Flutter";
@@ -49,6 +50,7 @@ import Gradle from "@/svg/tools/Gradle";
 import GraphQL from "@/svg/tools/GraphQL";
 import Hetzner from "@/svg/tools/Hetzner";
 import Nginx from "@/svg/tools/Nginx";
+import CMake from "@/svg/tools/CMake";
 
 export class Skill {
     name: string;
@@ -72,6 +74,7 @@ export class Skill {
     static javaScript: Skill = new Skill("JavaScript", JavaScript);
     static typeScript: Skill = new Skill("TypeScript", TypeScript);
     static rust: Skill = new Skill("Rust", Rust);
+    static python: Skill = new Skill("Python", Python);
 
     static spring: Skill = new Skill("Spring", Spring);
     static arduino: Skill = new Skill("Arduino", Arduino);
@@ -104,6 +107,7 @@ export class Skill {
     static graphQL: Skill = new Skill("GraphQL", GraphQL);
     static hetzner: Skill = new Skill("Hetzner", Hetzner);
     static nginx: Skill = new Skill("Nginx", Nginx);
+    static cmake: Skill = new Skill("CMake", CMake);
 }
 
 export class SkillSet {

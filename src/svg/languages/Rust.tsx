@@ -14,6 +14,7 @@ export default function Rust({ className }: { className?: string }) {
                 strokeLinejoin: "round",
                 strokeMiterlimit: 1.41421,
             }}
+            className={className}
         >
             <g id="Layer-1">
                 <g transform="matrix(1,0,0,1,1009.4,506.362)">

@@ -46,6 +46,7 @@ export const skillSets = [
             Classes.Skill.dart,
             Classes.Skill.javaScript,
             Classes.Skill.typeScript,
+            Classes.Skill.python,
         ]
     ),
     new Classes.SkillSet(
@@ -82,6 +83,7 @@ export const skillSets = [
             Classes.Skill.npm,
             Classes.Skill.graphQL,
             Classes.Skill.gradle,
+            Classes.Skill.cmake,
             Classes.Skill.nginx,
             Classes.Skill.docker,
             Classes.Skill.postman,
@@ -203,6 +205,26 @@ export const projects = [
         "projects/cv-maker.png",
         "https://muscaa.github.io/cv-maker",
         "https://github.com/muscaa/cv-maker"
+    ),
+    new Classes.Project(
+        "Telebot",
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Developed a cross-platform robot control application in C++ using
+                    SDL3 and Boost, enabling users to remotely operate ESP32-powered
+                    robots via the internet. It supports real-time video and audio feedback
+                    and user input via controller, keyboard or GUI. And a plugin system for
+                    adding new features and functionalities.
+                </>
+            ),
+        ],
+        Classes.Status.inDev,
+        [ "C", "C++", "CMake", "VCPKG", "Networking", "Cross-Platform", "SDL3", "Boost", "ESP32", "Java", "Android", "Github Actions" ],
+        undefined,
+        undefined,
+        "https://github.com/muscaa/telebot"
     ),
     new Classes.Project(
         "Developer Portfolio",
