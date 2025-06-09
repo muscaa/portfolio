@@ -94,20 +94,38 @@ export const skillSets = [
 ];
 export const jobs = [
     new Classes.Job(
-        "Freelancer",
-        "Mar 2022 - May 2022",
-        "Fiverr",
+        "Founder and CEO",
+        "May 2025 - present",
+        "Vest Visuals",
         [
             new Classes.Detail(
                 "Description",
                 <>
-                    Developed and maintained small-scale applications for freelance clients, enhancing my
-                    technical skills and project management abilities while generating additional income.
+                    A photography and videography studio for weddings, events, automotive, corporate, and more.
+                    Developed the whole infrastructure, including the website and the backend system.
                 </>
             ),
         ],
-        [ "java", "gradle", "opengl" ],
-        "jobs/fiverr.png"
+        [ "html", "css", "typescript", "next", "react", "tailwind", "hetzner", "bash" ],
+        "jobs/vest-visuals.png"
+    ),
+    new Classes.Job(
+        "Self Employed",
+        "Aug 2024 - present",
+        undefined,
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Working as a full-stack developer, I've had the chance to transform ideas into real,
+                    functioning products, ranging from simple websites to more complex applications.
+                    I enjoy the hands-on process of building and fine-tuning each project, and I make sure
+                    to offer practical support and guidance so my clients feel comfortable using the software.
+                </>
+            ),
+        ],
+        [ "html", "css", "typescript", "next", "react", "supabase", "docker", "bash" ],
+        undefined
     ),
     new Classes.Job(
         "Open Source Contributor",
@@ -128,25 +146,41 @@ export const jobs = [
         undefined
     ),
     new Classes.Job(
-        "Self Employed",
-        "Aug 2024 - present",
-        undefined,
+        "Freelancer",
+        "Mar 2022 - May 2022",
+        "Fiverr",
         [
             new Classes.Detail(
                 "Description",
                 <>
-                    Working as a full-stack developer, I've had the chance to transform ideas into real,
-                    functioning products, ranging from simple websites to more complex applications.
-                    I enjoy the hands-on process of building and fine-tuning each project, and I make sure
-                    to offer practical support and guidance so my clients feel comfortable using the software.
+                    Developed and maintained small-scale applications for freelance clients, enhancing my
+                    technical skills and project management abilities while generating additional income.
                 </>
             ),
         ],
-        [ "html", "css", "typescript", "next", "react", "supabase", "docker", "bash" ],
-        undefined
+        [ "java", "gradle", "opengl" ],
+        "jobs/fiverr.png"
     ),
 ];
 export const projects = [
+    new Classes.Project(
+        "Vest Visuals",
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Developed a photography and videography studio website that showcases the portfolio,
+                    services, and contact information. The site is built with Next.js and Tailwind CSS,
+                    ensuring a responsive and modern design.
+                </>
+            ),
+        ],
+        Classes.Status.complete,
+        [ "html", "css", "typescript", "next", "react", "tailwind", "hetzner", "bash" ],
+        "projects/vest-visuals.png",
+        "https://vestvisuals.ro",
+        "https://github.com/muscaa/vest-visuals"
+    ),
     new Classes.Project(
         "Chess",
         [
@@ -188,6 +222,26 @@ export const projects = [
         "https://github.com/muscaa/logic-gates-sim"
     ),
     new Classes.Project(
+        "Telebot",
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Developed a cross-platform robot control application in C++ using
+                    SDL3 and Boost, enabling users to remotely operate ESP32-powered
+                    robots via the internet. It supports real-time video and audio feedback
+                    and user input via controller, keyboard or GUI. And a plugin system for
+                    adding new features and functionalities.
+                </>
+            ),
+        ],
+        Classes.Status.inDev,
+        [ "c", "c++", "cmake", "vcpkg", "networking", "cross-platform", "sdl3", "boost", "esp32", "java", "android", "github actions" ],
+        undefined,
+        undefined,
+        "https://github.com/muscaa/telebot"
+    ),
+    new Classes.Project(
         "Free CV Maker",
         [
             new Classes.Detail(
@@ -205,26 +259,6 @@ export const projects = [
         "projects/cv-maker.png",
         "https://muscaa.github.io/cv-maker",
         "https://github.com/muscaa/cv-maker"
-    ),
-    new Classes.Project(
-        "Telebot",
-        [
-            new Classes.Detail(
-                "Description",
-                <>
-                    Developed a cross-platform robot control application in C++ using
-                    SDL3 and Boost, enabling users to remotely operate ESP32-powered
-                    robots via the internet. It supports real-time video and audio feedback
-                    and user input via controller, keyboard or GUI. And a plugin system for
-                    adding new features and functionalities.
-                </>
-            ),
-        ],
-        Classes.Status.inDev,
-        [ "C", "C++", "CMake", "VCPKG", "Networking", "Cross-Platform", "SDL3", "Boost", "ESP32", "Java", "Android", "Github Actions" ],
-        undefined,
-        undefined,
-        "https://github.com/muscaa/telebot"
     ),
     new Classes.Project(
         "Developer Portfolio",
