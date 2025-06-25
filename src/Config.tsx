@@ -176,7 +176,8 @@ export const projects = [
             ),
         ],
         Classes.Status.complete,
-        [ "html", "css", "typescript", "next", "react", "tailwind", "hetzner", "bash" ],
+        [ "html", "css", "typescript", "next", "react", "tailwind", "shadcn/ui", "animejs", "hetzner cloud",
+            "docker", "nginx", "s3", "minio", "pocketbase" ],
         "projects/vest-visuals.png",
         "https://vestvisuals.ro",
         "https://github.com/muscaa/vest-visuals"
