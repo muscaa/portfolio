@@ -94,7 +94,7 @@ export const skillSets = [
 ];
 export const jobs = [
     new Classes.Job(
-        "Founder and CEO",
+        "Co-Founder and CEO",
         "May 2025 - present",
         "Vest Visuals",
         [
@@ -106,7 +106,8 @@ export const jobs = [
                 </>
             ),
         ],
-        [ "html", "css", "typescript", "next", "react", "tailwind", "hetzner", "bash" ],
+        [ "html", "css", "typescript", "next", "react", "tailwind", "shadcn/ui", "animejs", "hetzner cloud",
+            "docker", "nginx", "s3", "minio", "pocketbase" ],
         "jobs/vest-visuals.png"
     ),
     new Classes.Job(
