@@ -1,0 +1,55 @@
+@utility h1 {
+    @apply scroll-m-20 text-4xl lg:text-5xl font-extrabold tracking-tight;
+}
+
+.h1 {
+    @apply h1;
+}
+
+@utility h2 {
+    @apply scroll-m-20 text-3xl font-semibold tracking-tight;
+}
+
+.h2 {
+    @apply h2;
+}
+
+@utility h3 {
+    @apply scroll-m-20 text-2xl font-medium tracking-tight;
+}
+
+.h3 {
+    @apply h3;
+}
+
+@utility h4 {
+    @apply scroll-m-20 text-xl tracking-tight;
+}
+
+.h4 {
+    @apply h4;
+}
+
+@utility h5 {
+    @apply scroll-m-20 text-sm tracking-tight;
+}
+
+.h5 {
+    @apply h5;
+}
+
+@utility h6 {
+    @apply scroll-m-20 text-xs tracking-tight;
+}
+
+.h6 {
+    @apply h6;
+}
+
+@utility p {
+    @apply text-base;
+}
+
+.p {
+    @apply p;
+}
