@@ -53,11 +53,3 @@
 .p {
     @apply p;
 }
-
-@utility press {
-    transform: var(--transform-press);
-}
-
-.press {
-    @apply press;
-}

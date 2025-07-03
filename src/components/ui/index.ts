@@ -1,1 +1,7 @@
 export * from "./button/button";
+export * from "./card/card";
+export * from "./badge/badge";
+export * from "./accordion/accordion";
+export * from "./input/input";
+export * from "./separator/separator";
+export * from "./textarea/textarea";
