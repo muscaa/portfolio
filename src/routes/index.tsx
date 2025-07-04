@@ -10,6 +10,7 @@ import {
     Textarea,
 } from "~/components/ui";
 import { LuBell, LuCheck } from '@qwikest/icons/lucide';
+import { Main } from "~/components/other";
 import {
     SectionHome
 } from "~/components/sections";
@@ -31,7 +32,7 @@ export default component$(() => {
     ];
 
     return (
-        <>
+        <Main>
             {/*<ParticlesBackground className="fixed inset-0 -z-50" />*/}
             <div class="flex flex-col h4 font-medium text-text">
                 <SectionHome />
@@ -123,7 +124,7 @@ export default component$(() => {
                     <Separator />
                 </div>
             </div>
-        </>
+        </Main>
     );
 });
 
