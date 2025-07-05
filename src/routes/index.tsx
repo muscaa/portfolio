@@ -75,9 +75,13 @@ export default component$(() => {
                     <Button look="secondary">
                         secondary
                     </Button>
-                    <Accordion.Root behavior="single" collapsible class="w-full">
+                    <Accordion.Root collapsible class="w-full">
                         <Accordion.Item id="item-1">
                             <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
+                            <Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
+                        </Accordion.Item>
+                        <Accordion.Item id="item-2">
+                            <Accordion.Trigger>Is it accessible x2?</Accordion.Trigger>
                             <Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
                         </Accordion.Item>
                     </Accordion.Root>
