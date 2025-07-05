@@ -5,5 +5,4 @@ export const SectionHome = component$(() => {
         <section class="relative flex h-screen overflow-hidden bg-red-400">
         </section>
     );
-},
-);
+});

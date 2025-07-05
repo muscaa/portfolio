@@ -11,5 +11,4 @@ export const Main = component$(() => {
             </main>
         </div>
     );
-},
-);
+});
