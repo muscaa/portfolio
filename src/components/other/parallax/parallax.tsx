@@ -24,13 +24,13 @@ export interface Options {
     yFactor?: number;
 }
 
-export interface ParallaxOpts {
+export interface ParallaxLayerOpts {
     store: Store;
     options: Options;
     layer: Layer;
 }
 
-export const Parallax = component$<ParallaxOpts>((opts) => {
+export const ParallaxLayer = component$<ParallaxLayerOpts>((opts) => {
     const xFactor = opts.layer.width / opts.layer.height;
     const yFactor = opts.layer.height / opts.layer.width;
 
@@ -53,7 +53,7 @@ export const Parallax = component$<ParallaxOpts>((opts) => {
 });
 
 export interface ParallaxLayersOpts {
-    interact: boolean;
+    interact: Signal<boolean>;
     options?: Options;
     layers: Layer[];
 }
@@ -65,7 +65,7 @@ export const ParallaxLayers = component$<ParallaxLayersOpts>((props) => {
     });
 
     useVisibleTask$(({ track }) => {
-        const interact = track(props.interact as any as Signal<boolean>);
+        const interact = track(props.interact);
 
         const handleMouseMove = (event: MouseEvent) => {
             if (!interact) return;
@@ -94,7 +94,7 @@ export const ParallaxLayers = component$<ParallaxLayersOpts>((props) => {
         <div class="absolute inset-0 w-full h-full overflow-hidden">
             {
                 props.layers.map((layer, index) => (
-                    <Parallax
+                    <ParallaxLayer
                         key={index}
                         store={store}
                         options={props.options || {}}
