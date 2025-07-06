@@ -6,13 +6,13 @@ import {
 } from "@builder.io/qwik";
 import { Button } from "~/components/ui";
 
-export interface IconOpts {
+export interface IconProps {
     size?: number;
     "stroke-width"?: number;
     class?: string;
 }
 
-export type Icon = Component<IconOpts>;
+export type Icon = Component<IconProps>;
 
 interface IconLinkProps {
     href: string;

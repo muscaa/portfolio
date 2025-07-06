@@ -7,12 +7,6 @@ import { ParallaxLayers } from "~/components/other";
 import { Parallax } from "~/components/svg";
 import { Reveal } from "~/components/animations";
 import {
-    SiGithub,
-    SiTelegram,
-    SiInstagram,
-    SiLinkedin,
-} from "@qwikest/icons/simpleicons";
-import {
     IconLink,
     ButtonLink,
 } from "~/components/other";
@@ -57,20 +51,20 @@ export const SectionHome = component$(() => {
             <div class="flex flex-col size-full justify-center items-center z-10">
                 <div class="flex-grow"></div>
                 <div class="flex-grow"></div>
-                <Reveal direction="right" delay={delay + 0.2}>
+                <Reveal direction="right" delay={delay + 200}>
                     <h1 class="font-bold">Hi, I'm {"Mihail"}</h1>
                 </Reveal>
-                <Reveal direction="right" delay={delay + 0.4}>
+                <Reveal direction="right" delay={delay + 400}>
                     <h2 class="font-bold">{"Full-Stack Developer"}</h2>
                 </Reveal>
-                <Reveal class="flex gap-2 justify-center items-center mt-4 lg:mt-8" direction="right" delay={delay + 0.6}>
+                <Reveal class="flex gap-2 justify-center items-center mt-4 lg:mt-8" direction="right" delay={delay + 600}>
                     <IconLink href={"https://github.com/muscaa"} icon={Si.Github} />
                     <IconLink href={"https://github.com/muscaa"} icon={Si.Github} />
                     <IconLink href={"https://github.com/muscaa"} icon={Si.Github} />
                     <IconLink href={"https://github.com/muscaa"} icon={Si.Github} />
                 </Reveal>
                 <div class="flex-grow"></div>
-                <Reveal direction="up" delay={delay + 0.2}>
+                <Reveal direction="up" delay={delay + 200}>
                     <ButtonLink href="#about">
                         More
                     </ButtonLink>

@@ -24,41 +24,41 @@ export interface Options {
     yFactor?: number;
 }
 
-export interface ParallaxLayerOpts {
+export interface ParallaxLayerProps {
     store: Store;
     options: Options;
     layer: Layer;
 }
 
-export const ParallaxLayer = component$<ParallaxLayerOpts>((opts) => {
-    const xFactor = opts.layer.width / opts.layer.height;
-    const yFactor = opts.layer.height / opts.layer.width;
+export const ParallaxLayer = component$<ParallaxLayerProps>((props) => {
+    const xFactor = props.layer.width / props.layer.height;
+    const yFactor = props.layer.height / props.layer.width;
 
     return (
         <div
             class="absolute transition-transform duration-100 ease-out"
             style={{
-                width: `max(${opts.layer.scale}vw, calc(${opts.layer.scale}vh * ${xFactor}))`,
-                height: `max(${opts.layer.scale}vh, calc(${opts.layer.scale}vw * ${yFactor}))`,
-                left: `calc(50vw - max(${opts.layer.scale}vw, calc(${opts.layer.scale}vh * ${xFactor})) / 2)`,
-                top: `calc(50vh - max(${opts.layer.scale}vh, calc(${opts.layer.scale}vw * ${yFactor})) / 2)`,
+                width: `max(${props.layer.scale}vw, calc(${props.layer.scale}vh * ${xFactor}))`,
+                height: `max(${props.layer.scale}vh, calc(${props.layer.scale}vw * ${yFactor}))`,
+                left: `calc(50vw - max(${props.layer.scale}vw, calc(${props.layer.scale}vh * ${xFactor})) / 2)`,
+                top: `calc(50vh - max(${props.layer.scale}vh, calc(${props.layer.scale}vw * ${yFactor})) / 2)`,
                 transform: `translate(
-                    ${opts.store.x * opts.layer.offset * (opts.options.xFactor ?? 1)}px,
-                    ${opts.store.y * opts.layer.offset * (opts.options.yFactor ?? 1)}px)`,
+                    ${props.store.x * props.layer.offset * (props.options.xFactor ?? 1)}px,
+                    ${props.store.y * props.layer.offset * (props.options.yFactor ?? 1)}px)`,
             }}
         >
-            <opts.layer.icon class="absolute inset-0 w-full h-full" />
+            <props.layer.icon class="absolute inset-0 w-full h-full" />
         </div>
     );
 });
 
-export interface ParallaxLayersOpts {
+export interface ParallaxLayersProps {
     interact: Signal<boolean>;
     options?: Options;
     layers: Layer[];
 }
 
-export const ParallaxLayers = component$<ParallaxLayersOpts>((props) => {
+export const ParallaxLayers = component$<ParallaxLayersProps>((props) => {
     const store = useStore<Store>({
         x: 0,
         y: 0,

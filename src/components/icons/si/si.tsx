@@ -1,13 +1,40 @@
 import { component$ } from "@builder.io/qwik";
-import { IconOpts } from "~/components/other";
+import { IconProps } from "~/components/other";
 import {
     SiGithub,
+    SiTelegram,
+    SiInstagram,
+    SiLinkedin,
 } from "@qwikest/icons/simpleicons";
 
-export const Github = component$<IconOpts>((opts) => {
+export const Github = component$<IconProps>((props) => {
     return (
         <SiGithub
-            {...opts}
+            {...props}
+        />
+    );
+});
+
+export const Telegram = component$<IconProps>((props) => {
+    return (
+        <SiTelegram
+            {...props}
+        />
+    );
+});
+
+export const Instagram = component$<IconProps>((props) => {
+    return (
+        <SiInstagram
+            {...props}
+        />
+    );
+});
+
+export const Linkedin = component$<IconProps>((props) => {
+    return (
+        <SiLinkedin
+            {...props}
         />
     );
 });
