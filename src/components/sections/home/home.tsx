@@ -52,10 +52,10 @@ export const SectionHome = component$(() => {
                 <div class="flex-grow"></div>
                 <div class="flex-grow"></div>
                 <Reveal direction="right" delay={delay + 200}>
-                    <h1 class="font-bold">Hi, I'm {"Mihail"}</h1>
+                    <h1>Hi, I'm {"Mihail"}</h1>
                 </Reveal>
                 <Reveal direction="right" delay={delay + 400}>
-                    <h2 class="font-bold">{"Full-Stack Developer"}</h2>
+                    <h2>{"Full-Stack Developer"}</h2>
                 </Reveal>
                 <Reveal class="flex gap-2 justify-center items-center mt-4 lg:mt-8" direction="right" delay={delay + 600}>
                     <IconLink href={"https://github.com/muscaa"} icon={Si.Github} />
