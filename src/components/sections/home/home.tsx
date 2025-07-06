@@ -5,10 +5,23 @@ import {
 } from "@builder.io/qwik";
 import { ParallaxLayers } from "~/components/other";
 import { Parallax } from "~/components/svg";
+import { Reveal } from "~/components/animations";
+import {
+    SiGithub,
+    SiTelegram,
+    SiInstagram,
+    SiLinkedin,
+} from "@qwikest/icons/simpleicons";
+import {
+    IconLink,
+    ButtonLink,
+} from "~/components/other";
+import { Si } from "~/components/icons";
 
 export const SectionHome = component$(() => {
     const ref = useSignal<HTMLElement>();
     const interact = useSignal(false);
+    const delay = 0;
 
     useVisibleTask$(() => {
         const handleMouseEnter = () => {
@@ -42,7 +55,28 @@ export const SectionHome = component$(() => {
                 ]}
             />
             <div class="flex flex-col size-full justify-center items-center z-10">
-                <h1>hello world</h1>
+                <div class="flex-grow"></div>
+                <div class="flex-grow"></div>
+                <Reveal direction="right" delay={delay + 0.2}>
+                    <h1 class="font-bold">Hi, I'm {"Mihail"}</h1>
+                </Reveal>
+                <Reveal direction="right" delay={delay + 0.4}>
+                    <h2 class="font-bold">{"Full-Stack Developer"}</h2>
+                </Reveal>
+                <Reveal class="flex gap-2 justify-center items-center mt-4 lg:mt-8" direction="right" delay={delay + 0.6}>
+                    <IconLink href={"https://github.com/muscaa"} icon={Si.Github} />
+                    <IconLink href={"https://github.com/muscaa"} icon={Si.Github} />
+                    <IconLink href={"https://github.com/muscaa"} icon={Si.Github} />
+                    <IconLink href={"https://github.com/muscaa"} icon={Si.Github} />
+                </Reveal>
+                <div class="flex-grow"></div>
+                <Reveal direction="up" delay={delay + 0.2}>
+                    <ButtonLink href="#about">
+                        More
+                    </ButtonLink>
+                </Reveal>
+                <div class="flex-grow"></div>
+                <div class="flex-grow"></div>
             </div>
         </section>
     );
