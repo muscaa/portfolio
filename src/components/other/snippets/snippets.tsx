@@ -21,7 +21,7 @@ interface IconLinkProps {
 
 export const IconLink = component$<IconLinkProps>((props) => {
     return (
-        <a href={props.href} target="_blank" class="hover:text-primary transition-all">
+        <a href={props.href} target="_blank" class="hover:scale-110 transition-all">
             <props.icon class="size-8" />
         </a>
     );
