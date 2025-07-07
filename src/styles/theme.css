@@ -1,8 +1,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-    --color-royal-blue-web-color: var(--royal-blue-web-color);
-    --color-keppel: var(--keppel);
+    --color-majorelle-blue: var(--majorelle-blue);
+    --color-aquamarine: var(--aquamarine);
     --color-taupe-gray: var(--taupe-gray);
     --color-imperial-red: var(--imperial-red);
 
@@ -110,7 +110,7 @@
     --muted: var(--timberwolf);
     --muted-foreground: var(--taupe-gray);
 
-    --primary: var(--royal-blue-web-color);
+    --primary: var(--majorelle-blue);
     --primary-foreground: var(--antiflash-white);
 
     --secondary: var(--timberwolf);
@@ -156,7 +156,7 @@
     --muted: var(--outer-space);
     --muted-foreground: var(--taupe-gray);
 
-    --primary: var(--royal-blue-web-color);
+    --primary: var(--majorelle-blue);
     --primary-foreground: var(--antiflash-white);
 
     --secondary: var(--outer-space);
@@ -177,8 +177,8 @@
 }
 
 :root {
-    --royal-blue-web-color: #4b71d8ff;
-    --keppel: #2ac1a8ff;
+    --majorelle-blue: #7649feff;
+    --aquamarine: #49fed0ff;
     --taupe-gray: #919295ff;
     --imperial-red: #f1414dff;
 

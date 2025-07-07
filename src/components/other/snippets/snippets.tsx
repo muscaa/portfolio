@@ -35,7 +35,7 @@ interface ButtonLinkProps extends PropsOf<typeof Button> {
 export const ButtonLink = component$<ButtonLinkProps>(({ href, target, ...props }) => {
     return (
         <a href={href} target={target}>
-            <Button {...props} class={`cursor-pointer ${props.className}`}>
+            <Button {...props} class={`cursor-pointer ${props.class}`}>
                 <Slot />
             </Button>
         </a>

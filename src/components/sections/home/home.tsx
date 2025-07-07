@@ -53,12 +53,12 @@ export const SectionHome = component$(() => {
                 <div class="flex-grow"></div>
                 <div class="flex-grow"></div>
                 <Reveal direction="right" delay={delay + 200}>
-                    <h1>Hi, I'm {Config.userInfo.shortName}</h1>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl">Hi, I'm {Config.userInfo.shortName}</h1>
                 </Reveal>
                 <Reveal direction="right" delay={delay + 400}>
-                    <h2>{Config.userInfo.role}</h2>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl">{Config.userInfo.role}</h2>
                 </Reveal>
-                <Reveal class="flex gap-2 justify-center items-center mt-4 lg:mt-8" direction="right" delay={delay + 600}>
+                <Reveal class="flex gap-3 justify-center items-center mt-4 lg:mt-8" direction="right" delay={delay + 600}>
                     <IconLink href={Config.contactInfo.github} icon={Si.Github} />
                     <IconLink href={Config.contactInfo.telegram} icon={Si.Telegram} />
                     <IconLink href={Config.contactInfo.instagram} icon={Si.Instagram} />
@@ -66,7 +66,7 @@ export const SectionHome = component$(() => {
                 </Reveal>
                 <div class="flex-grow"></div>
                 <Reveal direction="up" delay={delay + 200}>
-                    <ButtonLink href="#about">
+                    <ButtonLink href="#about" class="animate-bounce">
                         More
                     </ButtonLink>
                 </Reveal>
