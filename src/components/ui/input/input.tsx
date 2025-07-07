@@ -29,7 +29,7 @@ export const Input = component$<InputProps>(
                         valueSig ? $((__, el) => (valueSig.value = el.value)) : onInput$
                     }
                     class={cn(
-                        "rounded-md border-input bg-background text-foreground file:text-foreground placeholder:text-muted-foreground focus-visible:ring-ring flex h-12 w-full border px-3 py-1 p shadow-xs transition-colors file:border-0 file:bg-transparent file:p file:font-medium focus-visible:ring-1 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+                        "rounded-md border-input bg-background text-foreground file:text-foreground placeholder:text-muted-foreground focus-visible:ring-ring flex h-12 w-full border px-3 py-1 p shadow-xs transition-all file:border-0 file:bg-transparent file:p file:font-medium focus-visible:ring-1 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
                         props.class,
                     )}
                     id={inputId}
