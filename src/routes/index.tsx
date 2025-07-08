@@ -1,18 +1,12 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import {
-    Button,
-    Accordion,
-    Badge,
-    Card,
-    Input,
-    Separator,
-    Textarea,
-} from "~/components/ui";
-import { LuBell, LuCheck } from '@qwikest/icons/lucide';
 import { Main } from "~/components/other";
 import {
-    SectionHome
+    SectionHome,
+    SectionAbout,
+    SectionExperience,
+    SectionProjects,
+    SectionContact,
 } from "~/components/sections";
 import { Navbar } from "~/components/other";
 
@@ -46,7 +40,10 @@ export default component$(() => {
         >
             {/*<ParticlesBackground className="fixed inset-0 -z-50" />*/}
             <div class="flex flex-col">
-                <SectionHome />
+                <SectionAbout />
+                <SectionExperience />
+                <SectionProjects />
+                <SectionContact />
                 {/*<main className="relative">
                     <div className="flex justify-center items-center">
                         <div className="flex flex-col w-full max-w-6xl">
