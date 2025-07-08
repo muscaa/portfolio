@@ -35,7 +35,11 @@ export const SectionHome = component$(() => {
     });
 
     return (
-        <section ref={ref} class="relative flex h-screen">
+        <section
+            ref={ref}
+            id="home"
+            class="relative flex h-screen"
+        >
             <ParallaxLayers
                 interact={interact}
                 options={{

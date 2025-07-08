@@ -46,10 +46,10 @@ interface TabListProps {
 const TabList = component$<TabListProps>((props) => {
     return (
         <div class="flex w-full justify-end">
-            <Tab href="#about" text="about" icon={Lu.User} active={props.activeSection === "about"} />
-            <Tab href="#experience" text="experience" icon={Lu.Waypoints} active={props.activeSection === "experience"} />
-            <Tab href="#projects" text="projects" icon={Lu.FolderGit} active={props.activeSection === "projects"} />
-            <Tab href="#contact" text="contact" icon={Lu.BookMarked} active={props.activeSection === "contact"} />
+            <Tab href="/#about" text="about" icon={Lu.User} active={props.activeSection === "about"} />
+            <Tab href="/#experience" text="experience" icon={Lu.Waypoints} active={props.activeSection === "experience"} />
+            <Tab href="/#projects" text="projects" icon={Lu.FolderGit} active={props.activeSection === "projects"} />
+            <Tab href="/#contact" text="contact" icon={Lu.BookMarked} active={props.activeSection === "contact"} />
         </div>
     );
 });
@@ -75,7 +75,7 @@ export const Navbar = component$(() => {
         <nav class="sticky top-0 z-40 flex justify-center items-center shadow-sm bg-background2/25 backdrop-blur-lg">
             <div class="flex w-full max-w-6xl">
                 <div class="flex w-full justify-start">
-                    <Tab href="#home" text={Config.userInfo.nickName} icon={Images.Profile64x64} />
+                    <Tab href="/#home" text={Config.userInfo.nickName} icon={Images.Profile64x64} />
                 </div>
 
                 {
