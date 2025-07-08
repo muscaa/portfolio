@@ -7,8 +7,6 @@ import {
 import { Button } from "~/components/ui";
 
 export interface IconProps {
-    size?: number;
-    "stroke-width"?: number;
     class?: string;
 }
 

@@ -4,7 +4,10 @@ import {
 import { useIsMobile } from "~/utils";
 import * as Config from "~/config";
 import { Icon } from "~/components/other";
-import { Lu } from "~/components/icons";
+import {
+    Lu,
+    Images,
+} from "~/components/icons";
 import { Button } from "~/components/ui";
 
 interface TabProps {
@@ -72,7 +75,7 @@ export const Navbar = component$(() => {
         <nav class="sticky top-0 flex justify-center items-center shadow-sm bg-background/25 backdrop-blur-lg">
             <div class="flex w-full max-w-6xl">
                 <div class="flex w-full justify-start">
-                    <Tab href="#home" text={Config.userInfo.nickName} icon={Lu.Menu} />
+                    <Tab href="#home" text={Config.userInfo.nickName} icon={Images.Profile64x64} />
                 </div>
 
                 {
