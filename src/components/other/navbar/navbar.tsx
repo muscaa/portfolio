@@ -72,7 +72,7 @@ export const Navbar = component$(() => {
     const activeSection = "home";
 
     return (
-        <nav class="sticky top-0 flex justify-center items-center shadow-sm bg-background/25 backdrop-blur-lg">
+        <nav class="sticky top-0 z-40 flex justify-center items-center shadow-sm bg-background2/25 backdrop-blur-lg">
             <div class="flex w-full max-w-6xl">
                 <div class="flex w-full justify-start">
                     <Tab href="#home" text={Config.userInfo.nickName} icon={Images.Profile64x64} />

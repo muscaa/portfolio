@@ -58,7 +58,7 @@ export const SectionHome = component$(() => {
                 <Reveal direction="right" delay={delay + 400}>
                     <h2 class="text-2xl sm:text-3xl lg:text-4xl">{Config.userInfo.role}</h2>
                 </Reveal>
-                <Reveal class="flex gap-3 justify-center items-center mt-4 lg:mt-8" direction="right" delay={delay + 600}>
+                <Reveal class="flex gap-4 justify-center items-center mt-4 lg:mt-8" direction="right" delay={delay + 600}>
                     <IconLink href={Config.contactInfo.github} icon={Si.Github} />
                     <IconLink href={Config.contactInfo.telegram} icon={Si.Telegram} />
                     <IconLink href={Config.contactInfo.instagram} icon={Si.Instagram} />
