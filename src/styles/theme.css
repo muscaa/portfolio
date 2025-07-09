@@ -116,8 +116,8 @@
     --secondary: var(--timberwolf);
     --secondary-foreground: var(--jet);
 
-    --card: var(--background);
-    --card-foreground: var(--foreground);
+    --card: var(--background2);
+    --card-foreground: var(--foreground2);
 
     --popover: var(--background);
     --popover-foreground: var(--foreground);
@@ -162,8 +162,8 @@
     --secondary: var(--outer-space);
     --secondary-foreground: var(--antiflash-white);
 
-    --card: var(--background);
-    --card-foreground: var(--foreground);
+    --card: var(--background2);
+    --card-foreground: var(--foreground2);
 
     --popover: var(--background);
     --popover-foreground: var(--foreground);
