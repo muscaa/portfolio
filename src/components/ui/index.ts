@@ -6,3 +6,4 @@ export * from "./input/input";
 export * from "./separator/separator";
 export * from "./textarea/textarea";
 export * from "./text-link/text-link";
+export * from "./title/title";

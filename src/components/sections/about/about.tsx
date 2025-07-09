@@ -2,6 +2,9 @@ import {
     component$,
     useSignal,
 } from "@builder.io/qwik";
+import {
+    Title,
+} from "~/components/ui";
 
 export const SectionAbout = component$(() => {
     const ref = useSignal<HTMLElement>();
@@ -10,8 +13,13 @@ export const SectionAbout = component$(() => {
         <section
             ref={ref}
             id="about"
-            class="flex h-screen bg-red-400"
+            class="flex justify-center h-screen"
         >
+            <div class="flex flex-col max-w-6xl w-full bg-red-400">
+                <Title>
+                    About
+                </Title>
+            </div>
         </section>
     );
 });
