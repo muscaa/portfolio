@@ -8,6 +8,7 @@ import {
     Textarea,
     Button,
     Card,
+    Separator,
 } from "~/components/ui";
 
 const ContactForm = component$(() => {
@@ -39,7 +40,17 @@ const ContactForm = component$(() => {
                     id="message"
                     name="message"
                     placeholder="Message"
+                    class="min-h-32"
                 />
+                <Separator />
+                <div class="flex gap-2">
+                    <div class="w-full">
+
+                    </div>
+                    <Button class="w-full">
+                        Send
+                    </Button>
+                </div>
             </Card.Content>
         </Card.Root>
     );
@@ -52,13 +63,26 @@ export const SectionContact = component$(() => {
         <section
             ref={ref}
             id="contact"
-            class="flex justify-center h-screen"
+            class="flex justify-center"
         >
-            <div class="flex flex-col max-w-6xl w-full">
+            <div class="flex flex-col max-w-6xl w-full px-8 md:px-16 pb-20">
                 <Title>
                     Contact
                 </Title>
-                <ContactForm />
+                <div class="flex not-lg:flex-col justify-center items-center w-full gap-4">
+                    <ContactForm />
+                    <p class="text-muted-foreground">OR</p>
+                    <div class="w-full max-w-md">
+                        <div class="flex flex-col gap-2">
+                            <p>Location</p>
+                            <p>Phone</p>
+                            <p>E-mail</p>
+                            {/*<Info name="Location" value={Config.contactInfo.location} href={"https://www.google.com/maps/place/" + Config.contactInfo.location} IconComponent={Location} />
+                            <Info name="Phone" value={Config.contactInfo.phone} href={"tel:" + Config.contactInfo.phone.replaceAll(" ", "")} IconComponent={Phone} />
+                            <Info name="E-mail" value={Config.contactInfo.email} href={"mailto:" + Config.contactInfo.email} IconComponent={Mail} />*/}
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );

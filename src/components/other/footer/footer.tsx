@@ -1,6 +1,12 @@
 import { component$ } from "@builder.io/qwik";
-import { IconLink } from "~/components/other";
-import { Si } from "~/components/icons";
+import {
+    IconLink,
+    ButtonLink,
+} from "~/components/other";
+import {
+    Si,
+    Lu,
+} from "~/components/icons";
 import * as Config from "~/config";
 import { TextLink } from "~/components/ui";
 
@@ -30,8 +36,13 @@ export const FooterBase = component$(() => {
 
 export const Footer = component$(() => {
     return (
-        <footer class="flex justify-center items-center bg-background2">
+        <footer class="relative flex justify-center bg-background2">
             <FooterBase />
+            <div class="absolute flex justify-center items-center w-full -translate-y-7">
+                <ButtonLink href="#home" look="primary" size="iconLg" class="rounded-full">
+                    <Lu.ChevronsUp class="size-12 stroke-[1.5]" />
+                </ButtonLink>
+            </div>
         </footer>
     );
 });

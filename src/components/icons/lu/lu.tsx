@@ -6,6 +6,7 @@ import {
     LuWaypoints,
     LuFolderGit,
     LuBookMarked,
+    LuChevronsUp,
 } from "@qwikest/icons/lucide";
 
 export const Menu = component$<IconProps>((props) => {
@@ -43,6 +44,14 @@ export const FolderGit = component$<IconProps>((props) => {
 export const BookMarked = component$<IconProps>((props) => {
     return (
         <LuBookMarked
+            {...props}
+        />
+    );
+});
+
+export const ChevronsUp = component$<IconProps>((props) => {
+    return (
+        <LuChevronsUp
             {...props}
         />
     );
