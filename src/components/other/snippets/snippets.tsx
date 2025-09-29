@@ -2,15 +2,17 @@ import {
     Component,
     Slot,
     PropsOf,
+    QwikIntrinsicElements,
     component$,
 } from "@builder.io/qwik";
 import { Button } from "~/components/ui";
 
 export interface IconProps {
+    id?: string;
     class?: string;
 }
 
-export type Icon = Component<IconProps>;
+export type Icon = Component<QwikIntrinsicElements["svg"]>;
 
 interface IconLinkProps {
     href: string;
