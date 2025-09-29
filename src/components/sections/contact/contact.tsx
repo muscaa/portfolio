@@ -12,11 +12,7 @@ import {
 } from "~/components/ui";
 import { Info } from "~/components/other";
 import * as Config from "~/config";
-import {
-    MapPin,
-    Phone,
-    Mail,
-} from "~/components/icons/lu/lu";
+import { Lu } from "~/components/icons";
 
 const ContactForm = component$(() => {
     return (
@@ -85,19 +81,19 @@ export const SectionContact = component$(() => {
                                 name="Location"
                                 value={Config.contactInfo.location}
                                 href={"https://www.google.com/maps/place/" + Config.contactInfo.location}
-                                icon={MapPin}
+                                icon={Lu.MapPin}
                             />
                             <Info
                                 name="Phone"
                                 value={Config.contactInfo.phone}
                                 href={"tel:" + Config.contactInfo.phone.replaceAll(" ", "")}
-                                icon={Phone}
+                                icon={Lu.Phone}
                             />
                             <Info
                                 name="E-mail"
                                 value={Config.contactInfo.email}
                                 href={"mailto:" + Config.contactInfo.email}
-                                icon={Mail}
+                                icon={Lu.Mail}
                             />
                         </div>
                     </div>
