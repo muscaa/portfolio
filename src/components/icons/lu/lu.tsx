@@ -7,6 +7,7 @@ import {
     LuFolderGit,
     LuBookMarked,
     LuChevronsUp,
+    LuChevronsDown,
     LuMapPin,
     LuPhone,
     LuMail,
@@ -55,6 +56,14 @@ export const BookMarked = component$<IconProps>((props) => {
 export const ChevronsUp = component$<IconProps>((props) => {
     return (
         <LuChevronsUp
+            {...props}
+        />
+    );
+});
+
+export const ChevronsDown = component$<IconProps>((props) => {
+    return (
+        <LuChevronsDown
             {...props}
         />
     );
