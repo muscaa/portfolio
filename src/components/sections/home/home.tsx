@@ -5,12 +5,18 @@ import {
 } from "@builder.io/qwik";
 import { ParallaxLayers } from "~/components/other";
 import { Parallax } from "~/components/svg";
-import { Reveal } from "~/components/animations";
+import {
+    Reveal,
+    Bounce,
+} from "~/components/animations";
 import {
     IconLink,
     ButtonLink,
 } from "~/components/other";
-import { Si } from "~/components/icons";
+import {
+    Si,
+    Lu,
+} from "~/components/icons";
 import * as Config from "~/config";
 
 export const SectionHome = component$(() => {
@@ -69,10 +75,12 @@ export const SectionHome = component$(() => {
                     <IconLink href={Config.contactInfo.linkedin} icon={Si.Linkedin} />
                 </Reveal>
                 <div class="flex-grow"></div>
-                <Reveal direction="up" delay={delay + 200}>
-                    <ButtonLink href="#about" class="animate-bounce">
-                        More
-                    </ButtonLink>
+                <Reveal direction="down" delay={delay + 200}>
+                    <Bounce direction="down">
+                        <ButtonLink href="#about" look="primary" size="iconLg" class="rounded-full">
+                            <Lu.ChevronsDown class="size-12 stroke-[1.5]" />
+                        </ButtonLink>
+                    </Bounce>
                 </Reveal>
                 <div class="flex-grow"></div>
                 <div class="flex-grow"></div>
