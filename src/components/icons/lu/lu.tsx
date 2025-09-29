@@ -7,6 +7,9 @@ import {
     LuFolderGit,
     LuBookMarked,
     LuChevronsUp,
+    LuMapPin,
+    LuPhone,
+    LuMail,
 } from "@qwikest/icons/lucide";
 
 export const Menu = component$<IconProps>((props) => {
@@ -52,6 +55,30 @@ export const BookMarked = component$<IconProps>((props) => {
 export const ChevronsUp = component$<IconProps>((props) => {
     return (
         <LuChevronsUp
+            {...props}
+        />
+    );
+});
+
+export const MapPin = component$<IconProps>((props) => {
+    return (
+        <LuMapPin
+            {...props}
+        />
+    );
+});
+
+export const Phone = component$<IconProps>((props) => {
+    return (
+        <LuPhone
+            {...props}
+        />
+    );
+});
+
+export const Mail = component$<IconProps>((props) => {
+    return (
+        <LuMail
             {...props}
         />
     );
