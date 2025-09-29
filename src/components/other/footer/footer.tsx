@@ -9,6 +9,7 @@ import {
 } from "~/components/icons";
 import * as Config from "~/config";
 import { TextLink } from "~/components/ui";
+import { Bounce } from "~/components/animations";
 
 export const FooterBase = component$(() => {
     return (
@@ -39,9 +40,11 @@ export const Footer = component$(() => {
         <footer class="relative flex justify-center bg-background2">
             <FooterBase />
             <div class="absolute flex justify-center items-center w-full -translate-y-7">
-                <ButtonLink href="#home" look="primary" size="iconLg" class="rounded-full">
-                    <Lu.ChevronsUp class="size-12 stroke-[1.5]" />
-                </ButtonLink>
+                <Bounce direction="up">
+                    <ButtonLink href="#home" look="primary" size="iconLg" class="rounded-full">
+                        <Lu.ChevronsUp class="size-12 stroke-[1.5]" />
+                    </ButtonLink>
+                </Bounce>
             </div>
         </footer>
     );
