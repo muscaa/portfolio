@@ -10,10 +10,17 @@ import {
     Card,
     Separator,
 } from "~/components/ui";
+import { Info } from "~/components/other";
+import * as Config from "~/config";
+import {
+    MapPin,
+    Phone,
+    Mail,
+} from "~/components/icons/lu/lu";
 
 const ContactForm = component$(() => {
     return (
-        <Card.Root>
+        <Card.Root class="max-w-xl">
             <Card.Header>
                 <Card.Title>
                     Contact Form
@@ -74,12 +81,24 @@ export const SectionContact = component$(() => {
                     <p class="text-muted-foreground">OR</p>
                     <div class="w-full max-w-md">
                         <div class="flex flex-col gap-2">
-                            <p>Location</p>
-                            <p>Phone</p>
-                            <p>E-mail</p>
-                            {/*<Info name="Location" value={Config.contactInfo.location} href={"https://www.google.com/maps/place/" + Config.contactInfo.location} IconComponent={Location} />
-                            <Info name="Phone" value={Config.contactInfo.phone} href={"tel:" + Config.contactInfo.phone.replaceAll(" ", "")} IconComponent={Phone} />
-                            <Info name="E-mail" value={Config.contactInfo.email} href={"mailto:" + Config.contactInfo.email} IconComponent={Mail} />*/}
+                            <Info
+                                name="Location"
+                                value={Config.contactInfo.location}
+                                href={"https://www.google.com/maps/place/" + Config.contactInfo.location}
+                                icon={MapPin}
+                            />
+                            <Info
+                                name="Phone"
+                                value={Config.contactInfo.phone}
+                                href={"tel:" + Config.contactInfo.phone.replaceAll(" ", "")}
+                                icon={Phone}
+                            />
+                            <Info
+                                name="E-mail"
+                                value={Config.contactInfo.email}
+                                href={"mailto:" + Config.contactInfo.email}
+                                icon={Mail}
+                            />
                         </div>
                     </div>
                 </div>
