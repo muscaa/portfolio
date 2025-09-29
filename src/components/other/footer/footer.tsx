@@ -12,7 +12,7 @@ import { TextLink } from "~/components/ui";
 
 export const FooterBase = component$(() => {
     return (
-        <div class="grid grid-cols-1 sm:grid-cols-2 justify-center items-center max-w-5xl w-full px-4 py-8 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 justify-center items-center max-w-5xl w-full px-4 py-8 not-sm:pt-16 gap-4">
             <div class="flex items-center justify-center sm:justify-start gap-4">
                 <IconLink href={Config.contactInfo.github} icon={Si.Github} />
                 <IconLink href={Config.contactInfo.telegram} icon={Si.Telegram} />
