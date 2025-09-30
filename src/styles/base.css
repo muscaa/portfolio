@@ -38,6 +38,10 @@
     p {
         @apply p;
     }
+
+    span {
+        @apply p;
+    }
     
     .grecaptcha-badge {
         visibility: hidden;
