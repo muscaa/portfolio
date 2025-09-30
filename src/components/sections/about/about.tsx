@@ -26,7 +26,7 @@ export const SectionAbout = component$(() => {
     const ref2 = useSignal<HTMLDivElement>();
     const skills: Skill[] = Array.from({ length: 100 }).map(() => ({
         id: "skill",
-        r: Math.random() * 64 + 64,
+        r: Math.random() * 64 + 32,
         icon: Si.Github,
     }));
 
@@ -39,23 +39,18 @@ export const SectionAbout = component$(() => {
             x: rect.width / 2,
             y: rect.height / 2,
         }));
-
         const simulation = d3.forceSimulation(simulatedSkills)
-            .alphaTarget(0.4)
-            .alphaDecay(0.4)
-            .velocityDecay(0.8)
-            .force("collision", d3.forceCollide(d => d.r * 0.5))
-            .force("x", d3.forceX(rect.width / 2).strength(0.01))
-            .force("y1", d3.forceY(0).strength(0.01))
-            .force("y2", d3.forceY(rect.height / 2).strength(0.01))
-            .force("y3", d3.forceY(rect.height).strength(0.01))
+            .force("center", d3.forceCenter(rect.width / 2, rect.height / 2))
+            .force("collision", d3.forceCollide<SimulatedSkill>().radius(d => d.r * 0.5))
+            .force("body", d3.forceManyBody<SimulatedSkill>().strength(d => Math.exp(-d.r / 96)))
+            .force("radial", d3.forceRadial(100))
             ;
 
         const node = d3
             .selectAll("#skill")
             .data(simulatedSkills)
             .join("#skill")
-            .attr("fill", "#FF0000FF");
+            ;
 
         node.call(d3.drag()
             .on("start", dragstarted)
@@ -64,12 +59,12 @@ export const SectionAbout = component$(() => {
 
         simulation.on("tick", () => {
             node
-                .attr("style", d => `translate: ${d.x}px ${d.y}px`)
+                .attr("style", d => `translate: ${d.x}px ${d.y}px; width: ${d.r}px; height: ${d.r}px;`)
                 ;
         });
 
         function dragstarted(event: any) {
-            if (!event.active) simulation.restart();
+            if (!event.active) simulation.alphaTarget(0.05).restart();
             event.subject.fx = event.subject.x;
             event.subject.fy = event.subject.y;
         }
@@ -80,7 +75,7 @@ export const SectionAbout = component$(() => {
         }
 
         function dragended(event: any) {
-            if (!event.active) simulation;
+            if (!event.active) simulation.alphaTarget(0);
             event.subject.fx = null;
             event.subject.fy = null;
         }
@@ -99,10 +94,8 @@ export const SectionAbout = component$(() => {
                 <div ref={ref2} class="relative size-full bg-white">
                     {
                         skills.map((skill) => (
-                            <skill.icon id={skill.id} class={`absolute text-black`} style={{
-                                width: `${skill.r}px`,
-                                height: `${skill.r}px`,
-                            }} />
+                            // <skill.icon id={skill.id} class={`absolute text-black`} />
+                            <div id={skill.id} class="absolute bg-black rounded-full"></div>
                         ))
                     }
                 </div>
