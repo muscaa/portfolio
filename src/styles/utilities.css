@@ -1,3 +1,13 @@
+@utility montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.montserrat {
+    @apply montserrat;
+}
+
 @utility h1 {
     @apply scroll-m-20 text-4xl lg:text-5xl font-extrabold tracking-tight;
 }
