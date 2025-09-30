@@ -89,7 +89,7 @@ export const SectionAbout = component$(() => {
         >
             <div class="flex flex-col max-w-6xl w-full bg-red-400">
                 <Title>
-                    About
+                    about
                 </Title>
                 <div ref={ref2} class="relative size-full bg-white">
                     {

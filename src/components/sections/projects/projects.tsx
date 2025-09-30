@@ -5,6 +5,8 @@ import {
 import {
     Title,
 } from "~/components/ui";
+import { ProjectCard } from "~/components/other";
+import { projects } from "~/config/projects";
 
 export const SectionProjects = component$(() => {
     const ref = useSignal<HTMLElement>();
@@ -15,10 +17,15 @@ export const SectionProjects = component$(() => {
             id="projects"
             class="flex justify-center h-screen"
         >
-            <div class="flex flex-col max-w-6xl w-full bg-green-400">
+            <div class="flex flex-col max-w-6xl w-full">
                 <Title>
-                    Projects
+                    projects
                 </Title>
+                {
+                    projects.map((project) => (
+                        <ProjectCard project={project} />
+                    ))
+                }
             </div>
         </section>
     );

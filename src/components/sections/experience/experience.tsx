@@ -17,7 +17,7 @@ export const SectionExperience = component$(() => {
         >
             <div class="flex flex-col max-w-6xl w-full bg-orange-400">
                 <Title>
-                    Experience
+                    experience
                 </Title>
             </div>
         </section>

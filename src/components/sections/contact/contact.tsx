@@ -70,7 +70,7 @@ export const SectionContact = component$(() => {
         >
             <div class="flex flex-col max-w-6xl w-full px-8 md:px-16 pb-20">
                 <Title>
-                    Contact
+                    contact
                 </Title>
                 <div class="flex not-lg:flex-col justify-center items-center w-full gap-4">
                     <ContactForm />
