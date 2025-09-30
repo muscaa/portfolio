@@ -27,7 +27,7 @@ const Title = component$<PropsOf<"h3">>((props) => {
     return (
         <h3
             {...props}
-            class={cn("leading-none", props.class)}
+            class={cn("leading-none h3", props.class)}
         >
             <Slot />
         </h3>
@@ -36,7 +36,7 @@ const Title = component$<PropsOf<"h3">>((props) => {
 
 const Description = component$<PropsOf<"p">>((props) => {
     return (
-        <p {...props} class={cn("text-muted-foreground", props.class)}>
+        <p {...props} class={cn("text-muted-foreground p", props.class)}>
             <Slot />
         </p>
     );
