@@ -18,7 +18,7 @@ export const panelVariants = cva(
     {
         variants: {
             position: {
-                center: "max-w-lg m-auto rounded-xl shadow-lg data-[closed]:fade-out data-[open]:fade-in data-[closed]:zoom-out-95 data-[open]:zoom-in-95 data-[open]:slide-in-from-bottom-2",
+                center: "max-w-lg w-lg m-auto rounded-xl shadow-lg data-[closed]:fade-out data-[open]:fade-in data-[closed]:zoom-out-95 data-[open]:zoom-in-95 data-[open]:slide-in-from-bottom-2",
                 top: "inset-x-0 top-0 mt-0 mb-auto w-full rounded-b-xl border-b data-[closing]:slide-out-to-top data-[open]:slide-in-from-top",
                 bottom: "inset-x-0 bottom-0 mb-0 mt-auto w-full rounded-t-xl border-t data-[closing]:slide-out-to-bottom data-[open]:slide-in-from-bottom",
                 left: "inset-y-0 left-0 ml-0 mr-auto h-full max-w-sm rounded-r-xl border-r data-[closing]:slide-out-to-left data-[open]:slide-in-from-left",
