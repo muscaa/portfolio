@@ -11,6 +11,7 @@ import {
     LuMapPin,
     LuPhone,
     LuMail,
+    LuX,
 } from "@qwikest/icons/lucide";
 
 export const Menu = component$<IconProps>((props) => {
@@ -88,6 +89,14 @@ export const Phone = component$<IconProps>((props) => {
 export const Mail = component$<IconProps>((props) => {
     return (
         <LuMail
+            {...props}
+        />
+    );
+});
+
+export const X = component$<IconProps>((props) => {
+    return (
+        <LuX
             {...props}
         />
     );
