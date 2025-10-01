@@ -8,7 +8,11 @@ import {
     Badge,
 } from "~/components/ui";
 import { Project } from "~/config/types/projects";
-import { IconLink } from "~/components/other";
+import {
+    IconLink,
+    ProjectModal,
+    ModalTrigger,
+} from "~/components/other";
 import { Si } from "~/components/icons";
 import { cn } from "@qwik-ui/utils";
 
@@ -54,9 +58,13 @@ export const ProjectCard = component$<ProjectCardProps>((props) => {
                         href={props.project.githubUrl}
                         icon={Si.Github}
                     />
-                    <Button size="sm">
-                        View
-                    </Button>
+                    <ProjectModal
+                        project={props.project}
+                    >
+                        <ModalTrigger size="sm">
+                            View
+                        </ModalTrigger>
+                    </ProjectModal>
                 </div>
             </Card.Content>
         </Card.Root>

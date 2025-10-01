@@ -29,8 +29,8 @@ interface SimpleModalProps {
 export const SimpleModal = component$<SimpleModalProps>((props) => {
     return (
         <Modal.Root bind:show={props["bind:show"]}>
-            <Slot name="trigger" />
-            <Modal.Panel>
+            <Slot />
+            <Modal.Panel class={props.class}>
                 {
                     props.title && (
                         <Modal.Title>
@@ -45,19 +45,14 @@ export const SimpleModal = component$<SimpleModalProps>((props) => {
                         </Modal.Description>
                     )
                 }
-                <div class={cn(
-                    "flex flex-col gap-2",
-                    props.class,
-                )}>
-                    <Slot />
-                </div>
+                <Slot name="content" />
                 <Modal.Close
                     class={cn(
                         buttonVariants({ size: "icon", look: "link" }),
-                        "absolute top-2 right-3",
+                        "absolute top-2 right-2",
                     )}
                 >
-                    <Lu.X class="h-5 w-5" />
+                    <Lu.X class="h-6 w-6" />
                 </Modal.Close>
             </Modal.Panel>
         </Modal.Root>
