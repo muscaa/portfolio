@@ -7,7 +7,7 @@ import {
     Si,
     Lu,
 } from "~/components/icons";
-import * as Config from "~/config";
+import { userInfo } from "~/config";
 import { TextLink } from "~/components/ui";
 import { Bounce } from "~/components/animations";
 
@@ -15,10 +15,10 @@ export const FooterBase = component$(() => {
     return (
         <div class="grid grid-cols-1 sm:grid-cols-2 justify-center items-center max-w-5xl w-full px-4 py-8 not-sm:pt-16 gap-4">
             <div class="flex items-center justify-center sm:justify-start gap-4">
-                <IconLink href={Config.contactInfo.github} icon={Si.Github} />
-                <IconLink href={Config.contactInfo.telegram} icon={Si.Telegram} />
-                <IconLink href={Config.contactInfo.instagram} icon={Si.Instagram} />
-                <IconLink href={Config.contactInfo.linkedin} icon={Si.Linkedin} />
+                <IconLink href={userInfo.contact.github} icon={Si.Github} />
+                <IconLink href={userInfo.contact.telegram} icon={Si.Telegram} />
+                <IconLink href={userInfo.contact.instagram} icon={Si.Instagram} />
+                <IconLink href={userInfo.contact.linkedin} icon={Si.Linkedin} />
             </div>
             <div class="flex flex-col items-center sm:items-end text-center">
                 <p>

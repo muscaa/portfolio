@@ -14,4 +14,13 @@ export interface UserInfo {
         EN: string;
         RO: string;
     };
+    contact: {
+        location: string;
+        phone: string;
+        email: string;
+        github: string;
+        telegram: string;
+        instagram: string;
+        linkedin: string;
+    };
 }

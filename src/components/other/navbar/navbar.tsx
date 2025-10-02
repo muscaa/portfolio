@@ -2,7 +2,7 @@ import {
     component$,
 } from "@builder.io/qwik";
 import { useIsMobile } from "~/utils";
-import * as Config from "~/config";
+import { userInfo } from "~/config";
 import { Icon } from "~/components/other";
 import {
     Lu,
@@ -75,7 +75,7 @@ export const Navbar = component$(() => {
         <nav class="sticky top-0 z-40 flex justify-center items-center shadow-sm bg-background2/25 backdrop-blur-lg">
             <div class="flex w-full max-w-6xl">
                 <div class="flex w-full justify-start">
-                    <Tab href="/#home" text={Config.userInfo.nickName} icon={Images.Profile64x64} />
+                    <Tab href="/#home" text={userInfo.nickName} icon={Images.Profile64x64} />
                 </div>
 
                 {

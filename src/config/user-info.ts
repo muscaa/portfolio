@@ -34,4 +34,13 @@ export const userInfo: types.UserInfo = {
         EN: "resumes/EN.pdf",
         RO: "resumes/RO.pdf",
     },
+    contact: {
+        location: "Timisoara, Romania",
+        phone: "+40 738 479 198",
+        email: "muscamihailp@gmail.com",
+        github: "https://github.com/muscaa/",
+        telegram: "https://t.me/musca_mihail/",
+        instagram: "https://www.instagram.com/musca.mihail/",
+        linkedin: "https://www.linkedin.com/in/muscaa/",
+    },
 };

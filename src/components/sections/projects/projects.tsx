@@ -6,7 +6,7 @@ import {
     Title,
 } from "~/components/ui";
 import { ProjectCard } from "~/components/other";
-import { projects } from "~/config/projects";
+import { projects } from "~/config";
 
 export const SectionProjects = component$(() => {
     const ref = useSignal<HTMLElement>();

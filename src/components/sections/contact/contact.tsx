@@ -11,7 +11,7 @@ import {
     Separator,
 } from "~/components/ui";
 import { Info } from "~/components/other";
-import * as Config from "~/config";
+import { userInfo } from "~/config";
 import { Lu } from "~/components/icons";
 
 const ContactForm = component$(() => {
@@ -79,20 +79,20 @@ export const SectionContact = component$(() => {
                         <div class="flex flex-col gap-2">
                             <Info
                                 name="Location"
-                                value={Config.contactInfo.location}
-                                href={"https://www.google.com/maps/place/" + Config.contactInfo.location}
+                                value={userInfo.contact.location}
+                                href={"https://www.google.com/maps/place/" + userInfo.contact.location}
                                 icon={Lu.MapPin}
                             />
                             <Info
                                 name="Phone"
-                                value={Config.contactInfo.phone}
-                                href={"tel:" + Config.contactInfo.phone.replaceAll(" ", "")}
+                                value={userInfo.contact.phone}
+                                href={"tel:" + userInfo.contact.phone.replaceAll(" ", "")}
                                 icon={Lu.Phone}
                             />
                             <Info
                                 name="E-mail"
-                                value={Config.contactInfo.email}
-                                href={"mailto:" + Config.contactInfo.email}
+                                value={userInfo.contact.email}
+                                href={"mailto:" + userInfo.contact.email}
                                 icon={Lu.Mail}
                             />
                         </div>
