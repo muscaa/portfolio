@@ -15,7 +15,7 @@ export const SectionProjects = component$(() => {
         <section
             ref={ref}
             id="projects"
-            class="flex justify-center h-screen"
+            class="flex justify-center"
         >
             <div class="flex flex-col max-w-6xl w-full">
                 <Title>

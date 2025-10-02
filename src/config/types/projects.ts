@@ -10,7 +10,7 @@ export interface Project {
     description: string;
     status: ProjectStatus;
     technologies: Technology[];
-    cover?: string;
+    images: string[];
     demoUrl?: string;
     githubUrl: string;
 }

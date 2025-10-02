@@ -23,7 +23,7 @@ export const ProjectModal = component$<ProjectModalProps>((props) => {
             <Slot />
             <div q:slot="content" class="flex flex-col">
                 <img
-                    src={props.project.cover}
+                    src={props.project.images[0]}
                     alt="Cover"
                 />
                 <div class="flex flex-col gap-2 p-6">
