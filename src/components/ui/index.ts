@@ -10,3 +10,4 @@ export * from "./title/title";
 export * from "./modal/modal";
 export * from "./label/label";
 export * from "./badge/badge";
+export * from "./carousel/carousel";
