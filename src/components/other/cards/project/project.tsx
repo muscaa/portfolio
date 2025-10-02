@@ -2,30 +2,24 @@ import {
     component$,
 } from "@builder.io/qwik";
 import {
-    Button,
     Card,
     Separator,
-    Badge,
 } from "~/components/ui";
 import { Project } from "~/config/types";
 import {
     IconLink,
     ProjectModal,
     ModalTrigger,
+    TechBadge,
+    ColoredProjectStatus,
 } from "~/components/other";
 import { Si } from "~/components/icons";
-import { cn } from "@qwik-ui/utils";
 
 interface ProjectCardProps {
     project: Project;
 }
 
 export const ProjectCard = component$<ProjectCardProps>((props) => {
-    const statusColors: Record<Project["status"], string> = {
-        "COMPLETE": "text-green-400",
-        "IN DEV": "text-orange-400",
-    };
-
     return (
         <Card.Root class="relative w-80 sm:w-96 lg:w-112 bg-transparent overflow-hidden">
             <Card.Image
@@ -39,8 +33,8 @@ export const ProjectCard = component$<ProjectCardProps>((props) => {
                 <Separator />
                 <div class="flex flex-wrap gap-1">
                     {
-                        props.project.stack.map((tech) => (
-                            <Badge class="grow justify-center">{tech}</Badge>
+                        props.project.technologies.map((tech) => (
+                            <TechBadge technology={tech} />
                         ))
                     }
                 </div>
@@ -48,9 +42,7 @@ export const ProjectCard = component$<ProjectCardProps>((props) => {
             <Card.Content class="flex justify-between">
                 <div class="flex items-end">
                     <h5 class="text-muted-foreground">
-                        Status: <span class={cn("h5", statusColors[props.project.status])}>
-                            {props.project.status}
-                        </span>
+                        Status: <ColoredProjectStatus status={props.project.status} />
                     </h5>
                 </div>
                 <div class="flex items-center gap-2">

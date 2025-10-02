@@ -5,7 +5,14 @@ import {
     QwikIntrinsicElements,
     component$,
 } from "@builder.io/qwik";
-import { Button } from "~/components/ui";
+import {
+    Button,
+    Badge,
+} from "~/components/ui";
+import {
+    Technology,
+    ProjectStatus,
+} from "~/config/types";
 
 export interface IconProps {
     id?: string;
@@ -39,5 +46,37 @@ export const ButtonLink = component$<ButtonLinkProps>(({ href, target, ...props 
                 <Slot />
             </Button>
         </a>
+    );
+});
+
+interface TechBadgeProps {
+    technology: Technology;
+}
+
+export const TechBadge = component$<TechBadgeProps>((props) => {
+    return (
+        <Badge
+            look="aquamarine"
+            class="grow justify-center"
+        >
+            {props.technology.name}
+        </Badge>
+    );
+});
+
+interface ColoredProjectStatusProps {
+    status: ProjectStatus;
+}
+
+export const ColoredProjectStatus = component$<ColoredProjectStatusProps>((props) => {
+    return (
+        <span
+            class="h5"
+            style={{
+                color: props.status.color,
+            }}
+        >
+            {props.status.text}
+        </span>
     );
 });
