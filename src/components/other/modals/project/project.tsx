@@ -1,7 +1,6 @@
 import {
     Slot,
     component$,
-    useSignal,
 } from "@builder.io/qwik";
 import { SimpleModal } from "../simple/simple";
 import {
@@ -10,6 +9,7 @@ import {
     Badge,
 } from "~/components/ui";
 import { Project } from "~/config/types";
+import { TechBadge } from "~/components/other";
 
 interface ProjectModalProps {
     project: Project;
@@ -31,8 +31,8 @@ export const ProjectModal = component$<ProjectModalProps>((props) => {
                     <Separator />
                     <div class="flex flex-wrap gap-1">
                         {
-                            props.project.stack.map((tech) => (
-                                <Badge class="grow justify-center">{tech}</Badge>
+                            props.project.technologies.map((tech) => (
+                                <TechBadge technology={tech} />
                             ))
                         }
                     </div>
