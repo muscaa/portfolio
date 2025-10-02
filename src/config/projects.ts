@@ -1,11 +1,22 @@
 import * as types from "./types";
 import { technologies } from "./technologies";
 
+export const projectStatuses = {
+    complete: {
+        text: "COMPLETE",
+        color: "#00FF00",
+    },
+    indev: {
+        text: "IN DEV",
+        color: "#FF8800",
+    },
+} satisfies Record<string, types.ProjectStatus>;
+
 export const projects: types.Project[] = [
     {
         title: "Test",
         description: "Test test.",
-        status: "COMPLETE",
+        status: projectStatuses.complete,
         technologies: [
             technologies.nextjs,
         ],

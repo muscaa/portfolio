@@ -1,9 +1,14 @@
 import { Technology } from "./technologies";
 
+export interface ProjectStatus {
+    text: string;
+    color: string;
+}
+
 export interface Project {
     title: string;
     description: string;
-    status: "COMPLETE" | "IN DEV";
+    status: ProjectStatus;
     technologies: Technology[];
     cover?: string;
     demoUrl?: string;
