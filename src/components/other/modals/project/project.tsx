@@ -29,13 +29,16 @@ export const ProjectModal = component$<ProjectModalProps>((props) => {
                 <div class="flex flex-col gap-2 p-6">
                     <h2>{props.project.title}</h2>
                     <Separator />
-                    <div class="flex flex-wrap gap-1">
+                    <div class="flex flex-wrap gap-1 mb-6">
                         {
                             props.project.technologies.map((tech) => (
                                 <TechBadge technology={tech} />
                             ))
                         }
                     </div>
+                    <h4>Description</h4>
+                    <Separator />
+                    <p class="text-justify">{props.project.description}</p>
                 </div>
             </div>
         </SimpleModal>

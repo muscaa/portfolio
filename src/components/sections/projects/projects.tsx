@@ -21,11 +21,13 @@ export const SectionProjects = component$(() => {
                 <Title>
                     projects
                 </Title>
-                {
-                    projects.map((project) => (
-                        <ProjectCard project={project} />
-                    ))
-                }
+                <div class="flex flex-wrap justify-center gap-2 md:gap-12">
+                    {
+                        projects.map((project) => (
+                            <ProjectCard project={project} />
+                        ))
+                    }
+                </div>
             </div>
         </section>
     );

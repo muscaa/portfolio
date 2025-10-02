@@ -14,15 +14,90 @@ export const projectStatuses = {
 
 export const projects: types.Project[] = [
     {
-        title: "Test",
-        description: "Test test.",
+        title: "Vest Visuals",
+        description: `
+            Developed a photography and videography studio website that showcases the portfolio,
+            services, and contact information. The site is built with Next.js and Tailwind CSS,
+            ensuring a responsive and modern design.
+        `,
         status: projectStatuses.complete,
         technologies: [
+            technologies.html5,
+            technologies.css3,
+            technologies.typescript,
             technologies.nextjs,
+            technologies.react,
+            technologies.tailwindcss,
+            technologies.hetzner,
+            technologies.docker,
+            technologies.pocketbase,
         ],
         cover: "https://images.unsplash.com/photo-1758846182577-799b413b0da5?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        githubUrl: "",
-    }
+        githubUrl: "https://github.com/muscaa/vest-visuals",
+    },
+    {
+        title: "Chess",
+        description: "test",
+        status: projectStatuses.complete,
+        technologies: [
+        ],
+        cover: "https://images.unsplash.com/photo-1758846182577-799b413b0da5?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        githubUrl: "https://github.com/muscaa/test",
+    },
+    {
+        title: "Logic Gate Simulator",
+        description: "test",
+        status: projectStatuses.complete,
+        technologies: [
+        ],
+        cover: "https://images.unsplash.com/photo-1758846182577-799b413b0da5?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        githubUrl: "https://github.com/muscaa/test",
+    },
+    {
+        title: "Telebot",
+        description: "test",
+        status: projectStatuses.indev,
+        technologies: [
+        ],
+        cover: "https://images.unsplash.com/photo-1758846182577-799b413b0da5?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        githubUrl: "https://github.com/muscaa/test",
+    },
+    {
+        title: "CV Maker",
+        description: "test",
+        status: projectStatuses.indev,
+        technologies: [
+        ],
+        cover: "https://images.unsplash.com/photo-1758846182577-799b413b0da5?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        githubUrl: "https://github.com/muscaa/test",
+    },
+    {
+        title: "Developer Portfolio",
+        description: "test",
+        status: projectStatuses.complete,
+        technologies: [
+        ],
+        cover: "https://images.unsplash.com/photo-1758846182577-799b413b0da5?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        githubUrl: "https://github.com/muscaa/test",
+    },
+    {
+        title: "Fluff Libraries",
+        description: "test",
+        status: projectStatuses.complete,
+        technologies: [
+        ],
+        cover: "https://images.unsplash.com/photo-1758846182577-799b413b0da5?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        githubUrl: "https://github.com/muscaa/test",
+    },
+    {
+        title: "Quill",
+        description: "test",
+        status: projectStatuses.indev,
+        technologies: [
+        ],
+        cover: "https://images.unsplash.com/photo-1758846182577-799b413b0da5?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        githubUrl: "https://github.com/muscaa/test",
+    },
 ];
 
 /*
