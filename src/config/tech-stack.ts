@@ -1,4 +1,4 @@
-import * as types from "./types/tech-stack";
+import * as types from "./types";
 
 export const techStack: types.Technology[] = [
     

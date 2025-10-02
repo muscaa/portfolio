@@ -1,4 +1,4 @@
-import * as types from "./types/user-info";
+import * as types from "./types";
 
 export const userInfo: types.UserInfo = {
     fullName: "Musca Mihail",

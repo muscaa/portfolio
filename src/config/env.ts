@@ -1,4 +1,4 @@
-import * as types from "./types/env";
+import * as types from "./types";
 
 export const env: types.Env = {
     formspreeKey: "xrbzglbe",

@@ -7,7 +7,7 @@ import {
     Separator,
     Badge,
 } from "~/components/ui";
-import { Project } from "~/config/types/projects";
+import { Project } from "~/config/types";
 import {
     IconLink,
     ProjectModal,
