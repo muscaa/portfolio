@@ -1,6 +1,3 @@
-import { Icon } from "~/components/other";
+export interface TechStack {
 
-export interface Technology {
-    name: string;
-    icon: Icon;
 }
