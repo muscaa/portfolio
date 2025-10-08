@@ -94,40 +94,64 @@ export const skillSets = [
 ];
 export const jobs = [
     new Classes.Job(
-        "Co-Founder and CEO",
+        "Volunteer Full-Stack Developer",
+        "Jul 2025 - present",
+        "Smart::Bits",
+        [
+            new Classes.Detail(
+                "Description",
+                <>
+                    Contributed to the Scoring System app for the Open Robotics Intelligent Grid event.
+                    Used GitLab for version control and YouTrack to track issues.
+                    Implemented the display builder & components using React and Spring Boot.
+                    Added an assets system using AWS S3.
+                    Fixed bugs and improved the app overall.
+                    Started rewriting the backend from Spring Boot to Nest.js and Prisma ORM.
+                    Started migrating the frontend from React Router to TanStack Router.
+                </>
+            ),
+        ],
+        [ "html", "css", "typescript", "react", "tailwind", "java", "spring boot", "docker", "s3", "minio",
+            "nest.js", "postgresql", "prisma orm" ],
+        "jobs/smart-bits.png"
+    ),
+    new Classes.Job(
+        "Co-Founder",
         "May 2025 - present",
         "Vest Visuals",
         [
             new Classes.Detail(
                 "Description",
                 <>
-                    A photography and videography studio for weddings, events, automotive, corporate, and more.
-                    Developed the whole infrastructure, including the website and the backend system.
+                    Built the business website using Next.js, React, Tailwind CSS, Drizzle ORM and AWS S3.
+                    Focused on performance and SEO.
+                    Implemented authentication using Better Auth.
+                    Deployed to Hetzner Cloud using Docker.
                 </>
             ),
         ],
         [ "html", "css", "typescript", "next", "react", "tailwind", "shadcn/ui", "animejs", "hetzner cloud",
-            "docker", "nginx", "s3", "minio", "pocketbase" ],
+            "docker", "nginx", "s3", "minio", "sqlite", "drizzle orm" ],
         "jobs/vest-visuals.png"
     ),
-    new Classes.Job(
-        "Self Employed",
-        "Aug 2024 - present",
-        undefined,
-        [
-            new Classes.Detail(
-                "Description",
-                <>
-                    Working as a full-stack developer, I've had the chance to transform ideas into real,
-                    functioning products, ranging from simple websites to more complex applications.
-                    I enjoy the hands-on process of building and fine-tuning each project, and I make sure
-                    to offer practical support and guidance so my clients feel comfortable using the software.
-                </>
-            ),
-        ],
-        [ "html", "css", "typescript", "next", "react", "supabase", "docker", "bash" ],
-        undefined
-    ),
+    // new Classes.Job(
+    //     "Self Employed",
+    //     "Aug 2024 - present",
+    //     undefined,
+    //     [
+    //         new Classes.Detail(
+    //             "Description",
+    //             <>
+    //                 Working as a full-stack developer, I've had the chance to transform ideas into real,
+    //                 functioning products, ranging from simple websites to more complex applications.
+    //                 I enjoy the hands-on process of building and fine-tuning each project, and I make sure
+    //                 to offer practical support and guidance so my clients feel comfortable using the software.
+    //             </>
+    //         ),
+    //     ],
+    //     [ "html", "css", "typescript", "next", "react", "supabase", "docker", "bash" ],
+    //     undefined
+    // ),
     new Classes.Job(
         "Open Source Contributor",
         "Dec 2023 - present",
@@ -136,10 +160,10 @@ export const jobs = [
             new Classes.Detail(
                 "Description",
                 <>
-                    Built and maintained several public GitHub repositories that showcase my projects
-                    and coding skills. I focus on writing clean, well-documented code and use best
-                    practices like version control and automated testing. Currently, I'm managing these
-                    projects independently while looking forward to collaborating with others in the future.
+                    Built and maintained multiple GitHub repositories.
+                    Built full-stack apps using TypeScript, Next.js, React and Tailwind CSS.
+                    Built games & simulations using Java and OpenGL.
+                    Integrated CI/CD with GitHub Actions.
                 </>
             ),
         ],
@@ -154,8 +178,7 @@ export const jobs = [
             new Classes.Detail(
                 "Description",
                 <>
-                    Developed and maintained small-scale applications for freelance clients, enhancing my
-                    technical skills and project management abilities while generating additional income.
+                    Built and maintained game plugins in Java.
                 </>
             ),
         ],
@@ -178,7 +201,7 @@ export const projects = [
         ],
         Classes.Status.complete,
         [ "html", "css", "typescript", "next", "react", "tailwind", "shadcn/ui", "animejs", "hetzner cloud",
-            "docker", "nginx", "s3", "minio", "pocketbase" ],
+            "docker", "nginx", "s3", "minio", "sqlite", "drizzle orm" ],
         "projects/vest-visuals.png",
         "https://vestvisuals.ro",
         "https://github.com/muscaa/vest-visuals"
