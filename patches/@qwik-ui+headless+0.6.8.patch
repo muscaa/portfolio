@@ -1,46 +1,87 @@
 diff --git a/node_modules/@qwik-ui/headless/components/modal/index.d.ts b/node_modules/@qwik-ui/headless/components/modal/index.d.ts
-index 8d1e78a..0227b67 100644
+index 8d1e78a..f7c9919 100644
 --- a/node_modules/@qwik-ui/headless/components/modal/index.d.ts
 +++ b/node_modules/@qwik-ui/headless/components/modal/index.d.ts
-@@ -7,3 +7,4 @@ export { HModalTitle as Title } from './modal-title';
+@@ -7,3 +7,5 @@ export { HModalTitle as Title } from './modal-title';
  export { HModalDescription as Description } from './modal-description';
  export { HModalTrigger as Trigger } from './modal-trigger';
  export { HModalClose as Close } from './modal-close';
 +export { modalContextId as contextId } from "./modal-context";
++export { useModal } from "./use-modal";
 diff --git a/node_modules/@qwik-ui/headless/components/modal/index.qwik.cjs b/node_modules/@qwik-ui/headless/components/modal/index.qwik.cjs
-index 3fcde87..8ad5b71 100644
+index 3fcde87..657f9e7 100644
 --- a/node_modules/@qwik-ui/headless/components/modal/index.qwik.cjs
 +++ b/node_modules/@qwik-ui/headless/components/modal/index.qwik.cjs
-@@ -9,6 +9,7 @@ const modalTitle = require("./modal-title.qwik.cjs");
+@@ -9,6 +9,8 @@ const modalTitle = require("./modal-title.qwik.cjs");
  const modalDescription = require("./modal-description.qwik.cjs");
  const modalTrigger = require("./modal-trigger.qwik.cjs");
  const modalClose = require("./modal-close.qwik.cjs");
 +const modalContext = require("./modal-context.qwik.cjs");
++const useModal = require("./use-modal.qwik.cjs");
  exports.Root = modalRoot.HModalRoot;
  exports.Panel = modalPanel.HModalPanel;
  exports.Content = modalContent.HModalContent;
-@@ -18,3 +19,4 @@ exports.Title = modalTitle.HModalTitle;
+@@ -18,3 +20,5 @@ exports.Title = modalTitle.HModalTitle;
  exports.Description = modalDescription.HModalDescription;
  exports.Trigger = modalTrigger.HModalTrigger;
  exports.Close = modalClose.HModalClose;
 +exports.contextId = modalContext.modalContextId;
++exports.useModal = useModal.useModal;
 diff --git a/node_modules/@qwik-ui/headless/components/modal/index.qwik.mjs b/node_modules/@qwik-ui/headless/components/modal/index.qwik.mjs
-index bc3cfdb..2f71c9a 100644
+index bc3cfdb..02b22bd 100644
 --- a/node_modules/@qwik-ui/headless/components/modal/index.qwik.mjs
 +++ b/node_modules/@qwik-ui/headless/components/modal/index.qwik.mjs
-@@ -7,6 +7,7 @@ import { HModalTitle } from "./modal-title.qwik.mjs";
+@@ -7,6 +7,8 @@ import { HModalTitle } from "./modal-title.qwik.mjs";
  import { HModalDescription } from "./modal-description.qwik.mjs";
  import { HModalTrigger } from "./modal-trigger.qwik.mjs";
  import { HModalClose } from "./modal-close.qwik.mjs";
 +import { modalContextId } from "./modal-context.qwik.mjs";
++import { useModal } from "./use-modal.qwik.mjs";
  export {
    HModalClose as Close,
    HModalContent as Content,
-@@ -16,5 +17,6 @@ export {
+@@ -16,5 +18,7 @@ export {
    HModalPanel as Panel,
    HModalRoot as Root,
    HModalTitle as Title,
 -  HModalTrigger as Trigger
 +  HModalTrigger as Trigger,
-+  modalContextId as contextId
++  modalContextId as contextId,
++  useModal,
  };
+diff --git a/node_modules/@qwik-ui/headless/components/modal/modal-panel.d.ts b/node_modules/@qwik-ui/headless/components/modal/modal-panel.d.ts
+index 5f343d1..aaf9cb9 100644
+--- a/node_modules/@qwik-ui/headless/components/modal/modal-panel.d.ts
++++ b/node_modules/@qwik-ui/headless/components/modal/modal-panel.d.ts
+@@ -9,4 +9,5 @@ export type ModalProps = Omit<PropsOf<'dialog'>, 'open'> & {
+ export declare const HModalPanel: import('@builder.io/qwik').Component<{
+     open?: boolean | undefined;
+     returnValue?: string | undefined;
++    bypassCloseOnBackdropClick?: boolean;
+ } & import('@builder.io/qwik').HTMLElementAttrs & import('@builder.io/qwik').QwikAttributes<HTMLDialogElement>>;
+diff --git a/node_modules/@qwik-ui/headless/components/modal/modal-panel.qwik.cjs b/node_modules/@qwik-ui/headless/components/modal/modal-panel.qwik.cjs
+index b092389..673bb3b 100644
+--- a/node_modules/@qwik-ui/headless/components/modal/modal-panel.qwik.cjs
++++ b/node_modules/@qwik-ui/headless/components/modal/modal-panel.qwik.cjs
+@@ -47,7 +47,7 @@ const HModalPanel = qwik.component$((props) => {
+     if (!(e.target instanceof HTMLDialogElement)) {
+       return;
+     }
+-    if (await wasModalBackdropClicked(panelRef.value, e)) {
++    if (props.bypassCloseOnBackdropClick || await wasModalBackdropClicked(panelRef.value, e)) {
+       context.showSig.value = false;
+     }
+   });
+diff --git a/node_modules/@qwik-ui/headless/components/modal/modal-panel.qwik.mjs b/node_modules/@qwik-ui/headless/components/modal/modal-panel.qwik.mjs
+index 8776bcd..4c89edb 100644
+--- a/node_modules/@qwik-ui/headless/components/modal/modal-panel.qwik.mjs
++++ b/node_modules/@qwik-ui/headless/components/modal/modal-panel.qwik.mjs
+@@ -45,7 +45,7 @@ const HModalPanel = component$((props) => {
+     if (!(e.target instanceof HTMLDialogElement)) {
+       return;
+     }
+-    if (await wasModalBackdropClicked(panelRef.value, e)) {
++    if (props.bypassCloseOnBackdropClick || await wasModalBackdropClicked(panelRef.value, e)) {
+       context.showSig.value = false;
+     }
+   });
