@@ -21,7 +21,8 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "postinstall": "patch-package"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.16.1",
@@ -41,6 +42,7 @@
     "eslint-plugin-qwik": "^1.16.1",
     "globals": "^16.0.0",
     "nx": "^21.6.2",
+    "patch-package": "^8.0.1",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "qwik-ui": "^0.3.2",

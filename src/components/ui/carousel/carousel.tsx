@@ -90,8 +90,8 @@ const Slide = component$<PropsOf<typeof HCarousel.Slide>>(({ ...props }) => {
 });
 
 const Previous = component$<
-  PropsOf<typeof HCarousel.Previous> & VariantProps<typeof buttonVariants>
->(({ look = "ghost", size = "icon", ...props }) => {
+  PropsOf<typeof HCarousel.Previous> & VariantProps<typeof buttonVariants> & { extraClass?: string; }
+>(({ look = "ghost", size = "iconSm", extraClass, ...props }) => {
   const context = useContext(styledCarouselContextId);
   return (
     <div
@@ -100,6 +100,7 @@ const Previous = component$<
         context.orientation === "horizontal"
           ? "top-1/2 -left-12 -translate-y-1/2"
           : "-top-12 right-1/2 translate-x-1/2",
+        extraClass,
       )}
     >
       <HCarousel.Previous
@@ -119,9 +120,9 @@ const Previous = component$<
           )}
         >
           {context.orientation === "horizontal" ? (
-            <LuChevronLeft class="size-10" />
+            <LuChevronLeft class="size-6" />
           ) : (
-            <LuChevronUp class="size-10" />
+            <LuChevronUp class="size-6" />
           )}
         </div>
       </HCarousel.Previous>
@@ -130,8 +131,8 @@ const Previous = component$<
 });
 
 const Next = component$<
-  PropsOf<typeof HCarousel.Next> & VariantProps<typeof buttonVariants>
->(({ look = "ghost", size = "icon", ...props }) => {
+  PropsOf<typeof HCarousel.Next> & VariantProps<typeof buttonVariants> & { extraClass?: string; }
+>(({ look = "ghost", size = "iconSm", extraClass, ...props }) => {
   const context = useContext(styledCarouselContextId);
   return (
     <div
@@ -140,6 +141,7 @@ const Next = component$<
         context.orientation === "horizontal"
           ? "top-1/2 -right-12 -translate-y-1/2"
           : "right-1/2 -bottom-12 translate-x-1/2",
+        extraClass,
       )}
     >
       {/* moves content to the right on hover */}
@@ -160,9 +162,9 @@ const Next = component$<
           )}
         >
           {context.orientation === "horizontal" ? (
-            <LuChevronRight class="size-10" />
+            <LuChevronRight class="size-6" />
           ) : (
-            <LuChevronDown class="size-10" />
+            <LuChevronDown class="size-6" />
           )}
         </div>
       </HCarousel.Next>

@@ -7,21 +7,19 @@ export const buttonVariants = cva(
     {
         variants: {
             look: {
-                primary:
-                    "border-base bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
-                secondary:
-                    "border-base bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/90",
-                alert:
-                    "border-base bg-alert text-alert-foreground shadow-xs hover:bg-alert/90",
-                outline:
-                    "border bg-background text-foreground shadow-xs hover:bg-accent",
+                primary: "border-base bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
+                secondary: "border-base bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/90",
+                alert: "border-base bg-alert text-alert-foreground shadow-xs hover:bg-alert/90",
+                outline: "border bg-background text-foreground shadow-xs hover:bg-accent",
                 ghost: "text-accent-foreground hover:bg-accent",
                 link: "text-foreground hover:bg-transparent hover:text-foreground/80 hover:underline hover:underline-offset-2",
+                transluscent: "border bg-background/75 text-foreground shadow-xs hover:bg-accent/75",
             },
             size: {
                 sm: "h-8 px-2 py-1.5 text-sm",
                 md: "h-12 px-4 py-3 text-base",
                 lg: " h-16 px-8 py-4 text-lg",
+                iconSm: "h-8 w-8",
                 icon: "h-10 w-10",
                 iconLg: "h-14 w-14",
             },

@@ -28,7 +28,7 @@ export const ProjectCard = component$<ProjectCardProps>((props) => {
             />
             <div class="h-60"></div>
             <div class="relative flex flex-col justify-between grow">
-                <div class="absolute size-full -z-10 backdrop-blur-sm backdrop-brightness-40 mask-t-from-90%"></div>
+                <div class="absolute size-full -z-10 backdrop-blur-sm backdrop-brightness-50 mask-t-from-90%"></div>
                 <Card.Header>
                     <Card.Title>
                         {props.project.title}
