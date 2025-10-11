@@ -4,13 +4,17 @@ import {
 } from "@builder.io/qwik";
 import { SimpleModal } from "../simple/simple";
 import {
-    Button,
     Separator,
-    Badge,
+    Carousel,
+    Button,
 } from "~/components/ui";
 import { Project } from "~/config/types";
-import { TechBadge } from "~/components/other";
-import { Carousel } from "~/components/ui";
+import {
+    TechBadge,
+    ColoredProjectStatus,
+    IconLink,
+} from "~/components/other";
+import { Si } from "~/components/icons";
 
 interface ProjectModalProps {
     project: Project;
@@ -58,6 +62,24 @@ export const ProjectModal = component$<ProjectModalProps>((props) => {
                 <h4>Description</h4>
                 <Separator />
                 <p class="text-justify">{props.project.description}</p>
+                <div class="flex justify-between mt-6 mb-2">
+                    <div class="flex items-end">
+                        <h5 class="text-muted-foreground">
+                            Status: <ColoredProjectStatus status={props.project.status} />
+                        </h5>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <IconLink
+                            href={props.project.githubUrl}
+                            icon={Si.Github}
+                        />
+                        <Button
+                            size="sm"
+                        >
+                            Demo
+                        </Button>
+                    </div>
+                </div>
             </div>
         </SimpleModal>
     );
