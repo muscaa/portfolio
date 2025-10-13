@@ -33,7 +33,7 @@ export const projects: types.Project[] = [
             technologies.pocketbase,
         ],
         images: [
-            "https://images.unsplash.com/photo-1758846182577-799b413b0da5?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "/images/vest-visuals/1.jpg",
         ],
         githubUrl: "https://github.com/muscaa/vest-visuals",
     },
@@ -44,7 +44,7 @@ export const projects: types.Project[] = [
         technologies: [
         ],
         images: [
-            "https://images.unsplash.com/photo-1758846182577-799b413b0da5?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "/images/chess/1.jpg",
         ],
         githubUrl: "https://github.com/muscaa/test",
     },
@@ -55,7 +55,7 @@ export const projects: types.Project[] = [
         technologies: [
         ],
         images: [
-            "https://images.unsplash.com/photo-1758846182577-799b413b0da5?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "/images/logic-gate-simulator/1.jpg",
         ],
         githubUrl: "https://github.com/muscaa/test",
     },
@@ -77,7 +77,7 @@ export const projects: types.Project[] = [
         technologies: [
         ],
         images: [
-            "https://images.unsplash.com/photo-1758846182577-799b413b0da5?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "/images/cv-maker/1.jpg",
         ],
         githubUrl: "https://github.com/muscaa/test",
     },
