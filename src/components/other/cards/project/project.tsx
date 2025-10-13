@@ -1,25 +1,26 @@
 import {
     component$,
+    useSignal,
 } from "@builder.io/qwik";
 import {
+    Button,
     Card,
     Separator,
 } from "~/components/ui";
 import { Project } from "~/config/types";
 import {
-    IconLink,
     ProjectModal,
-    ModalTrigger,
     TechBadge,
-    ColoredProjectStatus,
 } from "~/components/other";
-import { Si } from "~/components/icons";
+import { Lu } from "~/components/icons";
 
 interface ProjectCardProps {
     project: Project;
 }
 
 export const ProjectCard = component$<ProjectCardProps>((props) => {
+    const show = useSignal(false);
+
     return (
         <Card.Root class="relative flex flex-col w-80 sm:w-96 lg:w-112 bg-transparent overflow-hidden">
             <Card.Image
@@ -30,9 +31,19 @@ export const ProjectCard = component$<ProjectCardProps>((props) => {
             <div class="relative flex flex-col justify-between grow">
                 <div class="absolute size-full -z-10 backdrop-blur-sm backdrop-brightness-50 mask-t-from-90%"></div>
                 <Card.Header>
-                    <Card.Title>
-                        {props.project.title}
-                    </Card.Title>
+                    <div class="flex justify-between items-center gap-2">
+                        <Button
+                            look="link"
+                            size="none"
+                            class="text-start flex justify-between items-center gap-2 size-full"
+                            onClick$={() => show.value = true}
+                        >
+                            <Card.Title>
+                                {props.project.title}
+                            </Card.Title>
+                            <Lu.ChevronRight class="size-8 shrink-0" />
+                        </Button>
+                    </div>
                     <Separator />
                     <div class="flex flex-wrap gap-1">
                         {
@@ -41,27 +52,11 @@ export const ProjectCard = component$<ProjectCardProps>((props) => {
                             ))
                         }
                     </div>
+                    <ProjectModal
+                        bind:show={show}
+                        project={props.project}
+                    />
                 </Card.Header>
-                <Card.Content class="flex justify-between">
-                    <div class="flex items-end">
-                        <h5 class="text-muted-foreground">
-                            Status: <ColoredProjectStatus status={props.project.status} />
-                        </h5>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <IconLink
-                            href={props.project.githubUrl}
-                            icon={Si.Github}
-                        />
-                        <ProjectModal
-                            project={props.project}
-                        >
-                            <ModalTrigger size="sm">
-                                View
-                            </ModalTrigger>
-                        </ProjectModal>
-                    </div>
-                </Card.Content>
             </div>
         </Card.Root>
     );

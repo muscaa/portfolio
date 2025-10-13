@@ -1,6 +1,7 @@
 import {
     Slot,
     component$,
+    Signal,
 } from "@builder.io/qwik";
 import { SimpleModal } from "../simple/simple";
 import {
@@ -17,12 +18,14 @@ import {
 import { Si } from "~/components/icons";
 
 interface ProjectModalProps {
+    "bind:show"?: Signal<boolean>;
     project: Project;
 }
 
 export const ProjectModal = component$<ProjectModalProps>((props) => {
     return (
         <SimpleModal
+            bind:show={props["bind:show"]}
             title={props.project.title}
         >
             <q:template q:slot="trigger">
