@@ -10,3 +10,7 @@ export interface Workplace {
     };
     description: string;
 }
+
+export interface Experience {
+    workplaces: Workplace[];
+}

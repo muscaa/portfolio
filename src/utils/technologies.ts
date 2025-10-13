@@ -1,5 +1,10 @@
-import * as types from "./types";
+import { Icon } from "~/components/other";
 import { Tech } from "~/components/icons";
+
+export interface Technology {
+    name: string;
+    icon: Icon;
+}
 
 export const technologies = {
     java: {
@@ -98,4 +103,4 @@ export const technologies = {
         name: "hetzner",
         icon: Tech.Hetzner,
     },
-} satisfies Record<string, types.Technology>;
+} satisfies Record<string, Technology>;

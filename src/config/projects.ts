@@ -1,18 +1,10 @@
 import * as types from "./types";
-import { technologies } from "./technologies";
+import {
+    technologies,
+    statuses,
+} from "~/utils";
 
-export const projectStatuses = {
-    complete: {
-        text: "COMPLETE",
-        color: "#00FF00",
-    },
-    indev: {
-        text: "IN DEV",
-        color: "#FF8800",
-    },
-} satisfies Record<string, types.ProjectStatus>;
-
-export const projects: types.Project[] = [
+export const projects: types.Projects = [
     {
         title: "Vest Visuals",
         description: `
@@ -20,7 +12,7 @@ export const projects: types.Project[] = [
             services, and contact information. The site is built with Next.js and Tailwind CSS,
             ensuring a responsive and modern design.
         `,
-        status: projectStatuses.complete,
+        status: statuses.complete,
         technologies: [
             technologies.html5,
             technologies.css3,
@@ -40,7 +32,7 @@ export const projects: types.Project[] = [
     {
         title: "Chess",
         description: "test",
-        status: projectStatuses.complete,
+        status: statuses.complete,
         technologies: [
         ],
         images: [
@@ -51,7 +43,7 @@ export const projects: types.Project[] = [
     {
         title: "Logic Gate Simulator",
         description: "test",
-        status: projectStatuses.complete,
+        status: statuses.complete,
         technologies: [
         ],
         images: [
@@ -62,7 +54,7 @@ export const projects: types.Project[] = [
     {
         title: "Telebot",
         description: "test",
-        status: projectStatuses.indev,
+        status: statuses.indev,
         technologies: [
         ],
         images: [
@@ -73,7 +65,7 @@ export const projects: types.Project[] = [
     {
         title: "CV Maker",
         description: "test",
-        status: projectStatuses.indev,
+        status: statuses.indev,
         technologies: [
         ],
         images: [
@@ -84,7 +76,7 @@ export const projects: types.Project[] = [
     {
         title: "Developer Portfolio",
         description: "test",
-        status: projectStatuses.complete,
+        status: statuses.complete,
         technologies: [
         ],
         images: [
@@ -95,7 +87,7 @@ export const projects: types.Project[] = [
     {
         title: "Fluff Libraries",
         description: "test",
-        status: projectStatuses.complete,
+        status: statuses.complete,
         technologies: [
         ],
         images: [
@@ -106,7 +98,7 @@ export const projects: types.Project[] = [
     {
         title: "Quill",
         description: "test",
-        status: projectStatuses.indev,
+        status: statuses.indev,
         technologies: [
         ],
         images: [

@@ -1,8 +1,10 @@
 import * as types from "./types";
 
-export const techStack: types.Technology[] = [
-    
-];
+export const techStack: types.TechStack = {
+    technologies: [
+        
+    ],
+};
 
 /*
 export const skillSets = [

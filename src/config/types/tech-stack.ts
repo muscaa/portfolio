@@ -1,3 +1,5 @@
-export interface TechStack {
+import { Technology } from "~/utils";
 
+export interface TechStack {
+    technologies: Technology[];
 }

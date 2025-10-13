@@ -1,8 +1,10 @@
 import * as types from "./types";
 
-export const experience: types.Workplace[] = [
-    
-];
+export const experience: types.Experience = {
+    workplaces: [
+        
+    ],
+};
 
 /*
 export const jobs = [

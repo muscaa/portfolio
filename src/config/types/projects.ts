@@ -1,16 +1,16 @@
-import { Technology } from "./technologies";
-
-export interface ProjectStatus {
-    text: string;
-    color: string;
-}
+import {
+    Technology,
+    Status,
+} from "~/utils";
 
 export interface Project {
     title: string;
     description: string;
-    status: ProjectStatus;
+    status: Status;
     technologies: Technology[];
     images: string[];
     demoUrl?: string;
     githubUrl: string;
 }
+
+export type Projects = Project[];

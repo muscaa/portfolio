@@ -26,14 +26,11 @@ export const userInfo: types.UserInfo = {
     ),*/
     role: "Full-Stack Developer",
     education: {
-        link: "https://info.uvt.ro/en/",
+        url: "https://info.uvt.ro/en/",
         school: "West University of Timisoara",
         period: "Bachelor's degree 2023 - 2026",
     },
-    resumes: {
-        EN: "resumes/EN.pdf",
-        RO: "resumes/RO.pdf",
-    },
+    resumeUrl: "/resume.pdf",
     contact: {
         location: "Timisoara, Romania",
         phone: "+40 738 479 198",

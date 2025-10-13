@@ -6,14 +6,11 @@ export interface UserInfo {
     description: string;
     role: string;
     education: {
-        link: string;
+        url: string;
         school: string;
         period: string;
     };
-    resumes: {
-        EN: string;
-        RO: string;
-    };
+    resumeUrl: string;
     contact: {
         location: string;
         phone: string;
